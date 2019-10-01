@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77B1F85E130840F790818FD5 /* Pods_Synapse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D84D447599553617826479 /* Pods_Synapse.framework */; };
+		A19F850A7E24DC768952B79D /* Pods_SynapseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C208035EAC5F80A9F7EB2EC /* Pods_SynapseTests.framework */; };
+		BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA32342F10D00E267DE /* AppDelegate.swift */; };
+		BE87EDA62342F10D00E267DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA52342F10D00E267DE /* SceneDelegate.swift */; };
+		BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA72342F10D00E267DE /* ContentView.swift */; };
+		BE87EDAA2342F11000E267DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE87EDA92342F11000E267DE /* Assets.xcassets */; };
+		BE87EDAD2342F11000E267DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE87EDAC2342F11000E267DE /* Preview Assets.xcassets */; };
+		BE87EDB02342F11000E267DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE87EDAE2342F11000E267DE /* LaunchScreen.storyboard */; };
+		BE87EDBB2342F11100E267DE /* SynapseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDBA2342F11100E267DE /* SynapseTests.swift */; };
+		BE87EDC62343066D00E267DE /* NavIndicatorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDC52343066D00E267DE /* NavIndicatorBar.swift */; };
+		BE87EDC82343073C00E267DE /* BalanceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDC72343073C00E267DE /* BalanceModule.swift */; };
+		BE87EDCA2343077700E267DE /* GraphModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDC92343077700E267DE /* GraphModule.swift */; };
+		BE87EDCE234315E500E267DE /* CurrencySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDCD234315E500E267DE /* CurrencySelector.swift */; };
+		BE87EDD023431E0700E267DE /* DepositWithdrawButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDCF23431E0700E267DE /* DepositWithdrawButtons.swift */; };
+		BE87EDD2234328AA00E267DE /* SwipeToPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDD1234328AA00E267DE /* SwipeToPay.swift */; };
+		BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDD32343413D00E267DE /* InstantTransferButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE87EDB72342F11100E267DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE87ED982342F10C00E267DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE87ED9F2342F10D00E267DE;
+			remoteInfo = Synapse;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7C208035EAC5F80A9F7EB2EC /* Pods_SynapseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SynapseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93FA58CAD0A83AEA63EADE07 /* Pods-SynapseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynapseTests.release.xcconfig"; path = "Target Support Files/Pods-SynapseTests/Pods-SynapseTests.release.xcconfig"; sourceTree = "<group>"; };
+		A579E0EAD7E5682E99BBB81C /* Pods-SynapseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynapseTests.debug.xcconfig"; path = "Target Support Files/Pods-SynapseTests/Pods-SynapseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8BA29DB202E6307048475DC /* Pods-Synapse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Synapse.debug.xcconfig"; path = "Target Support Files/Pods-Synapse/Pods-Synapse.debug.xcconfig"; sourceTree = "<group>"; };
+		BE87EDA02342F10D00E267DE /* Synapse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synapse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE87EDA32342F10D00E267DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE87EDA52342F10D00E267DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BE87EDA72342F10D00E267DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BE87EDA92342F11000E267DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE87EDAC2342F11000E267DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE87EDAF2342F11000E267DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE87EDB12342F11000E267DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE87EDB62342F11100E267DE /* SynapseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynapseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE87EDBA2342F11100E267DE /* SynapseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynapseTests.swift; sourceTree = "<group>"; };
+		BE87EDBC2342F11100E267DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE87EDC52343066D00E267DE /* NavIndicatorBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavIndicatorBar.swift; sourceTree = "<group>"; };
+		BE87EDC72343073C00E267DE /* BalanceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModule.swift; sourceTree = "<group>"; };
+		BE87EDC92343077700E267DE /* GraphModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphModule.swift; sourceTree = "<group>"; };
+		BE87EDCD234315E500E267DE /* CurrencySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelector.swift; sourceTree = "<group>"; };
+		BE87EDCF23431E0700E267DE /* DepositWithdrawButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositWithdrawButtons.swift; sourceTree = "<group>"; };
+		BE87EDD1234328AA00E267DE /* SwipeToPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToPay.swift; sourceTree = "<group>"; };
+		BE87EDD32343413D00E267DE /* InstantTransferButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantTransferButton.swift; sourceTree = "<group>"; };
+		E6D84D447599553617826479 /* Pods_Synapse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Synapse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1064788E2BBFE851AFED3E /* Pods-Synapse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Synapse.release.xcconfig"; path = "Target Support Files/Pods-Synapse/Pods-Synapse.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE87ED9D2342F10D00E267DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77B1F85E130840F790818FD5 /* Pods_Synapse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE87EDB32342F11100E267DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A19F850A7E24DC768952B79D /* Pods_SynapseTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1792A903C5B2A8A4434A9742 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8BA29DB202E6307048475DC /* Pods-Synapse.debug.xcconfig */,
+				ED1064788E2BBFE851AFED3E /* Pods-Synapse.release.xcconfig */,
+				A579E0EAD7E5682E99BBB81C /* Pods-SynapseTests.debug.xcconfig */,
+				93FA58CAD0A83AEA63EADE07 /* Pods-SynapseTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7E58BAC39833872ACFB8F32B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6D84D447599553617826479 /* Pods_Synapse.framework */,
+				7C208035EAC5F80A9F7EB2EC /* Pods_SynapseTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE87ED972342F10C00E267DE = {
+			isa = PBXGroup;
+			children = (
+				BE87EDA22342F10D00E267DE /* Synapse */,
+				BE87EDB92342F11100E267DE /* SynapseTests */,
+				BE87EDA12342F10D00E267DE /* Products */,
+				1792A903C5B2A8A4434A9742 /* Pods */,
+				7E58BAC39833872ACFB8F32B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BE87EDA12342F10D00E267DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE87EDA02342F10D00E267DE /* Synapse.app */,
+				BE87EDB62342F11100E267DE /* SynapseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE87EDA22342F10D00E267DE /* Synapse */ = {
+			isa = PBXGroup;
+			children = (
+				BE87EDA32342F10D00E267DE /* AppDelegate.swift */,
+				BE87EDA52342F10D00E267DE /* SceneDelegate.swift */,
+				BE87EDA72342F10D00E267DE /* ContentView.swift */,
+				BE87EDD32343413D00E267DE /* InstantTransferButton.swift */,
+				BE87EDD1234328AA00E267DE /* SwipeToPay.swift */,
+				BE87EDCF23431E0700E267DE /* DepositWithdrawButtons.swift */,
+				BE87EDCD234315E500E267DE /* CurrencySelector.swift */,
+				BE87EDC92343077700E267DE /* GraphModule.swift */,
+				BE87EDC72343073C00E267DE /* BalanceModule.swift */,
+				BE87EDC52343066D00E267DE /* NavIndicatorBar.swift */,
+				BE87EDA92342F11000E267DE /* Assets.xcassets */,
+				BE87EDAE2342F11000E267DE /* LaunchScreen.storyboard */,
+				BE87EDB12342F11000E267DE /* Info.plist */,
+				BE87EDAB2342F11000E267DE /* Preview Content */,
+			);
+			path = Synapse;
+			sourceTree = "<group>";
+		};
+		BE87EDAB2342F11000E267DE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BE87EDAC2342F11000E267DE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BE87EDB92342F11100E267DE /* SynapseTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE87EDBA2342F11100E267DE /* SynapseTests.swift */,
+				BE87EDBC2342F11100E267DE /* Info.plist */,
+			);
+			path = SynapseTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE87ED9F2342F10D00E267DE /* Synapse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE87EDBF2342F11100E267DE /* Build configuration list for PBXNativeTarget "Synapse" */;
+			buildPhases = (
+				1081744A8F134DB4EE73797C /* [CP] Check Pods Manifest.lock */,
+				BE87ED9C2342F10D00E267DE /* Sources */,
+				BE87ED9D2342F10D00E267DE /* Frameworks */,
+				BE87ED9E2342F10D00E267DE /* Resources */,
+				ACC734EBC09469D30618C23E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Synapse;
+			productName = Synapse;
+			productReference = BE87EDA02342F10D00E267DE /* Synapse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE87EDB52342F11100E267DE /* SynapseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE87EDC22342F11100E267DE /* Build configuration list for PBXNativeTarget "SynapseTests" */;
+			buildPhases = (
+				DFC327CBF9C57AD24D1C7C5B /* [CP] Check Pods Manifest.lock */,
+				BE87EDB22342F11100E267DE /* Sources */,
+				BE87EDB32342F11100E267DE /* Frameworks */,
+				BE87EDB42342F11100E267DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE87EDB82342F11100E267DE /* PBXTargetDependency */,
+			);
+			name = SynapseTests;
+			productName = SynapseTests;
+			productReference = BE87EDB62342F11100E267DE /* SynapseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE87ED982342F10C00E267DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Comitatus Capital";
+				TargetAttributes = {
+					BE87ED9F2342F10D00E267DE = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					BE87EDB52342F11100E267DE = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = BE87ED9F2342F10D00E267DE;
+					};
+				};
+			};
+			buildConfigurationList = BE87ED9B2342F10C00E267DE /* Build configuration list for PBXProject "Synapse" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE87ED972342F10C00E267DE;
+			productRefGroup = BE87EDA12342F10D00E267DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE87ED9F2342F10D00E267DE /* Synapse */,
+				BE87EDB52342F11100E267DE /* SynapseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE87ED9E2342F10D00E267DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE87EDB02342F11000E267DE /* LaunchScreen.storyboard in Resources */,
+				BE87EDAD2342F11000E267DE /* Preview Assets.xcassets in Resources */,
+				BE87EDAA2342F11000E267DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE87EDB42342F11100E267DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1081744A8F134DB4EE73797C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Synapse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACC734EBC09469D30618C23E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Synapse/Pods-Synapse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Synapse/Pods-Synapse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Synapse/Pods-Synapse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC327CBF9C57AD24D1C7C5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SynapseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE87ED9C2342F10D00E267DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE87EDC82343073C00E267DE /* BalanceModule.swift in Sources */,
+				BE87EDD2234328AA00E267DE /* SwipeToPay.swift in Sources */,
+				BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */,
+				BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */,
+				BE87EDD023431E0700E267DE /* DepositWithdrawButtons.swift in Sources */,
+				BE87EDCA2343077700E267DE /* GraphModule.swift in Sources */,
+				BE87EDCE234315E500E267DE /* CurrencySelector.swift in Sources */,
+				BE87EDA62342F10D00E267DE /* SceneDelegate.swift in Sources */,
+				BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */,
+				BE87EDC62343066D00E267DE /* NavIndicatorBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE87EDB22342F11100E267DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE87EDBB2342F11100E267DE /* SynapseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE87EDB82342F11100E267DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE87ED9F2342F10D00E267DE /* Synapse */;
+			targetProxy = BE87EDB72342F11100E267DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE87EDAE2342F11000E267DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE87EDAF2342F11000E267DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE87EDBD2342F11100E267DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE87EDBE2342F11100E267DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE87EDC02342F11100E267DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8BA29DB202E6307048475DC /* Pods-Synapse.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Synapse/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Synapse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.comitatus.Synapse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE87EDC12342F11100E267DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED1064788E2BBFE851AFED3E /* Pods-Synapse.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Synapse/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Synapse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.comitatus.Synapse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BE87EDC32342F11100E267DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A579E0EAD7E5682E99BBB81C /* Pods-SynapseTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SynapseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.comitatus.SynapseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Synapse.app/Synapse";
+			};
+			name = Debug;
+		};
+		BE87EDC42342F11100E267DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93FA58CAD0A83AEA63EADE07 /* Pods-SynapseTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SynapseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.comitatus.SynapseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Synapse.app/Synapse";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE87ED9B2342F10C00E267DE /* Build configuration list for PBXProject "Synapse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE87EDBD2342F11100E267DE /* Debug */,
+				BE87EDBE2342F11100E267DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE87EDBF2342F11100E267DE /* Build configuration list for PBXNativeTarget "Synapse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE87EDC02342F11100E267DE /* Debug */,
+				BE87EDC12342F11100E267DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE87EDC22342F11100E267DE /* Build configuration list for PBXNativeTarget "SynapseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE87EDC32342F11100E267DE /* Debug */,
+				BE87EDC42342F11100E267DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE87ED982342F10C00E267DE /* Project object */;
+}
