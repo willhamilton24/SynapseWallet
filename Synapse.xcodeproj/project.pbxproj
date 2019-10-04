@@ -23,6 +23,10 @@
 		BE87EDD023431E0700E267DE /* DepositWithdrawButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDCF23431E0700E267DE /* DepositWithdrawButtons.swift */; };
 		BE87EDD2234328AA00E267DE /* SwipeToPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDD1234328AA00E267DE /* SwipeToPay.swift */; };
 		BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDD32343413D00E267DE /* InstantTransferButton.swift */; };
+		BE87EDD623436B0200E267DE /* AccountPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDD523436B0200E267DE /* AccountPage.swift */; };
+		BE87EDD82346DB1000E267DE /* DepositPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDD72346DB1000E267DE /* DepositPage.swift */; };
+		BE87EDDA2346DB5B00E267DE /* WithdrawPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */; };
+		BE87EDDC2346DC4C00E267DE /* InstantTransferPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		BE87EDCF23431E0700E267DE /* DepositWithdrawButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositWithdrawButtons.swift; sourceTree = "<group>"; };
 		BE87EDD1234328AA00E267DE /* SwipeToPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToPay.swift; sourceTree = "<group>"; };
 		BE87EDD32343413D00E267DE /* InstantTransferButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantTransferButton.swift; sourceTree = "<group>"; };
+		BE87EDD523436B0200E267DE /* AccountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPage.swift; sourceTree = "<group>"; };
+		BE87EDD72346DB1000E267DE /* DepositPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositPage.swift; sourceTree = "<group>"; };
+		BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawPage.swift; sourceTree = "<group>"; };
+		BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantTransferPage.swift; sourceTree = "<group>"; };
 		E6D84D447599553617826479 /* Pods_Synapse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Synapse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1064788E2BBFE851AFED3E /* Pods-Synapse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Synapse.release.xcconfig"; path = "Target Support Files/Pods-Synapse/Pods-Synapse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +136,9 @@
 				BE87EDA32342F10D00E267DE /* AppDelegate.swift */,
 				BE87EDA52342F10D00E267DE /* SceneDelegate.swift */,
 				BE87EDA72342F10D00E267DE /* ContentView.swift */,
+				BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */,
+				BE87EDD72346DB1000E267DE /* DepositPage.swift */,
+				BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */,
 				BE87EDD32343413D00E267DE /* InstantTransferButton.swift */,
 				BE87EDD1234328AA00E267DE /* SwipeToPay.swift */,
 				BE87EDCF23431E0700E267DE /* DepositWithdrawButtons.swift */,
@@ -135,6 +146,7 @@
 				BE87EDC92343077700E267DE /* GraphModule.swift */,
 				BE87EDC72343073C00E267DE /* BalanceModule.swift */,
 				BE87EDC52343066D00E267DE /* NavIndicatorBar.swift */,
+				BE87EDD523436B0200E267DE /* AccountPage.swift */,
 				BE87EDA92342F11000E267DE /* Assets.xcassets */,
 				BE87EDAE2342F11000E267DE /* LaunchScreen.storyboard */,
 				BE87EDB12342F11000E267DE /* Info.plist */,
@@ -330,12 +342,16 @@
 			files = (
 				BE87EDC82343073C00E267DE /* BalanceModule.swift in Sources */,
 				BE87EDD2234328AA00E267DE /* SwipeToPay.swift in Sources */,
+				BE87EDDA2346DB5B00E267DE /* WithdrawPage.swift in Sources */,
+				BE87EDD623436B0200E267DE /* AccountPage.swift in Sources */,
 				BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */,
 				BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */,
 				BE87EDD023431E0700E267DE /* DepositWithdrawButtons.swift in Sources */,
 				BE87EDCA2343077700E267DE /* GraphModule.swift in Sources */,
 				BE87EDCE234315E500E267DE /* CurrencySelector.swift in Sources */,
+				BE87EDDC2346DC4C00E267DE /* InstantTransferPage.swift in Sources */,
 				BE87EDA62342F10D00E267DE /* SceneDelegate.swift in Sources */,
+				BE87EDD82346DB1000E267DE /* DepositPage.swift in Sources */,
 				BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */,
 				BE87EDC62343066D00E267DE /* NavIndicatorBar.swift in Sources */,
 			);

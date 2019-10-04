@@ -10,7 +10,7 @@ import SwiftUI
 
 struct InstantTransferButton: View {
     var body: some View {
-        Button(action: {}) {
+        NavigationLink(destination: InstantTransferPage()) {
             HStack(spacing: 5) {
                 Text("Instant")
                 Text("Transfer")

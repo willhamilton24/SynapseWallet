@@ -29,7 +29,7 @@ struct NavIndicatorBar: View {
             // TODO: Add Arrow
             //Text("Instant Transfer") // Signals Right Swipe For Account Page
                 //.font(.title)
-            Button(action: {}) {
+            NavigationLink(destination: AccountPage()) {
                 Image("gear")
             }.foregroundColor(.yellow)
         }

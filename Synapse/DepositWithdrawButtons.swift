@@ -11,7 +11,7 @@ import SwiftUI
 struct DepositWithdrawButtons: View {
     var body: some View {
         HStack() {
-            Button(action: {}) {
+            NavigationLink(destination: DepositPage()) {
                Text("Deposit")
                 .font(.headline)
                 .padding(.all, 12)
@@ -24,7 +24,7 @@ struct DepositWithdrawButtons: View {
             
             Spacer().frame(width: 120)
             
-            Button(action: {}) {
+            NavigationLink(destination: WithdrawPage()) {
                Text("Withdraw")
                 .font(.headline)
                 .padding(.all, 12)
