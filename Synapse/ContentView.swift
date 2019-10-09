@@ -16,21 +16,21 @@ struct ContentView: View {
             if viewRouter.currentPage == "welcome" {
                 WelcomePage(viewRouter: viewRouter)
             } else if viewRouter.currentPage == "login" {
-                LoginView(viewRouter: viewRouter).transition(.slide)
+                LoginView(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "signup" {
-                SignUpView(viewRouter: viewRouter).transition(.slide)
+                SignUpView(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "keep-logs" {
-                SetKeepLogs(viewRouter: viewRouter).transition(.slide)
+                SetKeepLogs(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "handle" {
-                SetHandle(viewRouter: viewRouter).transition(.slide)
+                SetHandle(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "terms" {
-                AcceptTerms(viewRouter: viewRouter).transition(.slide)
+                AcceptTerms(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "main" {
-                MainPage(viewRouter: viewRouter).transition(.slide)
+                MainPage(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "email-password" {
-                EmailPassword(viewRouter: viewRouter).transition(.slide)
+                EmailPassword(viewRouter: viewRouter).transition(.opacity)
             }
-        }.background(CustomColors().light)
+        }.background(CustomColors().dark)
             .edgesIgnoringSafeArea(.vertical)
     }
 }
