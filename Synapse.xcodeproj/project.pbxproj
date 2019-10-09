@@ -24,6 +24,8 @@
 		BE822BA6234D4031004B2FC6 /* SignUpProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA5234D4031004B2FC6 /* SignUpProgress.swift */; };
 		BE822BA8234D7E44004B2FC6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE822BA7234D7E44004B2FC6 /* Roboto-Light.ttf */; };
 		BE822BAB234D800E004B2FC6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE822BAA234D800E004B2FC6 /* Roboto-Thin.ttf */; };
+		BE822BB0234DA4D7004B2FC6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE822BAF234DA4D7004B2FC6 /* Roboto-Thin.ttf */; };
+		BE822BB2234DA4EE004B2FC6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE822BB1234DA4EE004B2FC6 /* Roboto-Light.ttf */; };
 		BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA32342F10D00E267DE /* AppDelegate.swift */; };
 		BE87EDA62342F10D00E267DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA52342F10D00E267DE /* SceneDelegate.swift */; };
 		BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA72342F10D00E267DE /* ContentView.swift */; };
@@ -79,6 +81,8 @@
 		BE822BA7234D7E44004B2FC6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../../../../Downloads/roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		BE822BA9234D7F73004B2FC6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../Downloads/roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		BE822BAA234D800E004B2FC6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../Downloads/roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		BE822BAF234DA4D7004B2FC6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../../Downloads/roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		BE822BB1234DA4EE004B2FC6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../../../../../Downloads/roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		BE87EDA02342F10D00E267DE /* Synapse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synapse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE87EDA32342F10D00E267DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE87EDA52342F10D00E267DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +153,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE822BAE234DA4B2004B2FC6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BE822BAF234DA4D7004B2FC6 /* Roboto-Thin.ttf */,
+				BE822BB1234DA4EE004B2FC6 /* Roboto-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		BE87ED972342F10C00E267DE = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,7 @@
 				BE87EDDE2346E06900E267DE /* UpdateProfile.swift */,
 				BE87EDA92342F11000E267DE /* Assets.xcassets */,
 				BE822BA9234D7F73004B2FC6 /* Roboto-Thin.ttf */,
+				BE822BAE234DA4B2004B2FC6 /* Fonts */,
 				BE822BAA234D800E004B2FC6 /* Roboto-Thin.ttf */,
 				BE822BA7234D7E44004B2FC6 /* Roboto-Light.ttf */,
 				BE718A0E23477AF800759BB1 /* HttpRequests.swift */,
@@ -318,7 +332,9 @@
 			files = (
 				BE87EDB02342F11000E267DE /* LaunchScreen.storyboard in Resources */,
 				BE87EDAD2342F11000E267DE /* Preview Assets.xcassets in Resources */,
+				BE822BB0234DA4D7004B2FC6 /* Roboto-Thin.ttf in Resources */,
 				BE822BA8234D7E44004B2FC6 /* Roboto-Light.ttf in Resources */,
+				BE822BB2234DA4EE004B2FC6 /* Roboto-Light.ttf in Resources */,
 				BE822BAB234D800E004B2FC6 /* Roboto-Thin.ttf in Resources */,
 				BE87EDAA2342F11000E267DE /* Assets.xcassets in Resources */,
 			);
