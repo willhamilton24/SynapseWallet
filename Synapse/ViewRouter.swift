@@ -16,7 +16,9 @@ class ViewRouter: ObservableObject {
     
     var currentPage: String = "welcome" {
         didSet {
-            objectWillChange.send(self)
+            withAnimation() {
+                objectWillChange.send(self)
+            }
         }
     }
     
