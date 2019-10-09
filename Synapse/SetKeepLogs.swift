@@ -69,7 +69,7 @@ struct SetKeepLogs: View {
                     self.viewRouter.currentPage = "handle"
                 }) {
                     Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
-                }.frame(minWidth: 0, maxWidth: 200)
+                }.frame(minWidth: 225, maxWidth: 250)
                 .background(CustomColors().primeGradiant)
                     .cornerRadius(40)
                 .padding()
