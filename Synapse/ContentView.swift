@@ -28,7 +28,7 @@ struct ContentView: View {
             } else if viewRouter.currentPage == "main" {
                 MainPage(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "email-password" {
-                EmailPassword(viewRouter: viewRouter).transition(.slide)
+                EmailPassword(viewRouter: viewRouter).transition(.opacity)
             }
         }.background(CustomColors().dark)
             .edgesIgnoringSafeArea(.vertical)
