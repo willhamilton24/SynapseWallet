@@ -1,18 +1,52 @@
 PODS:
+  - Alamofire (5.0.0-rc.2)
+  - AppAuth (1.2.0):
+    - AppAuth/Core (= 1.2.0)
+    - AppAuth/ExternalUserAgent (= 1.2.0)
+  - AppAuth/Core (1.2.0)
+  - AppAuth/ExternalUserAgent (1.2.0)
   - Charts (3.3.0):
     - Charts/Core (= 3.3.0)
   - Charts/Core (3.3.0)
+  - GoogleSignIn (5.0.0):
+    - AppAuth (~> 1.1)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GTMAppAuth (1.0.0):
+    - AppAuth/Core (~> 1.0)
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.2.2):
+    - GTMSessionFetcher/Full (= 1.2.2)
+  - GTMSessionFetcher/Core (1.2.2)
+  - GTMSessionFetcher/Full (1.2.2):
+    - GTMSessionFetcher/Core (= 1.2.2)
+  - p2.OAuth2 (5.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.2)
   - Charts
+  - GoogleSignIn
+  - p2.OAuth2 (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - AppAuth
     - Charts
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
+    - p2.OAuth2
 
 SPEC CHECKSUMS:
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
+  AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
   Charts: e0dd4cd8f257bccf98407b58183ddca8e8d5b578
+  GoogleSignIn: a62edd0516721d2a3db1259a5681b91f9b41c06a
+  GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
+  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  p2.OAuth2: 5d203b46c2857b4bbcca3e521089959e7b3b5a5c
 
-PODFILE CHECKSUM: 7c6045ee3b0b29936eff31b56a6d7aea166e79cb
+PODFILE CHECKSUM: 8643a51a422d56257aa3b3c1524085e5dabf0d75
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.8.3

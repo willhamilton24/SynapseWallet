@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		77B1F85E130840F790818FD5 /* Pods_Synapse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D84D447599553617826479 /* Pods_Synapse.framework */; };
 		A19F850A7E24DC768952B79D /* Pods_SynapseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C208035EAC5F80A9F7EB2EC /* Pods_SynapseTests.framework */; };
+		BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */; };
+		BE6ECB60234C17AA003F82A5 /* SetKeepLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */; };
+		BE6ECB64234C2787003F82A5 /* AcceptTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */; };
+		BE718A092346FBAA00759BB1 /* TransactionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A082346FBAA00759BB1 /* TransactionPage.swift */; };
+		BE718A0B2347005600759BB1 /* MyTransactionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */; };
+		BE718A0F23477AF800759BB1 /* HttpRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A0E23477AF800759BB1 /* HttpRequests.swift */; };
+		BE718A3F2347BF9800759BB1 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A3E2347BF9800759BB1 /* WelcomePage.swift */; };
+		BE718A412347BFBD00759BB1 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A402347BFBD00759BB1 /* MainPage.swift */; };
+		BE718A43234BD20300759BB1 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A42234BD20300759BB1 /* ViewRouter.swift */; };
+		BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */; };
+		BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA1234D12BC004B2FC6 /* BigLogo.swift */; };
+		BE822BA4234D3C33004B2FC6 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA3234D3C33004B2FC6 /* CustomColors.swift */; };
+		BE822BA6234D4031004B2FC6 /* SignUpProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA5234D4031004B2FC6 /* SignUpProgress.swift */; };
+		BE822BA8234D7E44004B2FC6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE822BA7234D7E44004B2FC6 /* Roboto-Light.ttf */; };
+		BE822BAB234D800E004B2FC6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE822BAA234D800E004B2FC6 /* Roboto-Thin.ttf */; };
 		BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA32342F10D00E267DE /* AppDelegate.swift */; };
 		BE87EDA62342F10D00E267DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA52342F10D00E267DE /* SceneDelegate.swift */; };
 		BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA72342F10D00E267DE /* ContentView.swift */; };
@@ -16,7 +31,6 @@
 		BE87EDAD2342F11000E267DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE87EDAC2342F11000E267DE /* Preview Assets.xcassets */; };
 		BE87EDB02342F11000E267DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE87EDAE2342F11000E267DE /* LaunchScreen.storyboard */; };
 		BE87EDBB2342F11100E267DE /* SynapseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDBA2342F11100E267DE /* SynapseTests.swift */; };
-		BE87EDC62343066D00E267DE /* NavIndicatorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDC52343066D00E267DE /* NavIndicatorBar.swift */; };
 		BE87EDC82343073C00E267DE /* BalanceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDC72343073C00E267DE /* BalanceModule.swift */; };
 		BE87EDCA2343077700E267DE /* GraphModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDC92343077700E267DE /* GraphModule.swift */; };
 		BE87EDCE234315E500E267DE /* CurrencySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDCD234315E500E267DE /* CurrencySelector.swift */; };
@@ -27,6 +41,11 @@
 		BE87EDD82346DB1000E267DE /* DepositPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDD72346DB1000E267DE /* DepositPage.swift */; };
 		BE87EDDA2346DB5B00E267DE /* WithdrawPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */; };
 		BE87EDDC2346DC4C00E267DE /* InstantTransferPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */; };
+		BE87EDDF2346E06900E267DE /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDDE2346E06900E267DE /* UpdateProfile.swift */; };
+		BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FC9234BFAE90046EADE /* LoginView.swift */; };
+		BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FCB234BFB060046EADE /* SignUpView.swift */; };
+		BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED52E0F234BEFE2003D3D4A /* SWLogo.swift */; };
+		BED52E12234BF6A1003D3D4A /* Socials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED52E11234BF6A1003D3D4A /* Socials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +63,22 @@
 		93FA58CAD0A83AEA63EADE07 /* Pods-SynapseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynapseTests.release.xcconfig"; path = "Target Support Files/Pods-SynapseTests/Pods-SynapseTests.release.xcconfig"; sourceTree = "<group>"; };
 		A579E0EAD7E5682E99BBB81C /* Pods-SynapseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynapseTests.debug.xcconfig"; path = "Target Support Files/Pods-SynapseTests/Pods-SynapseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8BA29DB202E6307048475DC /* Pods-Synapse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Synapse.debug.xcconfig"; path = "Target Support Files/Pods-Synapse/Pods-Synapse.debug.xcconfig"; sourceTree = "<group>"; };
+		BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHandle.swift; sourceTree = "<group>"; };
+		BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetKeepLogs.swift; sourceTree = "<group>"; };
+		BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTerms.swift; sourceTree = "<group>"; };
+		BE718A082346FBAA00759BB1 /* TransactionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPage.swift; sourceTree = "<group>"; };
+		BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTransactionsButton.swift; sourceTree = "<group>"; };
+		BE718A0E23477AF800759BB1 /* HttpRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequests.swift; sourceTree = "<group>"; };
+		BE718A3E2347BF9800759BB1 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomePage.swift; path = Views/WelcomePage.swift; sourceTree = "<group>"; };
+		BE718A402347BFBD00759BB1 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		BE718A42234BD20300759BB1 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPassword.swift; sourceTree = "<group>"; };
+		BE822BA1234D12BC004B2FC6 /* BigLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLogo.swift; sourceTree = "<group>"; };
+		BE822BA3234D3C33004B2FC6 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		BE822BA5234D4031004B2FC6 /* SignUpProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProgress.swift; sourceTree = "<group>"; };
+		BE822BA7234D7E44004B2FC6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../../../../Downloads/roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		BE822BA9234D7F73004B2FC6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../Downloads/roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		BE822BAA234D800E004B2FC6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../Downloads/roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		BE87EDA02342F10D00E267DE /* Synapse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synapse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE87EDA32342F10D00E267DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE87EDA52342F10D00E267DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +90,6 @@
 		BE87EDB62342F11100E267DE /* SynapseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynapseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE87EDBA2342F11100E267DE /* SynapseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynapseTests.swift; sourceTree = "<group>"; };
 		BE87EDBC2342F11100E267DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE87EDC52343066D00E267DE /* NavIndicatorBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavIndicatorBar.swift; sourceTree = "<group>"; };
 		BE87EDC72343073C00E267DE /* BalanceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModule.swift; sourceTree = "<group>"; };
 		BE87EDC92343077700E267DE /* GraphModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphModule.swift; sourceTree = "<group>"; };
 		BE87EDCD234315E500E267DE /* CurrencySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelector.swift; sourceTree = "<group>"; };
@@ -66,6 +100,11 @@
 		BE87EDD72346DB1000E267DE /* DepositPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositPage.swift; sourceTree = "<group>"; };
 		BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawPage.swift; sourceTree = "<group>"; };
 		BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantTransferPage.swift; sourceTree = "<group>"; };
+		BE87EDDE2346E06900E267DE /* UpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
+		BEBD7FC9234BFAE90046EADE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BEBD7FCB234BFB060046EADE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		BED52E0F234BEFE2003D3D4A /* SWLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLogo.swift; sourceTree = "<group>"; };
+		BED52E11234BF6A1003D3D4A /* Socials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socials.swift; sourceTree = "<group>"; };
 		E6D84D447599553617826479 /* Pods_Synapse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Synapse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1064788E2BBFE851AFED3E /* Pods-Synapse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Synapse.release.xcconfig"; path = "Target Support Files/Pods-Synapse/Pods-Synapse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +175,22 @@
 				BE87EDA32342F10D00E267DE /* AppDelegate.swift */,
 				BE87EDA52342F10D00E267DE /* SceneDelegate.swift */,
 				BE87EDA72342F10D00E267DE /* ContentView.swift */,
+				BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */,
+				BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */,
+				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
+				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
+				BE718A42234BD20300759BB1 /* ViewRouter.swift */,
+				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
+				BE822BA5234D4031004B2FC6 /* SignUpProgress.swift */,
+				BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */,
+				BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */,
+				BE718A402347BFBD00759BB1 /* MainPage.swift */,
+				BEBD7FC9234BFAE90046EADE /* LoginView.swift */,
+				BEBD7FCB234BFB060046EADE /* SignUpView.swift */,
+				BED52E11234BF6A1003D3D4A /* Socials.swift */,
+				BED52E0F234BEFE2003D3D4A /* SWLogo.swift */,
+				BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */,
+				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
 				BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */,
 				BE87EDD72346DB1000E267DE /* DepositPage.swift */,
 				BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */,
@@ -145,9 +200,13 @@
 				BE87EDCD234315E500E267DE /* CurrencySelector.swift */,
 				BE87EDC92343077700E267DE /* GraphModule.swift */,
 				BE87EDC72343073C00E267DE /* BalanceModule.swift */,
-				BE87EDC52343066D00E267DE /* NavIndicatorBar.swift */,
 				BE87EDD523436B0200E267DE /* AccountPage.swift */,
+				BE87EDDE2346E06900E267DE /* UpdateProfile.swift */,
 				BE87EDA92342F11000E267DE /* Assets.xcassets */,
+				BE822BA9234D7F73004B2FC6 /* Roboto-Thin.ttf */,
+				BE822BAA234D800E004B2FC6 /* Roboto-Thin.ttf */,
+				BE822BA7234D7E44004B2FC6 /* Roboto-Light.ttf */,
+				BE718A0E23477AF800759BB1 /* HttpRequests.swift */,
 				BE87EDAE2342F11000E267DE /* LaunchScreen.storyboard */,
 				BE87EDB12342F11000E267DE /* Info.plist */,
 				BE87EDAB2342F11000E267DE /* Preview Content */,
@@ -184,6 +243,7 @@
 				BE87ED9D2342F10D00E267DE /* Frameworks */,
 				BE87ED9E2342F10D00E267DE /* Resources */,
 				ACC734EBC09469D30618C23E /* [CP] Embed Pods Frameworks */,
+				5C5B0D61433A5DE463260D62 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +318,8 @@
 			files = (
 				BE87EDB02342F11000E267DE /* LaunchScreen.storyboard in Resources */,
 				BE87EDAD2342F11000E267DE /* Preview Assets.xcassets in Resources */,
+				BE822BA8234D7E44004B2FC6 /* Roboto-Light.ttf in Resources */,
+				BE822BAB234D800E004B2FC6 /* Roboto-Thin.ttf in Resources */,
 				BE87EDAA2342F11000E267DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +354,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C5B0D61433A5DE463260D62 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Synapse/Pods-Synapse-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Synapse/Pods-Synapse-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Synapse/Pods-Synapse-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ACC734EBC09469D30618C23E /* [CP] Embed Pods Frameworks */ = {
@@ -340,20 +419,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE718A0B2347005600759BB1 /* MyTransactionsButton.swift in Sources */,
+				BE6ECB60234C17AA003F82A5 /* SetKeepLogs.swift in Sources */,
 				BE87EDC82343073C00E267DE /* BalanceModule.swift in Sources */,
 				BE87EDD2234328AA00E267DE /* SwipeToPay.swift in Sources */,
+				BE718A3F2347BF9800759BB1 /* WelcomePage.swift in Sources */,
+				BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */,
+				BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */,
 				BE87EDDA2346DB5B00E267DE /* WithdrawPage.swift in Sources */,
 				BE87EDD623436B0200E267DE /* AccountPage.swift in Sources */,
+				BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */,
 				BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */,
 				BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */,
 				BE87EDD023431E0700E267DE /* DepositWithdrawButtons.swift in Sources */,
+				BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */,
+				BE718A092346FBAA00759BB1 /* TransactionPage.swift in Sources */,
+				BED52E12234BF6A1003D3D4A /* Socials.swift in Sources */,
+				BE822BA4234D3C33004B2FC6 /* CustomColors.swift in Sources */,
 				BE87EDCA2343077700E267DE /* GraphModule.swift in Sources */,
 				BE87EDCE234315E500E267DE /* CurrencySelector.swift in Sources */,
 				BE87EDDC2346DC4C00E267DE /* InstantTransferPage.swift in Sources */,
+				BE6ECB64234C2787003F82A5 /* AcceptTerms.swift in Sources */,
 				BE87EDA62342F10D00E267DE /* SceneDelegate.swift in Sources */,
+				BE718A412347BFBD00759BB1 /* MainPage.swift in Sources */,
+				BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */,
+				BE718A43234BD20300759BB1 /* ViewRouter.swift in Sources */,
 				BE87EDD82346DB1000E267DE /* DepositPage.swift in Sources */,
 				BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */,
-				BE87EDC62343066D00E267DE /* NavIndicatorBar.swift in Sources */,
+				BE718A0F23477AF800759BB1 /* HttpRequests.swift in Sources */,
+				BE822BA6234D4031004B2FC6 /* SignUpProgress.swift in Sources */,
+				BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */,
+				BE87EDDF2346E06900E267DE /* UpdateProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
