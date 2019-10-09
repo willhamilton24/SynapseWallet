@@ -9,45 +9,57 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewRouter: ViewRouter
     
     var body: some View {
-        NavigationView  {
-            VStack() {
-                
-                // Nav Indicator Bar
-                NavIndicatorBar().offset(x: 0.0, y: -120.0)
-                
-                //Spacer().frame(height: 20)
-                
-                // Balance Display Cluster
-                BalanceModule()//.offset(x: 0.0, y: -30.0)
-                
-                Spacer().frame(height: 50)
-                
-                // Select Active Currency
-                CurrencySelector()//.offset(x: 0.0, y: -30.0)
-                           
-                SwipeToPay()
-                
-                // Deposit / Withdraw Funds
-                DepositWithdrawButtons()
-                
-                Spacer().frame(height: 20)
-                
-                // Instant Transfer Funds
-                InstantTransferButton()
-                
-                // Coin Value Display
-                //GraphModule()//.offset(x: 0.0, y: -50.0)
-                
-               
-                
-                //Divider().frame(width: 250, height: 20, alignment: .center)
-                
-                
-                
-            }.padding()//.background(Color.blue.edgesIgnoringSafeArea(.all))
+        VStack {
+            if viewRouter.currentPage == "welcome" {
+                WelcomePage(viewRouter: viewRouter)
+            } else if viewRouter.currentPage == "login" {
+                LoginView(viewRouter: viewRouter)
+            } else if viewRouter.currentPage == "signup" {
+                SignUpView(viewRouter: viewRouter)
+            } else if viewRouter.currentPage == "keep-logs" {
+                SetKeepLogs(viewRouter: viewRouter)
+            } else if viewRouter.currentPage == "handle" {
+                SetHandle(viewRouter: viewRouter)
+            } else if viewRouter.currentPage == "terms" {
+                AcceptTerms(viewRouter: viewRouter)
+            } else if viewRouter.currentPage == "main" {
+                MainPage(viewRouter: viewRouter)
+            } else if viewRouter.currentPage == "email-password" {
+                EmailPassword(viewRouter: viewRouter)
+            }
+        }.background(CustomColors().light)
+            .edgesIgnoringSafeArea(.vertical)
+    }
+}
+
+extension UIColor {
+    public convenience init?(hex: String) {
+        let r, g, b, a: CGFloat
+
+        if hex.hasPrefix("#") {
+            let start = hex.index(hex.startIndex, offsetBy: 1)
+            let hexColor = String(hex[start...])
+
+            if hexColor.count == 8 {
+                let scanner = Scanner(string: hexColor)
+                var hexNumber: UInt64 = 0
+
+                if scanner.scanHexInt64(&hexNumber) {
+                    r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
+                    g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
+                    b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
+                    a = CGFloat(hexNumber & 0x000000ff) / 255
+
+                    self.init(red: r, green: g, blue: b, alpha: a)
+                    return
+                }
+            }
         }
+
+        return nil
     }
 }
 
@@ -55,6 +67,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewRouter: ViewRouter())
     }
 }
