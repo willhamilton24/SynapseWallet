@@ -19,11 +19,7 @@ struct SetHandle: View {
             BigLogo()
             
             VStack (spacing: 0){
-                Spacer().frame(height: 35)
-                
-                Text("Getting Started...").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Thin", size:20))
-                
-                Spacer().frame(height: 13)
+                GettingStartedText()
                 
                 VStack {
                     Text("Choose Handle").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Light", size: 35)).padding(.bottom, 30)

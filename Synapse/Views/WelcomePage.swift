@@ -28,8 +28,8 @@ struct WelcomePage: View {
                 Button(action: {self.viewRouter.currentPage = "login"}) {
                     Text("Login").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                 }.frame(minWidth: 0, maxWidth: .infinity)
-                .background(CustomColors().primeGradiant)
-                    .cornerRadius(40)
+                .background(CustomColors().lg)
+                    .cornerRadius(30)
                 .padding()
                     .foregroundColor(CustomColors().light)
 //
@@ -51,8 +51,8 @@ struct WelcomePage: View {
                 Button(action: {self.viewRouter.currentPage = "handle"}) {
                     Text("Get Started").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                 }.frame(minWidth: 0, maxWidth: .infinity)
-                .background(CustomColors().primeGradiant)
-                    .cornerRadius(40)
+                .background(CustomColors().lg)
+                    .cornerRadius(30)
                 .padding()
                     .foregroundColor(CustomColors().light)
                 

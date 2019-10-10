@@ -18,7 +18,7 @@ struct BigLogo: View {
             }.font(Font.custom("Roboto-Thin", size:75))
                 .padding()
                 .foregroundColor(CustomColors().light)
-                .frame(minWidth: 500, maxWidth: .infinity)
+                .frame(minWidth: 500, maxWidth: .infinity, minHeight: 350, maxHeight: 350)
                 .position(x:182,y:170)
                 .background(CustomColors().primeGradiant)
                 .edgesIgnoringSafeArea(.top)
