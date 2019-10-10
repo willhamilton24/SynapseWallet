@@ -23,7 +23,7 @@ struct WelcomePage: View {
             VStack (spacing: 0) {
                 Spacer().frame(height:55)
                 
-                Text("Welcome" + self.users).foregroundColor(CustomColors().light).font(Font.custom("Roboto-Light", size:8))
+                Text("Welcome").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Light", size:60))
                 
                 Spacer().frame(height:30)
                 
@@ -64,7 +64,7 @@ struct WelcomePage: View {
                             self.users = error.localizedDescription
                         } else if let json = json {
                             print(json)
-                            self.users = json.description
+                            self.viewRouter.users = json//.description
                             self.viewRouter.currentPage = "handle"
                         }
                     }
