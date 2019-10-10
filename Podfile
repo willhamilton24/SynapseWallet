@@ -6,7 +6,7 @@ target 'Synapse' do
   use_frameworks!
 
   pod 'Charts'
-  pod 'Alamofire', '~> 5.0.0-rc.2'
+  pod 'Alamofire', '~> 4.7.3'
   pod 'p2.OAuth2', '~> 5.0.0'
   pod 'GoogleSignIn'
 
