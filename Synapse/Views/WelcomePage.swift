@@ -12,6 +12,8 @@ struct WelcomePage: View {
     
     @ObservedObject var viewRouter: ViewRouter
     
+    @State var token: String = "Your Handle"
+    
     var body: some View {
         VStack {
             //Spacer().frame(height:20)
@@ -22,14 +24,21 @@ struct WelcomePage: View {
                 Spacer().frame(height:55)
                 
                 Text("Welcome").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Light", size:60))
-                
+                //Text(self.token)
                 Spacer().frame(height:30)
                 
-                Button(action: {self.viewRouter.currentPage = "login"}) {
+                Button(action:
+                {
+                    self.viewRouter.currentPage = "login"
+                    
+                }
+                
+                
+                ) {
                     Text("Login").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                 }.frame(minWidth: 0, maxWidth: .infinity)
-                .background(CustomColors().primeGradiant)
-                    .cornerRadius(40)
+                .background(CustomColors().lg)
+                    .cornerRadius(30)
                 .padding()
                     .foregroundColor(CustomColors().light)
 //
@@ -48,11 +57,24 @@ struct WelcomePage: View {
                     Divider().frame(width: 150).padding(.vertical, 30)
                 }
                 
-                Button(action: {self.viewRouter.currentPage = "handle"}) {
+                Button(action: {
+                    self.viewRouter.currentPage = "loading"
+                    NetworkingClient().handleArray() { (json, error) in
+                        if let error = error {
+                            //print(error)
+                            self.viewRouter.users = [error.localizedDescription]
+                        } else if let json = json {
+                            print(json)
+                            self.viewRouter.users = json//.description
+                            self.viewRouter.currentPage = "handle"
+                        }
+                    }
+                    
+                }) {
                     Text("Get Started").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                 }.frame(minWidth: 0, maxWidth: .infinity)
-                .background(CustomColors().primeGradiant)
-                    .cornerRadius(40)
+                .background(CustomColors().lg)
+                    .cornerRadius(30)
                 .padding()
                     .foregroundColor(CustomColors().light)
                 

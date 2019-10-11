@@ -19,11 +19,7 @@ struct SetHandle: View {
             BigLogo()
             
             VStack (spacing: 0){
-                Spacer().frame(height: 35)
-                
-                Text("Getting Started...").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Thin", size:20))
-                
-                Spacer().frame(height: 13)
+                GettingStartedText()
                 
                 VStack {
                     Text("Choose Handle").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Light", size: 35)).padding(.bottom, 30)
@@ -57,10 +53,10 @@ struct SetHandle: View {
                     }.offset(x: -64, y: 0.0)
                     
                     HStack (spacing: 15){
-                         if (self.isTaken == false) {
-                            Image("dot").resizable().frame(width: 28, height: 28).background(Color.green).cornerRadius(30)
+                        if self.viewRouter.users.contains(self.handle) {
+                            Image("dot").resizable().frame(width: 28, height: 28).background(Color.red).cornerRadius(30)
                         } else {
-                             Image("dot").resizable().frame(width: 28, height: 28).background(Color.red).cornerRadius(30)
+                             Image("dot").resizable().frame(width: 28, height: 28).background(Color.green).cornerRadius(30)
                         }
                          
                          Text("Handle is Available").foregroundColor(CustomColors().light)

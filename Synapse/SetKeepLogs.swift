@@ -16,13 +16,14 @@ struct SetKeepLogs: View {
         VStack {
             BigLogo()
         
-            Spacer().frame(height: 18)
+            GettingStartedText()
             
             VStack (alignment: .leading) {
-                Text("Welcome to Synapse,").foregroundColor(CustomColors().light).font(.custom("Roboto-Thin", size:38)).padding(.horizontal, 0)
-                Text(self.viewRouter.handle + ".").font(.custom("Roboto-Light", size:60)).padding(.horizontal, 0).foregroundColor(CustomColors().prime)
+                Text("Welcome to Synapse,").foregroundColor(CustomColors().light).font(.custom("Roboto-Thin", size:24)).padding(.horizontal, 0)
+                Text("@" + self.viewRouter.handle + ".").font(.custom("Roboto-Light", size:38)).padding(.horizontal, 0).foregroundColor(CustomColors().prime)
             }
             .padding(.horizontal, 0)
+            .offset(x: -70)
             
             //Spacer().frame(height: 5)
             
@@ -42,14 +43,14 @@ struct SetKeepLogs: View {
             .foregroundColor(.gray)
             
             
-            Divider().frame(width: 360, height: 28)
-            
-            if keepLogsBool {
-                Text("Logs Will Be Kept").font(.title).foregroundColor(Color.green)
-            } else {
-                Text("Logs Won't Be Kept").font(.title).foregroundColor(Color.red)
-            }
-            
+//            Divider().frame(width: 360, height: 28)
+//            
+//            if keepLogsBool {
+//                Text("Logs Will Be Kept").font(.title).foregroundColor(Color.green)
+//            } else {
+//                Text("Logs Won't Be Kept").font(.title).foregroundColor(Color.red)
+//            }
+//
             //Spacer().frame(height: 20)
             
             VStack (spacing: 12) {

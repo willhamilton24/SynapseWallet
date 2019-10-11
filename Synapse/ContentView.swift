@@ -15,6 +15,8 @@ struct ContentView: View {
         VStack {
             if viewRouter.currentPage == "welcome" {
                 WelcomePage(viewRouter: viewRouter)
+            } else if viewRouter.currentPage == "loading" {
+                LoadingView(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "login" {
                 LoginView(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "signup" {

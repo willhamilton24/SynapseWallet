@@ -12,9 +12,10 @@
 		BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */; };
 		BE6ECB60234C17AA003F82A5 /* SetKeepLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */; };
 		BE6ECB64234C2787003F82A5 /* AcceptTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */; };
+		BE6FEA85234FD6AC00758CD2 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */; };
+		BE6FEA87234FF64300758CD2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6FEA86234FF64300758CD2 /* LoadingView.swift */; };
 		BE718A092346FBAA00759BB1 /* TransactionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A082346FBAA00759BB1 /* TransactionPage.swift */; };
 		BE718A0B2347005600759BB1 /* MyTransactionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */; };
-		BE718A0F23477AF800759BB1 /* HttpRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A0E23477AF800759BB1 /* HttpRequests.swift */; };
 		BE718A3F2347BF9800759BB1 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A3E2347BF9800759BB1 /* WelcomePage.swift */; };
 		BE718A412347BFBD00759BB1 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A402347BFBD00759BB1 /* MainPage.swift */; };
 		BE718A43234BD20300759BB1 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A42234BD20300759BB1 /* ViewRouter.swift */; };
@@ -24,6 +25,7 @@
 		BE822BA6234D4031004B2FC6 /* SignUpProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA5234D4031004B2FC6 /* SignUpProgress.swift */; };
 		BE822BB4234DA5A3004B2FC6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE822BB3234DA5A3004B2FC6 /* Roboto-Light.ttf */; };
 		BE822BB6234DA5AE004B2FC6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE822BB5234DA5AE004B2FC6 /* Roboto-Thin.ttf */; };
+		BE822BB8234FCB63004B2FC6 /* GettingStartedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BB7234FCB63004B2FC6 /* GettingStartedText.swift */; };
 		BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA32342F10D00E267DE /* AppDelegate.swift */; };
 		BE87EDA62342F10D00E267DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA52342F10D00E267DE /* SceneDelegate.swift */; };
 		BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDA72342F10D00E267DE /* ContentView.swift */; };
@@ -66,9 +68,10 @@
 		BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHandle.swift; sourceTree = "<group>"; };
 		BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetKeepLogs.swift; sourceTree = "<group>"; };
 		BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTerms.swift; sourceTree = "<group>"; };
+		BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
+		BE6FEA86234FF64300758CD2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		BE718A082346FBAA00759BB1 /* TransactionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPage.swift; sourceTree = "<group>"; };
 		BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTransactionsButton.swift; sourceTree = "<group>"; };
-		BE718A0E23477AF800759BB1 /* HttpRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequests.swift; sourceTree = "<group>"; };
 		BE718A3E2347BF9800759BB1 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomePage.swift; path = Views/WelcomePage.swift; sourceTree = "<group>"; };
 		BE718A402347BFBD00759BB1 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		BE718A42234BD20300759BB1 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		BE822BA5234D4031004B2FC6 /* SignUpProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProgress.swift; sourceTree = "<group>"; };
 		BE822BB3234DA5A3004B2FC6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		BE822BB5234DA5AE004B2FC6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		BE822BB7234FCB63004B2FC6 /* GettingStartedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedText.swift; sourceTree = "<group>"; };
 		BE87EDA02342F10D00E267DE /* Synapse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Synapse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE87EDA32342F10D00E267DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE87EDA52342F10D00E267DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			children = (
 				BE822BB3234DA5A3004B2FC6 /* Roboto-Light.ttf */,
 				BE822BB5234DA5AE004B2FC6 /* Roboto-Thin.ttf */,
+				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				BE822BA5234D4031004B2FC6 /* SignUpProgress.swift */,
 				BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */,
 				BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */,
+				BE822BB7234FCB63004B2FC6 /* GettingStartedText.swift */,
 				BE718A402347BFBD00759BB1 /* MainPage.swift */,
 				BEBD7FC9234BFAE90046EADE /* LoginView.swift */,
 				BEBD7FCB234BFB060046EADE /* SignUpView.swift */,
@@ -211,8 +217,8 @@
 				BE87EDD523436B0200E267DE /* AccountPage.swift */,
 				BE87EDDE2346E06900E267DE /* UpdateProfile.swift */,
 				BE87EDA92342F11000E267DE /* Assets.xcassets */,
+				BE6FEA86234FF64300758CD2 /* LoadingView.swift */,
 				BE822BAE234DA4B2004B2FC6 /* Fonts */,
-				BE718A0E23477AF800759BB1 /* HttpRequests.swift */,
 				BE87EDAE2342F11000E267DE /* LaunchScreen.storyboard */,
 				BE87EDB12342F11000E267DE /* Info.plist */,
 				BE87EDAB2342F11000E267DE /* Preview Content */,
@@ -426,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE718A0B2347005600759BB1 /* MyTransactionsButton.swift in Sources */,
+				BE822BB8234FCB63004B2FC6 /* GettingStartedText.swift in Sources */,
 				BE6ECB60234C17AA003F82A5 /* SetKeepLogs.swift in Sources */,
 				BE87EDC82343073C00E267DE /* BalanceModule.swift in Sources */,
 				BE87EDD2234328AA00E267DE /* SwipeToPay.swift in Sources */,
@@ -438,6 +445,7 @@
 				BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */,
 				BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */,
 				BE87EDD023431E0700E267DE /* DepositWithdrawButtons.swift in Sources */,
+				BE6FEA87234FF64300758CD2 /* LoadingView.swift in Sources */,
 				BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */,
 				BE718A092346FBAA00759BB1 /* TransactionPage.swift in Sources */,
 				BED52E12234BF6A1003D3D4A /* Socials.swift in Sources */,
@@ -448,11 +456,11 @@
 				BE6ECB64234C2787003F82A5 /* AcceptTerms.swift in Sources */,
 				BE87EDA62342F10D00E267DE /* SceneDelegate.swift in Sources */,
 				BE718A412347BFBD00759BB1 /* MainPage.swift in Sources */,
+				BE6FEA85234FD6AC00758CD2 /* NetworkingClient.swift in Sources */,
 				BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */,
 				BE718A43234BD20300759BB1 /* ViewRouter.swift in Sources */,
 				BE87EDD82346DB1000E267DE /* DepositPage.swift in Sources */,
 				BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */,
-				BE718A0F23477AF800759BB1 /* HttpRequests.swift in Sources */,
 				BE822BA6234D4031004B2FC6 /* SignUpProgress.swift in Sources */,
 				BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */,
 				BE87EDDF2346E06900E267DE /* UpdateProfile.swift in Sources */,

@@ -22,6 +22,18 @@ class ViewRouter: ObservableObject {
         }
     }
     
+    var users: [String] = ["404"] {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
+    var token: String  = "" {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
     var method: String = "local" {
         didSet {
             objectWillChange.send(self)

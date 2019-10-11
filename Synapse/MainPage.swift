@@ -16,6 +16,7 @@ struct MainPage: View {
         NavigationView  {
             VStack() {
                 
+                
                 // Top Bar
                 HStack(spacing: 10.0) {
                     
@@ -26,12 +27,14 @@ struct MainPage: View {
                     
                     //Logout Button
                     Button(action: {}) {
-                        Image("logout2")
+                        Text(self.viewRouter.token)
+                        //Image("logout2")
                     }.foregroundColor(.yellow).background(Color.white)
                         
                 }//.offset(x: 0.0, y: -100.0)
                 
                 Spacer().frame(height: 100)
+                
                 
                 // Balance Display Cluster
                 BalanceModule()//.offset(x: 0.0, y: -30.0)
