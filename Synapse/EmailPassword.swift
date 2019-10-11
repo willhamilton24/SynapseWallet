@@ -51,15 +51,12 @@ struct EmailPassword: View {
                     self.viewRouter.email = "\(self.email)"
                     self.viewRouter.password = "\(self.password)"
                 }) {
-                    Text("Next")
+                    Text("Next").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                 }.frame(minWidth: 0, maxWidth: .infinity)
-                    .padding()
-                    .foregroundColor(.yellow)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 40)
-                        .stroke(Color.yellow, lineWidth: 2)
-                        .padding(.horizontal, 40)
-                    )
+                .background(CustomColors().lg)
+                    .cornerRadius(30)
+                .padding()
+                    .foregroundColor(CustomColors().light)
                 
                 Button(action: {
                     self.viewRouter.currentPage = "keep-logs"

@@ -15,68 +15,85 @@ struct LoginView: View {
     @State var password: String = ""
     
     var body: some View {
-        VStack {
-            Text("Login").font(.title).foregroundColor(.yellow)
+        ZStack {
             
-            Text("Handle").font(.title)
+            VStack {
+                Spacer().frame(height: 235)
                 
-            TextField(" Your Handle", text: $handle)
-                    .padding(.horizontal, 30)
-                    .padding(.vertical)
-                    .background(
-                        RoundedRectangle(cornerRadius: 5)
-                            .strokeBorder(Color.yellow, lineWidth: 1)
-                            .padding(.horizontal, 25)
-                    )
-            
-            Text("Password").font(.title)
+                Text("Login").foregroundColor(CustomColors().prime).font(Font.custom("Roboto-Thin", size:60))
                 
-            TextField(" Your Password", text: $password)
-                    .padding(.horizontal, 30)
-                    .padding(.vertical)
-                    .background(
-                        RoundedRectangle(cornerRadius: 5)
-                            .strokeBorder(Color.yellow, lineWidth: 1)
-                            .padding(.horizontal, 25)
-                    )
-            
-            VStack (spacing: 12) {
-                Button(action: {
-                    //self.viewRouter.currentPage = "keep-logs"
-                    self.viewRouter.handle = self.handle
-                    NetworkingClient().login(username: self.handle, password: self.password) { (json, error) in
-                        if json != nil {
-                            if json == "invalid username/password" {
-                                print("INVALID")
-                            } else {
-                                self.viewRouter.token = json!
-                                self.viewRouter.currentPage = "main"
+                VStack (alignment: .leading) {
+                    Text("Handle").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().prime).padding(.horizontal, 30)
+                        
+                    TextField(" Your Handle", text: $handle)
+                            .padding(.horizontal, 30)
+                            .padding(.vertical)
+                            .background(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .strokeBorder(CustomColors().primeGradiant, lineWidth: 1)
+                                    .padding(.horizontal, 25)
+                            ).foregroundColor(CustomColors().light)
+                    
+                    Spacer().frame(height: 20)
+                    
+                    Text("Password").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().prime).padding(.horizontal, 30)
+                        
+                    TextField(" Your Password", text: $password)
+                            .padding(.horizontal, 30)
+                            .padding(.vertical)
+                            .background(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .strokeBorder(CustomColors().primeGradiant, lineWidth: 1)
+                                    .padding(.horizontal, 25)
+                            ).foregroundColor(CustomColors().light)
+                    
+                    
+                }
+                
+                Button(action: {}) {
+                    Text("Forgot password?")
+                }
+                
+                Spacer().frame(height: 40)
+                
+                VStack (spacing: 12) {
+                    Button(action: {
+                        //self.viewRouter.currentPage = "keep-logs"
+                        self.viewRouter.handle = self.handle
+                        NetworkingClient().login(username: self.handle, password: self.password) { (json, error) in
+                            if json != nil {
+                                if json == "invalid username/password" {
+                                    print("INVALID")
+                                } else {
+                                    self.viewRouter.token = json!
+                                    self.viewRouter.currentPage = "main"
+                                }
                             }
                         }
-                    }
-                }) {
-                    Text("Login").padding().font(.custom("Roboto-Thin", size:30)).foregroundColor(CustomColors().light)
-                }.frame(minWidth: 0, maxWidth: .infinity)
-                .background(CustomColors().primeGradiant)
-                    .cornerRadius(40)
-                .padding()
-                    .foregroundColor(CustomColors().light)
-                    .padding(.vertical, 0)
-                
-                Button(action: {
-                    self.viewRouter.currentPage = "welcome"
-                }) {
-                    Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
-                }.frame(minWidth: 225, maxWidth: 250)
-                    .background(CustomColors().primeGradiant)
-                        .cornerRadius(40)
+                    }) {
+                        Text("Login").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
+                    }.frame(minWidth: 0, maxWidth: .infinity)
+                    .background(CustomColors().lg)
+                        .cornerRadius(30)
                     .padding()
-                    .padding(.vertical, 0)
                         .foregroundColor(CustomColors().light)
-            }//.position(x: 210, y:300)
-            
-            
-        }
+                    
+                    Button(action: {
+                        self.viewRouter.currentPage = "welcome"
+                    }) {
+                        Text("Back").padding().font(Font.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
+                    }.frame(minWidth: 225, maxWidth: 250)
+                        .background(CustomColors().lg)
+                            .cornerRadius(25)
+                        .padding()
+                        .padding(.vertical, 0)
+                            .foregroundColor(CustomColors().light)
+                }//.position(x: 210, y:300)
+                
+                
+            }
+            BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
+        }.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
     }
 }
 

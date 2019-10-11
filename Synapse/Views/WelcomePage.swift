@@ -15,11 +15,11 @@ struct WelcomePage: View {
     @State var token: String = "Your Handle"
     
     var body: some View {
-        VStack {
+        ZStack {
             //Spacer().frame(height:20)
             
-            ZStack {
-                BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
+            VStack {
+                
                 
                 VStack (spacing: 0) {
                     Spacer().frame(height:235)
@@ -92,6 +92,8 @@ struct WelcomePage: View {
                 //Spacer().frame(height: 65)
                 }
             .background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
+            
+        BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
         }.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
     }
 }

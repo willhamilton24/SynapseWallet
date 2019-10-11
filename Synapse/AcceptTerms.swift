@@ -111,29 +111,24 @@ struct AcceptTerms: View {
                             
                         }
                     }) {
-                        Text("Go To Wallet")
+                        Text("Sign Up").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                     }.frame(minWidth: 0, maxWidth: .infinity)
-                        .padding()
-                        .foregroundColor(.yellow)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 40)
-                            .stroke(Color.yellow, lineWidth: 2)
-                            .padding(.horizontal, 40)
-                    )
+                    .background(CustomColors().lg)
+                        .cornerRadius(30)
+                    .padding()
+                        .foregroundColor(CustomColors().light)
                 }
                 
                 Button(action: {
                     self.viewRouter.currentPage = "email-password"
                 }) {
-                    Text("Back")
-                }.frame(minWidth: 0, maxWidth: 200)
+                    Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
+                }.frame(minWidth: 225, maxWidth: 250)
+                    .background(CustomColors().lg)
+                        .cornerRadius(25)
                     .padding()
-                    .foregroundColor(.yellow)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 40)
-                        .stroke(Color.yellow, lineWidth: 2)
-                        .padding(.horizontal, 40)
-                )
+                    .padding(.vertical, 0)
+                        .foregroundColor(CustomColors().light)
                 
                 
             }

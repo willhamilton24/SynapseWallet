@@ -77,31 +77,30 @@ struct SetHandle: View {
                             self.viewRouter.handle = "\(self.handle)"
                             // Add No Handle Error
                         }) {
-                            Text("Next").padding().font(.custom("Roboto-Thin", size:30)).foregroundColor(CustomColors().light)
+                            Text("Next").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                         }.frame(minWidth: 0, maxWidth: .infinity)
-                        .background(CustomColors().primeGradiant)
-                            .cornerRadius(40)
+                        .background(CustomColors().lg)
+                            .cornerRadius(30)
                         .padding()
                             .foregroundColor(CustomColors().light)
-                            .padding(.vertical, 0)
                         
                         Button(action: {
                             self.viewRouter.currentPage = "welcome"
                         }) {
                             Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
                         }.frame(minWidth: 225, maxWidth: 250)
-                            .background(CustomColors().primeGradiant)
-                                .cornerRadius(40)
+                            .background(CustomColors().lg)
+                                .cornerRadius(25)
                             .padding()
                             .padding(.vertical, 0)
                                 .foregroundColor(CustomColors().light)
                     }//.position(x: 210, y:300)
                     
                     //Spacer().frame(height: 70)
-                }.background(CustomColors().dark)
+                }.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
             
             }
-        }.edgesIgnoringSafeArea(.bottom)
+        }.edgesIgnoringSafeArea(.bottom).background(CustomColors().dark)
     }
 }
 
