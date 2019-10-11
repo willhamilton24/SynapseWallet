@@ -12,15 +12,15 @@ struct BigLogo: View {
     var body: some View {
         
             VStack(alignment: .leading) {
-                Spacer().frame(height: 70)
+                Spacer().frame(height: 120)
                 Text("SYNAPSE")
                 Text("WALLET.")
             }.font(Font.custom("Roboto-Thin", size:75))
                 .padding()
                 .foregroundColor(CustomColors().light)
-                .frame(minWidth: 500, maxWidth: .infinity, idealHeight: 350)
+                .frame(width: 500, height: 320)
                 .fixedSize()
-                .position(x:182,y:170)
+                //.position(x:182,y:0)
                 .background(CustomColors().primeGradiant)
                 .edgesIgnoringSafeArea(.top)
             
