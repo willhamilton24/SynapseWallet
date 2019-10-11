@@ -34,12 +34,13 @@ class NetworkingClient  {
         }
     }
     
-    func registerUser(username: String, password: String, email: String, saveLogs: Bool, completion: @escaping WebServiceResponseString) {
+    func registerUser(username: String, password: String, email: String, saveLogs: Bool, receiveEmails: Bool, completion: @escaping WebServiceResponseString) {
         let parameters: [String: Any] = [
             "username": username,
             "password": password,
             "email" : email,
-            "saveLogs": saveLogs
+            "saveLogs": saveLogs,
+            "receiveEmails": receiveEmails
         ]
         
         //var urlRequest = URLRequest(url: URL(string: "https://serverless.willhamilton24.now.sh/api/auth/signup")!)

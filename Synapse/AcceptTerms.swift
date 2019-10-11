@@ -89,7 +89,7 @@ struct AcceptTerms: View {
                         )
                 } else {
                     Button(action: {
-                        NetworkingClient().registerUser(username: self.viewRouter.handle, password: self.viewRouter.password, email: self.viewRouter.email, saveLogs: self.viewRouter.keepLogs) { (json, error) in
+                        NetworkingClient().registerUser(username: self.viewRouter.handle, password: self.viewRouter.password, email: self.viewRouter.email, saveLogs: self.viewRouter.keepLogs, receiveEmails: self.emailAccept) { (json, error) in
                             if let error = error {
                                 print(error)
                                 //self.viewRouter.token = error.localizedDescription
