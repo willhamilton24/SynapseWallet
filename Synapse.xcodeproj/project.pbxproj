@@ -11,8 +11,7 @@
 		A19F850A7E24DC768952B79D /* Pods_SynapseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C208035EAC5F80A9F7EB2EC /* Pods_SynapseTests.framework */; };
 		BE6BAB1E2350287E00E2C17B /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB1D2350287E00E2C17B /* LoadingAnimation.swift */; };
 		BE6BAB20235028E200E2C17B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB1F235028E200E2C17B /* LottieView.swift */; };
-		BE6BAB2223502DDC00E2C17B /* loading-disc.json in Resources */ = {isa = PBXBuildFile; fileRef = BE6BAB2123502DDC00E2C17B /* loading-disc.json */; };
-		BE6BAB2423502E9700E2C17B /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = BE6BAB2323502E9700E2C17B /* loader.json */; };
+		BE6BAB28235039B700E2C17B /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = BE6BAB27235039B700E2C17B /* loader.json */; };
 		BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */; };
 		BE6ECB60234C17AA003F82A5 /* SetKeepLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */; };
 		BE6ECB64234C2787003F82A5 /* AcceptTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */; };
@@ -71,8 +70,7 @@
 		B8BA29DB202E6307048475DC /* Pods-Synapse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Synapse.debug.xcconfig"; path = "Target Support Files/Pods-Synapse/Pods-Synapse.debug.xcconfig"; sourceTree = "<group>"; };
 		BE6BAB1D2350287E00E2C17B /* LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
 		BE6BAB1F235028E200E2C17B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		BE6BAB2123502DDC00E2C17B /* loading-disc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "loading-disc.json"; path = "../../../../../../Downloads/loading-disc.json"; sourceTree = "<group>"; };
-		BE6BAB2323502E9700E2C17B /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = loader.json; path = ../../../../../../Downloads/loader.json; sourceTree = "<group>"; };
+		BE6BAB27235039B700E2C17B /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHandle.swift; sourceTree = "<group>"; };
 		BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetKeepLogs.swift; sourceTree = "<group>"; };
 		BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTerms.swift; sourceTree = "<group>"; };
@@ -165,6 +163,7 @@
 			children = (
 				BE822BB3234DA5A3004B2FC6 /* Roboto-Light.ttf */,
 				BE822BB5234DA5AE004B2FC6 /* Roboto-Thin.ttf */,
+				BE6BAB27235039B700E2C17B /* loader.json */,
 				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
 			);
 			path = Fonts;
@@ -225,8 +224,6 @@
 				BE87EDD523436B0200E267DE /* AccountPage.swift */,
 				BE87EDDE2346E06900E267DE /* UpdateProfile.swift */,
 				BE87EDA92342F11000E267DE /* Assets.xcassets */,
-				BE6BAB2123502DDC00E2C17B /* loading-disc.json */,
-				BE6BAB2323502E9700E2C17B /* loader.json */,
 				BE6FEA86234FF64300758CD2 /* LoadingView.swift */,
 				BE6BAB1D2350287E00E2C17B /* LoadingAnimation.swift */,
 				BE6BAB1F235028E200E2C17B /* LottieView.swift */,
@@ -339,10 +336,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6BAB28235039B700E2C17B /* loader.json in Resources */,
 				BE87EDB02342F11000E267DE /* LaunchScreen.storyboard in Resources */,
-				BE6BAB2223502DDC00E2C17B /* loading-disc.json in Resources */,
 				BE87EDAD2342F11000E267DE /* Preview Assets.xcassets in Resources */,
-				BE6BAB2423502E9700E2C17B /* loader.json in Resources */,
 				BE822BB4234DA5A3004B2FC6 /* Roboto-Light.ttf in Resources */,
 				BE822BB6234DA5AE004B2FC6 /* Roboto-Thin.ttf in Resources */,
 				BE87EDAA2342F11000E267DE /* Assets.xcassets in Resources */,
