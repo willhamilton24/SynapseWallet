@@ -12,7 +12,7 @@ struct WelcomePage: View {
     
     @ObservedObject var viewRouter: ViewRouter
     
-    @State var users: String = "Your Handle"
+    @State var token: String = "Your Handle"
     
     var body: some View {
         VStack {
@@ -24,12 +24,13 @@ struct WelcomePage: View {
                 Spacer().frame(height:55)
                 
                 Text("Welcome").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Light", size:60))
-                
+                //Text(self.token)
                 Spacer().frame(height:30)
                 
                 Button(action:
                 {
                     self.viewRouter.currentPage = "login"
+                    
                 }
                 
                 
@@ -61,7 +62,7 @@ struct WelcomePage: View {
                     NetworkingClient().handleArray() { (json, error) in
                         if let error = error {
                             //print(error)
-                            self.users = error.localizedDescription
+                            self.viewRouter.users = [error.localizedDescription]
                         } else if let json = json {
                             print(json)
                             self.viewRouter.users = json//.description

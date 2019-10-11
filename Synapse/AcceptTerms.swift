@@ -89,7 +89,27 @@ struct AcceptTerms: View {
                         )
                 } else {
                     Button(action: {
-                        self.viewRouter.currentPage = "main"
+                        NetworkingClient().registerUser(username: self.viewRouter.handle, password: self.viewRouter.password, email: self.viewRouter.email, saveLogs: self.viewRouter.keepLogs) { (json, error) in
+                            if let error = error {
+                                print(error)
+                                //self.viewRouter.token = error.localizedDescription
+                            } else if let json = json {
+                                print(json)
+                                if json == "user created" {
+                                    NetworkingClient().login(username: self.viewRouter.handle, password: self.viewRouter.password) { (json2, error2) in
+                                            if let error2 = error2 {
+                                                print(error2)
+                                                self.viewRouter.token = error2.localizedDescription
+                                            } else if let json2 = json2 {
+                                                print(json2)
+                                                self.viewRouter.token = json2
+                                                self.viewRouter.currentPage = "main"
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
                     }) {
                         Text("Go To Wallet")
                     }.frame(minWidth: 0, maxWidth: .infinity)

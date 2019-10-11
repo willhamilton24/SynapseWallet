@@ -28,6 +28,12 @@ class ViewRouter: ObservableObject {
         }
     }
     
+    var token: String  = "" {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
     var method: String = "local" {
         didSet {
             objectWillChange.send(self)
