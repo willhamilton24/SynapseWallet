@@ -5,10 +5,8 @@ target 'Synapse' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Charts'
   pod 'Alamofire', '~> 4.7.3'
-  pod 'p2.OAuth2', '~> 5.0.0'
-  pod 'GoogleSignIn'
+  pod 'lottie-ios'
 
   # Pods for Synapse
 

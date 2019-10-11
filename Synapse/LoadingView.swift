@@ -13,8 +13,18 @@ struct LoadingView: View {
     
     var body: some View {
         VStack {
-            Text("Loading...").foregroundColor(.white)
-        }
+            BigLogo()
+            
+            Spacer().frame(height: 140)
+            
+            VStack {
+                LoadingAnimation()
+                Text("  Loading...").foregroundColor(.white).font(Font.custom("Roboto-Light", size:50))
+            }
+            
+            Spacer().frame(height: 220)
+        }.background(CustomColors().dark)
+            .edgesIgnoringSafeArea(.bottom)
     }
 }
 
