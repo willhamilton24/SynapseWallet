@@ -11,7 +11,7 @@ import SwiftUI
 struct SetHandle: View {
     @ObservedObject var viewRouter: ViewRouter
     
-    @State private var handle: String = ""
+    @State var handle: String = ""
     @State private var isTaken: Bool = false
     
     var body: some View {
@@ -23,6 +23,8 @@ struct SetHandle: View {
                 
                 VStack {
                     Text("Choose Handle").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Light", size: 35)).padding(.bottom, 30)
+                    
+                    
                     
                     TextField("  Your Handle", text: $handle)
                         .padding(.horizontal, 30)

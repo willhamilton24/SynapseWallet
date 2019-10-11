@@ -18,6 +18,8 @@ struct SetKeepLogs: View {
         
             GettingStartedText()
             
+            Spacer().frame(height: 5)
+            
             VStack (alignment: .leading) {
                 Text("Welcome to Synapse,").foregroundColor(CustomColors().light).font(.custom("Roboto-Thin", size:24)).padding(.horizontal, 0)
                 Text("@" + self.viewRouter.handle + ".").font(.custom("Roboto-Light", size:38)).padding(.horizontal, 0).foregroundColor(CustomColors().prime)
@@ -25,7 +27,7 @@ struct SetKeepLogs: View {
             .padding(.horizontal, 0)
             .offset(x: -70)
             
-            //Spacer().frame(height: 5)
+            
             
             
                 
@@ -51,7 +53,7 @@ struct SetKeepLogs: View {
 //                Text("Logs Won't Be Kept").font(.title).foregroundColor(Color.red)
 //            }
 //
-            //Spacer().frame(height: 20)
+           Spacer().frame(height: 81)
             
             VStack (spacing: 12) {
                 Button(action: {
