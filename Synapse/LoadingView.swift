@@ -12,17 +12,16 @@ struct LoadingView: View {
     @ObservedObject var viewRouter: ViewRouter
     
     var body: some View {
-        VStack {
-            BigLogo()
-            
-            Spacer().frame(height: 140)
-            
+        ZStack {
+            BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
             VStack {
-                LoadingAnimation()
-                Text("  Loading...").foregroundColor(.white).font(Font.custom("Roboto-Light", size:50))
-            }
+                Spacer().frame(height: 235)
             
-            Spacer().frame(height: 220)
+                VStack {
+                    LoadingAnimation()
+                    Text("  Loading...").foregroundColor(.white).font(Font.custom("Roboto-Light", size:50))
+                }
+            }
         }.background(CustomColors().dark)
             .edgesIgnoringSafeArea(.bottom)
     }
