@@ -84,7 +84,15 @@ struct SetHandle: View {
                                 self.alertTitle = "Handle Taken"
                                 self.alertText = "This handle has already been registered. Please choose a different one."
                                 self.showAlert = true
-                             }
+                            } else {
+                                self.alertText = "Your handle must be between 4 and 24 charaters in length. Please choose a different one."
+                                if (self.handle.count < 4) {
+                                    self.alertTitle = "Handle Too Short"
+                                } else {
+                                    self.alertTitle = "Handle Too Long"
+                                }
+                                self.showAlert = true
+                            }
                         }) {
                             Text("Next").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                         }.frame(minWidth: 0, maxWidth: .infinity)
