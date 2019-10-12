@@ -14,11 +14,9 @@ struct SetKeepLogs: View {
     
     var body: some View {
         ZStack {
-            
-        
+            BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
             VStack {
                 Spacer().frame(height: 235)
-                GettingStartedText()
                 
                 Spacer().frame(height: 5)
                 
@@ -80,13 +78,11 @@ struct SetKeepLogs: View {
                     .padding(.vertical, 0)
                     .foregroundColor(CustomColors().light)
                 }.edgesIgnoringSafeArea(.bottom).background(CustomColors().dark)
-
-                Spacer().frame(height: 70)
                 
                 
-            }.padding(.horizontal, 20).edgesIgnoringSafeArea(.bottom).background(CustomColors().dark)
+            }//.padding(.horizontal, 20).edgesIgnoringSafeArea(.bottom).background(CustomColors().dark)
             
-            BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
+            
         }.edgesIgnoringSafeArea(.bottom).background(CustomColors().dark)
     }
 }

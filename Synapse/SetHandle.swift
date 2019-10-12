@@ -22,8 +22,8 @@ struct SetHandle: View {
                 
                 Spacer().frame(height:235)
                 
-                VStack (spacing: 0){
-                    GettingStartedText()
+                //VStack (spacing: 0){
+                    //GettingStartedText()
                     
                     VStack {
                         Text("Choose Handle").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Light", size: 35)).padding(.bottom, 30)
@@ -97,7 +97,7 @@ struct SetHandle: View {
                     }//.position(x: 210, y:300)
                     
                     //Spacer().frame(height: 70)
-                }.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
+                //}.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
             
             }
         }.edgesIgnoringSafeArea(.bottom).background(CustomColors().dark)

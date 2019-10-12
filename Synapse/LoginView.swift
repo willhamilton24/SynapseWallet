@@ -38,7 +38,7 @@ struct LoginView: View {
                     
                     Text("Password").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().prime).padding(.horizontal, 30)
                         
-                    TextField(" Your Password", text: $password)
+                    SecureField(" Your Password", text: $password)
                             .padding(.horizontal, 30)
                             .padding(.vertical)
                             .background(
@@ -93,6 +93,7 @@ struct LoginView: View {
                 
             }
             BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
+            
         }.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
     }
 }
