@@ -14,6 +14,10 @@ struct SetHandle: View {
     @State var handle: String = ""
     @State private var isTaken: Bool = false
     
+    @State private var showAlert: Bool = false
+    @State private var alertTitle: String = ""
+    @State private var alertText: String = ""
+    
     var body: some View {
         ZStack {
             BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
@@ -73,9 +77,14 @@ struct SetHandle: View {
                     
                     VStack (spacing: 12) {
                         Button(action: {
-                            self.viewRouter.currentPage = "keep-logs"
-                            self.viewRouter.handle = "\(self.handle)"
-                            // Add No Handle Error
+                            if ( (self.handle.count >= 4 && self.handle.count <= 24) && self.viewRouter.users.contains(self.handle) != true) {
+                                self.viewRouter.currentPage = "keep-logs"
+                                self.viewRouter.handle = self.handle
+                            } else if (self.viewRouter.users.contains(self.handle)) {
+                                self.alertTitle = "Handle Taken"
+                                self.alertText = "This handle has already been registered. Please choose a different one."
+                                self.showAlert = true
+                             }
                         }) {
                             Text("Next").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                         }.frame(minWidth: 0, maxWidth: .infinity)
@@ -83,6 +92,9 @@ struct SetHandle: View {
                             .cornerRadius(30)
                         .padding()
                             .foregroundColor(CustomColors().light)
+                            .alert(isPresented: $showAlert) {
+                                Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
+                            }
                         
                         Button(action: {
                             self.viewRouter.currentPage = "welcome"
