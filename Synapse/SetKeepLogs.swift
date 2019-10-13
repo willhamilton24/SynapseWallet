@@ -41,7 +41,7 @@ struct SetKeepLogs: View {
                     .padding(.vertical, 0)
                     .foregroundColor(.gray)
                 
-                Text("Only your account can view theese logs.")
+                Text("Only your account can view these logs.")
                     .padding(.vertical, 0)
                 .foregroundColor(.gray)
                 

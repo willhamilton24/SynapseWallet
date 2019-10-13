@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if viewRouter.currentPage == "welcome" {
-                WelcomePage(viewRouter: viewRouter)
+                //WelcomePage(viewRouter: viewRouter)
                 //LoadingView(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "loading" {
                 LoadingView(viewRouter: viewRouter).transition(.opacity)
@@ -32,7 +32,10 @@ struct ContentView: View {
                 MainPage(viewRouter: viewRouter).transition(.opacity)
             } else if viewRouter.currentPage == "email-password" {
                 EmailPassword(viewRouter: viewRouter).transition(.opacity)
+            } else if viewRouter.currentPage == "persist" {
+                PersistantView(viewRouter: viewRouter).transition(.opacity)
             }
+            
         }.background(CustomColors().dark)
             .edgesIgnoringSafeArea(.vertical)
     }
