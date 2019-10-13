@@ -42,6 +42,7 @@ class BiometricAuth {
             }
         } else {
             // no biometry
+            print("no biometry")
             completionHandler(false)
         }
         

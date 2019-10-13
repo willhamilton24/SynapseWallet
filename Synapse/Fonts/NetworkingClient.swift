@@ -80,8 +80,10 @@ class NetworkingClient  {
         //                completion(jsonArray, nil)
                     } else if let jsonDict = response.result.value as? [String: Any] {
                         let token = jsonDict["token"] as? String
-                        self.defaults.set(parameters["username"], forKey: defaultsKeys.handleKey)
-                        self.defaults.set(parameters["password"], forKey: defaultsKeys.passwordKey)
+                        if token != "email not verified" {
+                            self.defaults.set(parameters["username"], forKey: defaultsKeys.handleKey)
+                            self.defaults.set(parameters["password"], forKey: defaultsKeys.passwordKey)
+                        }
                         print(token)
                         completion(token, nil)
                     }

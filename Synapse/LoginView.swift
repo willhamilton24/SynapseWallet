@@ -58,12 +58,13 @@ struct LoginView: View {
                 
                 VStack (spacing: 12) {
                     Button(action: {
-                        //self.viewRouter.currentPage = "keep-logs"
+                        self.viewRouter.currentPage = "loading"
                         self.viewRouter.handle = self.handle
                         NetworkingClient().login(username: self.handle, password: self.password) { (json, error) in
                             if json != nil {
                                 if json == "invalid username/password" {
                                     print("INVALID")
+                                    self.viewRouter.currentPage = "login"
                                 } else {
                                     self.viewRouter.token = json!
                                     self.viewRouter.currentPage = "main"

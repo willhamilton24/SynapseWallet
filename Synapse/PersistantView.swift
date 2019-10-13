@@ -18,6 +18,7 @@ struct PersistantView: View {
             BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
             VStack {
                 Spacer().frame(height: 350)
+                Text("")
                 Button(action: {
                     BiometricAuth().authenticateTapped() { didWork in
                         if didWork {
@@ -28,22 +29,31 @@ struct PersistantView: View {
                             password: defaults.string(forKey: defaultsKeys.passwordKey)!) { (json, error) in
                                 if json != nil {
                                     if json == "invalid username/password" {
-                                            print("INVALID")
-                                } else {
-                                    self.viewRouter.token = json!
-                                    self.viewRouter.currentPage = "main"
+                                        print("INVALID")
+                                    } else {
+                                        self.viewRouter.token = json!
+                                        self.viewRouter.currentPage = "main"
+                                    }
                                 }
                             }
-                                            }
                             self.viewRouter.currentPage = "main"
                         } else {
-                            self.viewRouter.currentPage = "login"
+                            print("Try again or login normally")
                         }
                     }
                     
                     
                 }) {
-                    Text("Login")
+                    Text("Login With Biometrics").font(.title)
+                }
+                
+                Button(action: {
+                    let defaults = UserDefaults.standard
+                    defaults.set(nil, forKey: defaultsKeys.handleKey)
+                    defaults.set(nil, forKey: defaultsKeys.passwordKey)
+                    self.viewRouter.currentPage = "welcome"
+                }) {
+                    Text("or login normally")
                 }
             }
         }
