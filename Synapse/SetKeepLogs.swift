@@ -14,25 +14,26 @@ struct SetKeepLogs: View {
     
     var body: some View {
         ZStack {
+            
             BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
+            
             VStack {
                 Spacer().frame(height: 235)
-                
-                Spacer().frame(height: 5)
                 
                 VStack (alignment: .leading) {
                     Text("Welcome to Synapse,").foregroundColor(CustomColors().light).font(.custom("Roboto-Thin", size:24)).padding(.horizontal, 0)
                     Text("@" + self.viewRouter.handle + ".").font(.custom("Roboto-Light", size:38)).padding(.horizontal, 0).foregroundColor(CustomColors().prime)
                 }
-                .padding(.horizontal, 0)
-                .offset(x: -70)
+                .padding(0)
+                .frame(width: 380, alignment: .leading)
+                //.offset(x: -70)
                 
                 
-                
+                Spacer().frame(height: 35)
                 
                     
                 Toggle(isOn: $keepLogsBool) {
-                    Text("Store Transaction Logs?").font(.custom("Roboto-Lighr", size:27)).foregroundColor(CustomColors().light)
+                    Text("Store Transaction Logs?").font(.custom("Roboto-Lighr", size:24)).foregroundColor(CustomColors().light)
                 }.padding()
                     .padding(.horizontal, 10)
                 
@@ -53,7 +54,7 @@ struct SetKeepLogs: View {
     //                Text("Logs Won't Be Kept").font(.title).foregroundColor(Color.red)
     //            }
     //
-               Spacer().frame(height: 81)
+               Spacer().frame(height: 95)
                 
                 VStack (spacing: 12) {
                     Button(action: {
@@ -63,9 +64,9 @@ struct SetKeepLogs: View {
                         Text("Next").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                     }.frame(minWidth: 0, maxWidth: .infinity)
                     .background(CustomColors().lg)
-                        .padding(.horizontal, 0)
-                    .cornerRadius(30)
-                    .foregroundColor(CustomColors().light)
+                        .cornerRadius(30)
+                    .padding()
+                        .foregroundColor(CustomColors().light)
                     
                     Button(action: {
                         self.viewRouter.currentPage = "handle"
@@ -73,11 +74,11 @@ struct SetKeepLogs: View {
                         Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
                     }.frame(minWidth: 225, maxWidth: 250)
                     .background(CustomColors().lg)
-                        .cornerRadius(30)
+                        .cornerRadius(25)
                     .padding()
                     .padding(.vertical, 0)
-                    .foregroundColor(CustomColors().light)
-                }.edgesIgnoringSafeArea(.bottom).background(CustomColors().dark)
+                        .foregroundColor(CustomColors().light)
+                }//.edgesIgnoringSafeArea(.bottom).background(CustomColors().dark)
                 
                 
             }//.padding(.horizontal, 20).edgesIgnoringSafeArea(.bottom).background(CustomColors().dark)

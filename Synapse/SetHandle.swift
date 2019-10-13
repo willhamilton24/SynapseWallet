@@ -44,7 +44,7 @@ struct SetHandle: View {
                             ).foregroundColor(CustomColors().light)
                     
                         
-                        //Spacer().frame(height: 60)
+                        
                         
                         Text("This is how other users will see you.")
                             .padding(.horizontal, 50)
@@ -52,25 +52,35 @@ struct SetHandle: View {
                             .lineLimit(3)
                             .foregroundColor(CustomColors().light)
                         
+                        Spacer().frame(height: 30)
+                        
                         HStack (spacing: 15){
                             if (self.handle.count >= 4 && self.handle.count <= 24) {
-                               Image("dot").resizable().frame(width: 28, height: 28).background(Color.green).cornerRadius(30)
+                               Image("check").resizable()
+                                .frame(width: 28, height: 28)
+                                .background(CustomColors().prime2)
+                                .cornerRadius(30)
+                                .foregroundColor(CustomColors().light)
                            } else {
-                                Image("dot").resizable().frame(width: 28, height: 28).background(Color.red).cornerRadius(30)
+                                Image("x").resizable().frame(width: 28, height: 28).background(CustomColors().prime).cornerRadius(30)
                             }
                             
-                            Text("Length: 4-24 Characters").foregroundColor(CustomColors().light)
-                        }.offset(x: -64, y: 0.0)
+                            Text("Length: 4-24 Characters")
+                        }.offset(x: -64, y: 0.0).foregroundColor(CustomColors().light)
                         
                         HStack (spacing: 15){
                             if self.viewRouter.users.contains(self.handle) {
-                                Image("dot").resizable().frame(width: 28, height: 28).background(Color.red).cornerRadius(30)
+                                Image("x").resizable().frame(width: 28, height: 28).background(CustomColors().prime).cornerRadius(30)
                             } else {
-                                 Image("dot").resizable().frame(width: 28, height: 28).background(Color.green).cornerRadius(30)
+                                 Image("check").resizable()
+                                 .frame(width: 28, height: 28)
+                                 .background(CustomColors().prime2)
+                                 .cornerRadius(30)
+                                 .foregroundColor(CustomColors().light)
                             }
                              
-                             Text("Handle is Available").foregroundColor(CustomColors().light)
-                        }.offset(x: -87, y: 0.0)
+                             Text("Handle is Available")
+                        }.offset(x: -87, y: 0.0).foregroundColor(CustomColors().light)
                     }
                     
                     Spacer().frame(height: 70)
