@@ -25,6 +25,7 @@
 		BE718A3F2347BF9800759BB1 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A3E2347BF9800759BB1 /* WelcomePage.swift */; };
 		BE718A412347BFBD00759BB1 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A402347BFBD00759BB1 /* MainPage.swift */; };
 		BE718A43234BD20300759BB1 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A42234BD20300759BB1 /* ViewRouter.swift */; };
+		BE7F6D672352CFB40065F8DB /* EmailSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F6D662352CFB40065F8DB /* EmailSentView.swift */; };
 		BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */; };
 		BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA1234D12BC004B2FC6 /* BigLogo.swift */; };
 		BE822BA4234D3C33004B2FC6 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA3234D3C33004B2FC6 /* CustomColors.swift */; };
@@ -87,6 +88,7 @@
 		BE718A3E2347BF9800759BB1 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomePage.swift; path = Views/WelcomePage.swift; sourceTree = "<group>"; };
 		BE718A402347BFBD00759BB1 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		BE718A42234BD20300759BB1 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		BE7F6D662352CFB40065F8DB /* EmailSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSentView.swift; sourceTree = "<group>"; };
 		BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPassword.swift; sourceTree = "<group>"; };
 		BE822BA1234D12BC004B2FC6 /* BigLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLogo.swift; sourceTree = "<group>"; };
 		BE822BA3234D3C33004B2FC6 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */,
 				BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */,
 				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
+				BE7F6D662352CFB40065F8DB /* EmailSentView.swift */,
 				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
 				BE718A42234BD20300759BB1 /* ViewRouter.swift */,
 				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
@@ -466,6 +469,7 @@
 				BE718A43234BD20300759BB1 /* ViewRouter.swift in Sources */,
 				BE87EDD82346DB1000E267DE /* DepositPage.swift in Sources */,
 				BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */,
+				BE7F6D672352CFB40065F8DB /* EmailSentView.swift in Sources */,
 				BE822BA6234D4031004B2FC6 /* SignUpProgress.swift in Sources */,
 				BE6BAB20235028E200E2C17B /* LottieView.swift in Sources */,
 				BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */,

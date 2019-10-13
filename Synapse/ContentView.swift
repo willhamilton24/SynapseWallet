@@ -35,6 +35,8 @@ struct ContentView: View {
                     EmailPassword(viewRouter: viewRouter).transition(.opacity)
                 } else if viewRouter.currentPage == "persist" {
                     PersistantView(viewRouter: viewRouter).transition(.opacity)
+                } else if viewRouter.currentPage == "email-v" {
+                    EmailSentView(viewRouter: viewRouter).transition(.opacity)
                 }
             
         }.background(CustomColors().dark)
