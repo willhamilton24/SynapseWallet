@@ -14,6 +14,7 @@ import SwiftUI
 class ViewRouter: ObservableObject {
     let objectWillChange = PassthroughSubject<ViewRouter,Never>()
     
+    
     var currentPage: String = "welcome" {
         didSet {
             withAnimation() {

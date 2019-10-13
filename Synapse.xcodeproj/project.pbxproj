@@ -14,6 +14,7 @@
 		BE6BAB2C23503AED00E2C17B /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = BE6BAB2B23503AED00E2C17B /* loader.json */; };
 		BE6BAB2E2352B06900E2C17B /* PersistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB2D2352B06900E2C17B /* PersistantView.swift */; };
 		BE6BAB302352B28700E2C17B /* Biometrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB2F2352B28700E2C17B /* Biometrics.swift */; };
+		BE6BAB322352BE5800E2C17B /* defaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */; };
 		BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */; };
 		BE6ECB60234C17AA003F82A5 /* SetKeepLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */; };
 		BE6ECB64234C2787003F82A5 /* AcceptTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */; };
@@ -75,6 +76,7 @@
 		BE6BAB2B23503AED00E2C17B /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		BE6BAB2D2352B06900E2C17B /* PersistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantView.swift; sourceTree = "<group>"; };
 		BE6BAB2F2352B28700E2C17B /* Biometrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics.swift; sourceTree = "<group>"; };
+		BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = defaultsKeys.swift; sourceTree = "<group>"; };
 		BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHandle.swift; sourceTree = "<group>"; };
 		BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetKeepLogs.swift; sourceTree = "<group>"; };
 		BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTerms.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				BE87EDA32342F10D00E267DE /* AppDelegate.swift */,
+				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
 				BE6BAB2D2352B06900E2C17B /* PersistantView.swift */,
 				BE6BAB2F2352B28700E2C17B /* Biometrics.swift */,
 				BE87EDA52342F10D00E267DE /* SceneDelegate.swift */,
@@ -430,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE718A0B2347005600759BB1 /* MyTransactionsButton.swift in Sources */,
+				BE6BAB322352BE5800E2C17B /* defaultsKeys.swift in Sources */,
 				BE822BB8234FCB63004B2FC6 /* GettingStartedText.swift in Sources */,
 				BE6ECB60234C17AA003F82A5 /* SetKeepLogs.swift in Sources */,
 				BE6BAB2E2352B06900E2C17B /* PersistantView.swift in Sources */,

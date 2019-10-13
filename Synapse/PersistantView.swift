@@ -12,6 +12,7 @@ import SwiftUI
 struct PersistantView: View {
     @ObservedObject var viewRouter: ViewRouter
     
+    
     var body: some View {
         ZStack {
             BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
@@ -21,6 +22,19 @@ struct PersistantView: View {
                     BiometricAuth().authenticateTapped() { didWork in
                         if didWork {
                             // Login
+                            let defaults = UserDefaults.standard
+                            NetworkingClient().login(
+                            username: defaults.string(forKey: defaultsKeys.handleKey)!,
+                            password: defaults.string(forKey: defaultsKeys.passwordKey)!) { (json, error) in
+                                if json != nil {
+                                    if json == "invalid username/password" {
+                                            print("INVALID")
+                                } else {
+                                    self.viewRouter.token = json!
+                                    self.viewRouter.currentPage = "main"
+                                }
+                            }
+                                            }
                             self.viewRouter.currentPage = "main"
                         } else {
                             self.viewRouter.currentPage = "login"

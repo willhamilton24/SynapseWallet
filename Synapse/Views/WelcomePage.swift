@@ -95,6 +95,12 @@ struct WelcomePage: View {
             
         BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
         }.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
+        .onAppear {
+            let defaults = UserDefaults.standard
+            if let savedHandle = defaults.string(forKey: defaultsKeys.handleKey) {
+                self.viewRouter.currentPage = "persist"
+            }
+        }
     }
 }
 
