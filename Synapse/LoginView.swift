@@ -20,10 +20,10 @@ struct LoginView: View {
             VStack {
                 Spacer().frame(height: 235)
                 
-                Text("Login").foregroundColor(CustomColors().prime).font(Font.custom("Roboto-Thin", size:45))
+                Text("Login").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Thin", size:45))
                 
                 VStack (alignment: .leading) {
-                    Text("Handle").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().prime).padding(.horizontal, 30)
+                    Text("Handle").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().light).padding(.horizontal, 30)
                         
                     TextField(" Your Handle", text: $handle)
                             .padding(.horizontal, 30)
@@ -36,7 +36,7 @@ struct LoginView: View {
                     
                     Spacer().frame(height: 20)
                     
-                    Text("Password").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().prime).padding(.horizontal, 30)
+                    Text("Password").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().light).padding(.horizontal, 30)
                         
                     SecureField(" Your Password", text: $password)
                             .padding(.horizontal, 30)

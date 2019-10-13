@@ -21,11 +21,11 @@ struct SetKeepLogs: View {
                 Spacer().frame(height: 235)
                 
                 VStack (alignment: .leading) {
-                    Text("Welcome to Synapse,").foregroundColor(CustomColors().light).font(.custom("Roboto-Thin", size:24)).padding(.horizontal, 0)
+                    Text("Welcome to Synapse,").foregroundColor(CustomColors().light).font(.custom("Roboto-Thin", size:30)).padding(.horizontal, 0)
                     Text("@" + self.viewRouter.handle + ".").font(.custom("Roboto-Light", size:38)).padding(.horizontal, 0).foregroundColor(CustomColors().prime)
                 }
                 .padding(0)
-                .frame(width: 300, alignment: .leading)
+                //.frame(width: 300, alignment: .leading)
                 //.offset(x: -70)
                 
                 

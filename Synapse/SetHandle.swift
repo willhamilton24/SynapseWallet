@@ -30,7 +30,7 @@ struct SetHandle: View {
                     //GettingStartedText()
                     
                     VStack {
-                        Text("Choose Handle").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Light", size: 35)).padding(.bottom, 30)
+                        Text("Choose Handle").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Thin", size:30)).padding(.bottom, 20)
                         
                         
                         

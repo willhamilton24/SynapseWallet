@@ -24,7 +24,7 @@ struct AcceptTerms: View {
             VStack {
                 Spacer().frame(height: 235)
                            
-                Text("Almost Done...").font(.title).foregroundColor(CustomColors().prime)
+                Text("Almost Done...").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Thin", size:30)).padding(.bottom, 20)
                 
                 Divider()
                 
