@@ -53,9 +53,9 @@ struct WelcomePage: View {
     //                )
                     
                     HStack {
-                        Divider().frame(width: 150).padding(.vertical, 30)
+                        //Divider().frame(width: 150).padding(.vertical, 30)
                         Text("OR").font(Font.custom("Roboto-Light", size: 30)).foregroundColor(CustomColors().light)
-                        Divider().frame(width: 150).padding(.vertical, 30)
+                        //Divider().frame(width: 150).padding(.vertical, 30)
                     }
                     
                     Button(action: {

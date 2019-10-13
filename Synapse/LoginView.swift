@@ -20,7 +20,7 @@ struct LoginView: View {
             VStack {
                 Spacer().frame(height: 235)
                 
-                Text("Login").foregroundColor(CustomColors().prime).font(Font.custom("Roboto-Thin", size:60))
+                Text("Login").foregroundColor(CustomColors().prime).font(Font.custom("Roboto-Thin", size:45))
                 
                 VStack (alignment: .leading) {
                     Text("Handle").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().prime).padding(.horizontal, 30)
@@ -54,9 +54,9 @@ struct LoginView: View {
                     Text("Forgot password?")
                 }
                 
-                Spacer().frame(height: 40)
+                Spacer().frame(height: 20)
                 
-                VStack (spacing: 12) {
+                VStack (spacing: 3) {
                     Button(action: {
                         self.viewRouter.currentPage = "loading"
                         self.viewRouter.handle = self.handle
@@ -78,6 +78,7 @@ struct LoginView: View {
                         .cornerRadius(30)
                     .padding()
                         .foregroundColor(CustomColors().light)
+                        //.padding(0)
                     
                     Button(action: {
                         self.viewRouter.currentPage = "welcome"

@@ -56,6 +56,29 @@ struct PersistantView: View {
                     Text("or login normally")
                 }
             }
+        }.onAppear {
+            BiometricAuth().authenticateTapped() { didWork in
+                if didWork {
+                    // Login
+                    let defaults = UserDefaults.standard
+                    NetworkingClient().login(
+                    username: defaults.string(forKey: defaultsKeys.handleKey)!,
+                    password: defaults.string(forKey: defaultsKeys.passwordKey)!) { (json, error) in
+                        if json != nil {
+                            if json == "invalid username/password" {
+                                print("INVALID")
+                            } else {
+                                self.viewRouter.token = json!
+                                self.viewRouter.currentPage = "main"
+                            }
+                        }
+                    }
+                    self.viewRouter.currentPage = "main"
+                } else {
+                    print("Try again or login normally")
+                }
+            }
+            
         }
     }
 }

@@ -25,7 +25,7 @@ struct SetKeepLogs: View {
                     Text("@" + self.viewRouter.handle + ".").font(.custom("Roboto-Light", size:38)).padding(.horizontal, 0).foregroundColor(CustomColors().prime)
                 }
                 .padding(0)
-                .frame(width: 380, alignment: .leading)
+                .frame(width: 300, alignment: .leading)
                 //.offset(x: -70)
                 
                 
@@ -56,7 +56,7 @@ struct SetKeepLogs: View {
     //
                Spacer().frame(height: 95)
                 
-                VStack (spacing: 12) {
+                VStack (spacing: 4) {
                     Button(action: {
                         self.viewRouter.keepLogs = self.keepLogsBool
                         self.viewRouter.currentPage = "email-password"

@@ -15,28 +15,28 @@ struct ContentView: View {
     var body: some View {
         VStack {
                 if viewRouter.currentPage == "welcome" {
-                    WelcomePage(viewRouter: viewRouter).transition(.opacity)
+                    WelcomePage(viewRouter: viewRouter)//.transition(.opacity)
                     //LoadingView(viewRouter: viewRouter).transition(.opacity)
                 } else if viewRouter.currentPage == "loading" {
-                    LoadingView(viewRouter: viewRouter).transition(.opacity)
+                    LoadingView(viewRouter: viewRouter)//.transition(.opacity)
                 } else if viewRouter.currentPage == "login" {
-                    LoginView(viewRouter: viewRouter).transition(.opacity)
+                    LoginView(viewRouter: viewRouter)//.transition(.opacity)
                 } else if viewRouter.currentPage == "signup" {
-                    SignUpView(viewRouter: viewRouter).transition(.opacity)
+                    SignUpView(viewRouter: viewRouter)//.transition(.opacity)
                 } else if viewRouter.currentPage == "keep-logs" {
-                    SetKeepLogs(viewRouter: viewRouter).transition(.opacity)
+                    SetKeepLogs(viewRouter: viewRouter)//.transition(.opacity)
                 } else if viewRouter.currentPage == "handle" {
-                    SetHandle(viewRouter: viewRouter).transition(.opacity)
+                    SetHandle(viewRouter: viewRouter)//.transition(.opacity)
                 } else if viewRouter.currentPage == "terms" {
-                    AcceptTerms(viewRouter: viewRouter).transition(.opacity)
+                    AcceptTerms(viewRouter: viewRouter)//.transition(.opacity)
                 } else if viewRouter.currentPage == "main" {
-                    MainPage(viewRouter: viewRouter).transition(.opacity)
+                    MainPage(viewRouter: viewRouter)//.transition(.opacity)
                 } else if viewRouter.currentPage == "email-password" {
-                    EmailPassword(viewRouter: viewRouter).transition(.opacity)
+                    EmailPassword(viewRouter: viewRouter)//.transition(.opacity)
                 } else if viewRouter.currentPage == "persist" {
-                    PersistantView(viewRouter: viewRouter).transition(.opacity)
+                    PersistantView(viewRouter: viewRouter)//.transition(.opacity)
                 } else if viewRouter.currentPage == "email-v" {
-                    EmailSentView(viewRouter: viewRouter).transition(.opacity)
+                    EmailSentView(viewRouter: viewRouter)//.transition(.opacity)
                 }
             
         }.background(CustomColors().dark)

@@ -83,9 +83,9 @@ struct SetHandle: View {
                         }.offset(x: -87, y: 0.0).foregroundColor(CustomColors().light)
                     }
                     
-                    Spacer().frame(height: 70)
+                    //Spacer().frame(height: 70)
                     
-                    VStack (spacing: 12) {
+                    VStack (spacing: 4) {
                         Button(action: {
                             if ( (self.handle.count >= 4 && self.handle.count <= 24) && self.viewRouter.users.contains(self.handle) != true) {
                                 self.viewRouter.currentPage = "keep-logs"

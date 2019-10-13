@@ -19,10 +19,12 @@ struct EmailPassword: View {
             VStack {
                 Spacer().frame(height: 235)
                 
-                Text("Email & Password").foregroundColor(CustomColors().prime).font(Font.custom("Roboto-Thin", size:30))
+                Text("Email & Password").foregroundColor(CustomColors().prime).font(Font.custom("Roboto-Thin", size:30)).padding(.bottom, 20)
+                
+                
                 
                 VStack (alignment: .leading) {
-                    Text("Email").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().prime).padding(.horizontal, 30)
+                    Text("Email").font(Font.custom("Roboto-Light", size:16)).padding(.vertical, 0).foregroundColor(CustomColors().prime).padding(.horizontal, 30)
                         
                     TextField(" Your Email", text: $email)
                             .padding(.horizontal, 30)
@@ -35,7 +37,7 @@ struct EmailPassword: View {
                     
                     Spacer().frame(height: 20)
                     
-                    Text("Password").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().prime).padding(.horizontal, 30)
+                    Text("Password").font(Font.custom("Roboto-Light", size:16)).padding(.vertical, 0).foregroundColor(CustomColors().prime).padding(.horizontal, 30)
                         
                     SecureField(" Your Password", text: $password)
                             .padding(.horizontal, 30)
@@ -60,9 +62,9 @@ struct EmailPassword: View {
                     
                 }
                 
-                Spacer().frame(height: 40)
+                Spacer().frame(height: 10)
                 
-                VStack (spacing: 12) {
+                VStack (spacing: 4) {
                     Button(action: {
                         self.viewRouter.password = self.password
                         self.viewRouter.email = self.email
