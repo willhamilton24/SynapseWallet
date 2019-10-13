@@ -26,6 +26,7 @@
 		BE718A412347BFBD00759BB1 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A402347BFBD00759BB1 /* MainPage.swift */; };
 		BE718A43234BD20300759BB1 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A42234BD20300759BB1 /* ViewRouter.swift */; };
 		BE7F6D672352CFB40065F8DB /* EmailSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F6D662352CFB40065F8DB /* EmailSentView.swift */; };
+		BE7F6D692352FCD00065F8DB /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BE7F6D682352FCD00065F8DB /* applogo.png */; };
 		BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */; };
 		BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA1234D12BC004B2FC6 /* BigLogo.swift */; };
 		BE822BA4234D3C33004B2FC6 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA3234D3C33004B2FC6 /* CustomColors.swift */; };
@@ -89,6 +90,7 @@
 		BE718A402347BFBD00759BB1 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		BE718A42234BD20300759BB1 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		BE7F6D662352CFB40065F8DB /* EmailSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSentView.swift; sourceTree = "<group>"; };
+		BE7F6D682352FCD00065F8DB /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
 		BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPassword.swift; sourceTree = "<group>"; };
 		BE822BA1234D12BC004B2FC6 /* BigLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLogo.swift; sourceTree = "<group>"; };
 		BE822BA3234D3C33004B2FC6 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				BE822BAE234DA4B2004B2FC6 /* Fonts */,
 				BE87EDAE2342F11000E267DE /* LaunchScreen.storyboard */,
 				BE87EDB12342F11000E267DE /* Info.plist */,
+				BE7F6D682352FCD00065F8DB /* applogo.png */,
 				BE87EDAB2342F11000E267DE /* Preview Content */,
 			);
 			path = Synapse;
@@ -353,6 +356,7 @@
 				BE87EDAD2342F11000E267DE /* Preview Assets.xcassets in Resources */,
 				BE822BB4234DA5A3004B2FC6 /* Roboto-Light.ttf in Resources */,
 				BE822BB6234DA5AE004B2FC6 /* Roboto-Thin.ttf in Resources */,
+				BE7F6D692352FCD00065F8DB /* applogo.png in Resources */,
 				BE87EDAA2342F11000E267DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
