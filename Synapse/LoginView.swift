@@ -68,7 +68,12 @@ struct LoginView: View {
                                 if json == "invalid username/password" {
                                     print("INVALID")
                                     self.alertTitle = "Invalid Handle or Password"
-                                    self.alertText = "The Handle or Password was either incorrect or misspelled. Please Try Again"
+                                    self.alertText = "The Handle or Password was either incorrect or misspelled. Please Try Again."
+                                    self.showAlert = true
+                                } else if json == "email not verified" {
+                                    print("NOT VERIFIED")
+                                    self.alertTitle = "Email not Verified"
+                                    self.alertText = "You must verify your email before logging in."
                                     self.showAlert = true
                                 } else {
                                     self.viewRouter.token = json!
