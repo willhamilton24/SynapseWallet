@@ -14,6 +14,10 @@ struct LoginView: View {
     @State var handle: String = ""
     @State var password: String = ""
     
+    @State private var showAlert: Bool = false
+    @State private var alertTitle: String = ""
+    @State private var alertText: String = ""
+    
     var body: some View {
         ZStack {
             
@@ -58,13 +62,14 @@ struct LoginView: View {
                 
                 VStack (spacing: 3) {
                     Button(action: {
-                        self.viewRouter.currentPage = "loading"
                         self.viewRouter.handle = self.handle
                         NetworkingClient().login(username: self.handle, password: self.password) { (json, error) in
                             if json != nil {
                                 if json == "invalid username/password" {
                                     print("INVALID")
-                                    self.viewRouter.currentPage = "login"
+                                    self.alertTitle = "Invalid Handle or Password"
+                                    self.alertText = "The Handle or Password was either incorrect or misspelled. Please Try Again"
+                                    self.showAlert = true
                                 } else {
                                     self.viewRouter.token = json!
                                     self.viewRouter.currentPage = "main"
@@ -78,6 +83,9 @@ struct LoginView: View {
                         .cornerRadius(30)
                     .padding()
                         .foregroundColor(CustomColors().light)
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
+                    }
                         //.padding(0)
                     
                     Button(action: {
