@@ -37,6 +37,8 @@ struct ContentView: View {
                     PersistantView(viewRouter: viewRouter)//.transition(.opacity)
                 } else if viewRouter.currentPage == "email-v" {
                     EmailSentView(viewRouter: viewRouter)//.transition(.opacity)
+                } else if viewRouter.currentPage == "forgot-pass" {
+                    ForgotPassword(viewRouter: viewRouter)
                 }
             
         }.background(CustomColors().dark)

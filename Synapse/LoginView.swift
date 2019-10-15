@@ -54,7 +54,9 @@ struct LoginView: View {
                     
                 }
                 
-                Button(action: {}) {
+                Button(action: {
+                    self.viewRouter.currentPage = "forgot-pass"
+                }) {
                     Text("Forgot password?")
                 }
                 
