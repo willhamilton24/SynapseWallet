@@ -88,7 +88,7 @@
 		BE6FEA86234FF64300758CD2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		BE718A082346FBAA00759BB1 /* TransactionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPage.swift; sourceTree = "<group>"; };
 		BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTransactionsButton.swift; sourceTree = "<group>"; };
-		BE718A3E2347BF9800759BB1 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomePage.swift; path = Views/WelcomePage.swift; sourceTree = "<group>"; };
+		BE718A3E2347BF9800759BB1 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		BE718A402347BFBD00759BB1 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		BE718A42234BD20300759BB1 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		BE7B7BF62356913F001039A3 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
@@ -172,6 +172,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE7B7BFA235694D2001039A3 /* Persistant Log-In */ = {
+			isa = PBXGroup;
+			children = (
+				BE6BAB2D2352B06900E2C17B /* PersistantView.swift */,
+				BE6BAB2F2352B28700E2C17B /* Biometrics.swift */,
+			);
+			path = "Persistant Log-In";
+			sourceTree = "<group>";
+		};
+		BE7B7BFB23569556001039A3 /* Sign-Up */ = {
+			isa = PBXGroup;
+			children = (
+				BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */,
+				BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */,
+				BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */,
+				BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */,
+				BE7F6D662352CFB40065F8DB /* EmailSentView.swift */,
+			);
+			path = "Sign-Up";
+			sourceTree = "<group>";
+		};
+		BE7B7BFC235695BD001039A3 /* Manual Log-In */ = {
+			isa = PBXGroup;
+			children = (
+				BEBD7FC9234BFAE90046EADE /* LoginView.swift */,
+				BE7B7BF8235693CD001039A3 /* ForgotPassword.swift */,
+			);
+			path = "Manual Log-In";
+			sourceTree = "<group>";
+		};
+		BE7B7BFD235695FB001039A3 /* Deprecated Auth Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEBD7FCB234BFB060046EADE /* SignUpView.swift */,
+				BE822BA5234D4031004B2FC6 /* SignUpProgress.swift */,
+				BE822BB7234FCB63004B2FC6 /* GettingStartedText.swift */,
+				BED52E11234BF6A1003D3D4A /* Socials.swift */,
+			);
+			path = "Deprecated Auth Views";
+			sourceTree = "<group>";
+		};
 		BE822BAE234DA4B2004B2FC6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,27 +249,18 @@
 			isa = PBXGroup;
 			children = (
 				BE87EDA32342F10D00E267DE /* AppDelegate.swift */,
-				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
-				BE6BAB2D2352B06900E2C17B /* PersistantView.swift */,
-				BE6BAB2F2352B28700E2C17B /* Biometrics.swift */,
 				BE87EDA52342F10D00E267DE /* SceneDelegate.swift */,
-				BE87EDA72342F10D00E267DE /* ContentView.swift */,
-				BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */,
-				BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */,
-				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
-				BE7F6D662352CFB40065F8DB /* EmailSentView.swift */,
+				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
 				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
+				BE87EDA72342F10D00E267DE /* ContentView.swift */,
 				BE718A42234BD20300759BB1 /* ViewRouter.swift */,
+				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
 				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
-				BE822BA5234D4031004B2FC6 /* SignUpProgress.swift */,
-				BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */,
-				BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */,
-				BE822BB7234FCB63004B2FC6 /* GettingStartedText.swift */,
 				BE718A402347BFBD00759BB1 /* MainPage.swift */,
-				BEBD7FC9234BFAE90046EADE /* LoginView.swift */,
-				BE7B7BF8235693CD001039A3 /* ForgotPassword.swift */,
-				BEBD7FCB234BFB060046EADE /* SignUpView.swift */,
-				BED52E11234BF6A1003D3D4A /* Socials.swift */,
+				BE7B7BFA235694D2001039A3 /* Persistant Log-In */,
+				BE7B7BFB23569556001039A3 /* Sign-Up */,
+				BE7B7BFC235695BD001039A3 /* Manual Log-In */,
+				BE7B7BFD235695FB001039A3 /* Deprecated Auth Views */,
 				BED52E0F234BEFE2003D3D4A /* SWLogo.swift */,
 				BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */,
 				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
