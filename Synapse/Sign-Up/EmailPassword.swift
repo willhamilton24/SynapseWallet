@@ -14,6 +14,10 @@ struct EmailPassword: View {
     @State var password: String = ""
     @State var showPass: Bool = false
     
+    @State private var showAlert: Bool = false
+    @State private var alertTitle: String = ""
+    @State private var alertText: String = ""
+    
     var body: some View {
         ZStack {
             BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
@@ -89,16 +93,29 @@ struct EmailPassword: View {
                 
                 VStack (spacing: 4) {
                     Button(action: {
-                        self.viewRouter.password = self.password
-                        self.viewRouter.email = self.email
-                        self.viewRouter.currentPage = "terms"
+                        if self.password.count >= 4 && self.password.count <= 24 {
+                            self.viewRouter.password = self.password
+                            self.viewRouter.email = self.email
+                            self.viewRouter.currentPage = "terms"
+                        } else {
+                            self.alertText = "Your handle must be between 4 and 24 charaters in length. Please choose a different one."
+                            if self.password.count < 4 {
+                                self.alertTitle = "Handle Too Short"
+                            } else {
+                                self.alertTitle = "Handle Too Long"
+                            }
+                            self.showAlert = true
+                        }
                     }) {
                         Text("Next").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                     }.frame(minWidth: 0, maxWidth: .infinity)
                     .background(CustomColors().lg)
-                        .cornerRadius(30)
+                    .cornerRadius(30)
                     .padding()
-                        .foregroundColor(CustomColors().light)
+                    .foregroundColor(CustomColors().light)
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
+                    }
                     
                     Button(action: {
                         self.viewRouter.currentPage = "keep-logs"
