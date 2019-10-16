@@ -213,6 +213,30 @@
 			path = "Deprecated Auth Views";
 			sourceTree = "<group>";
 		};
+		BE7B7BFE2356A10E001039A3 /* Main Page */ = {
+			isa = PBXGroup;
+			children = (
+				BE718A402347BFBD00759BB1 /* MainPage.swift */,
+				BED52E0F234BEFE2003D3D4A /* SWLogo.swift */,
+				BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */,
+				BE87EDD32343413D00E267DE /* InstantTransferButton.swift */,
+				BE87EDD1234328AA00E267DE /* SwipeToPay.swift */,
+				BE87EDCF23431E0700E267DE /* DepositWithdrawButtons.swift */,
+				BE87EDCD234315E500E267DE /* CurrencySelector.swift */,
+				BE87EDC72343073C00E267DE /* BalanceModule.swift */,
+			);
+			path = "Main Page";
+			sourceTree = "<group>";
+		};
+		BE7B7BFF2356A12D001039A3 /* Misc. Deprecated  */ = {
+			isa = PBXGroup;
+			children = (
+				BE87EDDE2346E06900E267DE /* UpdateProfile.swift */,
+				BE87EDC92343077700E267DE /* GraphModule.swift */,
+			);
+			path = "Misc. Deprecated ";
+			sourceTree = "<group>";
+		};
 		BE822BAE234DA4B2004B2FC6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +244,6 @@
 				BE6BAB2B23503AED00E2C17B /* loader.json */,
 				BE822BB3234DA5A3004B2FC6 /* Roboto-Light.ttf */,
 				BE822BB5234DA5AE004B2FC6 /* Roboto-Thin.ttf */,
-				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -250,31 +273,24 @@
 			children = (
 				BE87EDA32342F10D00E267DE /* AppDelegate.swift */,
 				BE87EDA52342F10D00E267DE /* SceneDelegate.swift */,
+				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
 				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
 				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
 				BE87EDA72342F10D00E267DE /* ContentView.swift */,
 				BE718A42234BD20300759BB1 /* ViewRouter.swift */,
 				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
 				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
-				BE718A402347BFBD00759BB1 /* MainPage.swift */,
 				BE7B7BFA235694D2001039A3 /* Persistant Log-In */,
 				BE7B7BFB23569556001039A3 /* Sign-Up */,
 				BE7B7BFC235695BD001039A3 /* Manual Log-In */,
 				BE7B7BFD235695FB001039A3 /* Deprecated Auth Views */,
-				BED52E0F234BEFE2003D3D4A /* SWLogo.swift */,
-				BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */,
+				BE7B7BFE2356A10E001039A3 /* Main Page */,
 				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
-				BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */,
 				BE87EDD72346DB1000E267DE /* DepositPage.swift */,
 				BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */,
-				BE87EDD32343413D00E267DE /* InstantTransferButton.swift */,
-				BE87EDD1234328AA00E267DE /* SwipeToPay.swift */,
-				BE87EDCF23431E0700E267DE /* DepositWithdrawButtons.swift */,
-				BE87EDCD234315E500E267DE /* CurrencySelector.swift */,
-				BE87EDC92343077700E267DE /* GraphModule.swift */,
-				BE87EDC72343073C00E267DE /* BalanceModule.swift */,
+				BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */,
 				BE87EDD523436B0200E267DE /* AccountPage.swift */,
-				BE87EDDE2346E06900E267DE /* UpdateProfile.swift */,
+				BE7B7BFF2356A12D001039A3 /* Misc. Deprecated  */,
 				BE87EDA92342F11000E267DE /* Assets.xcassets */,
 				BE6FEA86234FF64300758CD2 /* LoadingView.swift */,
 				BE6BAB1D2350287E00E2C17B /* LoadingAnimation.swift */,

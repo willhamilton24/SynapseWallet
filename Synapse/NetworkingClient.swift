@@ -25,13 +25,27 @@ class NetworkingClient  {
             if let error = response.error {
                 print(error)
                 completion(nil, error)
-//            } else if let jsonArray = response.result.value as? [[String: Any]] {
-//                print(jsonArray)
-//                completion(jsonArray, nil)
             } else if let jsonDict = response.result.value as? [String: Any] {
                 let handles = jsonDict["usernames"] as? [String]
                 print(handles)
                 completion(handles, nil)
+            }
+        }
+    }
+    
+    func emailArray(completion: @escaping WebServiceResponseArray) {
+        
+        var urlRequest = URLRequest(url: URL(string: "https://serverless.willhamilton24.now.sh/api/auth/getEmails")!)
+        urlRequest.httpMethod = "POST"
+        
+        Alamofire.request(urlRequest).validate().responseJSON { response in
+            if let error = response.error {
+                print(error)
+                completion(nil, error)
+            } else if let jsonDict = response.result.value as? [String: Any] {
+                let emails = jsonDict["emails"] as? [String]
+                print(emails)
+                completion(emails, nil)
             }
         }
     }

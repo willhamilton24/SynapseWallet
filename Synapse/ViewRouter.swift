@@ -29,6 +29,13 @@ class ViewRouter: ObservableObject {
         }
     }
     
+    var emails: [String] = ["404"] {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+
+    
     var token: String  = "" {
         didSet {
             objectWillChange.send(self)
