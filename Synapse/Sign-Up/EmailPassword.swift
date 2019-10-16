@@ -12,6 +12,7 @@ struct EmailPassword: View {
     @ObservedObject var viewRouter: ViewRouter
     @State var email: String = ""
     @State var password: String = ""
+    @State var showPass: Bool = false
     
     var body: some View {
         ZStack {
@@ -38,25 +39,47 @@ struct EmailPassword: View {
                     Spacer().frame(height: 20)
                     
                     Text("Password").font(Font.custom("Roboto-Light", size:16)).padding(.vertical, 0).foregroundColor(CustomColors().light).padding(.horizontal, 30)
+                    
+                    if (self.showPass) {
+                        TextField(" Your Password", text: $password)
+                        .padding(.horizontal, 30)
+                        .padding(.vertical)
+                        .background(
+                            RoundedRectangle(cornerRadius: 5)
+                                .strokeBorder(CustomColors().primeGradiant, lineWidth: 1)
+                                .padding(.horizontal, 25)
+                        ).foregroundColor(CustomColors().light)
+                    } else {
+                        SecureField(" Your Password", text: $password)
+                        .padding(.horizontal, 30)
+                        .padding(.vertical)
+                        .background(
+                            RoundedRectangle(cornerRadius: 5)
+                                .strokeBorder(CustomColors().primeGradiant, lineWidth: 1)
+                                .padding(.horizontal, 25)
+                        ).foregroundColor(CustomColors().light)
                         
-                    SecureField(" Your Password", text: $password)
-                            .padding(.horizontal, 30)
-                            .padding(.vertical)
-                            .background(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .strokeBorder(CustomColors().primeGradiant, lineWidth: 1)
-                                    .padding(.horizontal, 25)
-                            ).foregroundColor(CustomColors().light)
+                    }
+                        
+                    
+                    Toggle(isOn: $showPass) {
+                        Text("Show Password?").font(.custom("Roboto-Lighr", size:20)).foregroundColor(CustomColors().light)
+                    }.padding(.vertical, 4)
+                        .padding(.horizontal, 30)
                     
                     HStack (spacing: 15){
                         if (self.password.count >= 8 && self.password.count <= 24) {
-                           Image("dot").resizable().frame(width: 28, height: 28).background(Color.green).cornerRadius(30)
+                           Image("check").resizable()
+                           .frame(width: 28, height: 28)
+                           .background(CustomColors().prime2)
+                           .cornerRadius(30)
+                           .foregroundColor(CustomColors().light)
                        } else {
-                            Image("dot").resizable().frame(width: 28, height: 28).background(Color.red).cornerRadius(30)
+                            Image("x").resizable().frame(width: 28, height: 28).background(CustomColors().prime).cornerRadius(30)
                         }
                         
                         Text("Length: 8-24 Characters").foregroundColor(CustomColors().light)
-                        }.padding().padding(.horizontal, 30)
+                    }.padding(.vertical, 0).padding(.horizontal, 30)
                     //.offset(x: 28, y: 0.0)
                     
                     
