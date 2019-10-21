@@ -16,6 +16,9 @@ struct AcceptTerms: View {
     @State var comitatusAccept = false
     @State var emailAccept = false
     
+    @State private var showAlert: Bool = false
+    @State private var alertTitle: String = ""
+    @State private var alertText: String = ""
     
     
     var body: some View {
@@ -64,7 +67,7 @@ struct AcceptTerms: View {
                     Divider()
                     
                     Toggle(isOn: $emailAccept) {
-                        Text("I Would Like Synapse to Email Me About Crypto").font(.system(size: 13)).foregroundColor(CustomColors().light)
+                        Text("Want Crypto Updates via Email?").font(.system(size: 13)).foregroundColor(CustomColors().light)
                     }.padding()
                     .padding(.horizontal, 10)
                     
@@ -89,26 +92,43 @@ struct AcceptTerms: View {
                             )
                     } else {
                         Button(action: {
-                            self.viewRouter.currentPage = "loading"
-                            NetworkingClient().registerUser(username: self.viewRouter.handle, password: self.viewRouter.password, email: self.viewRouter.email, saveLogs: self.viewRouter.keepLogs, receiveEmails: self.emailAccept) { (json, error) in
-                                if let error = error {
-                                    print(error)
-                                    //self.viewRouter.token = error.localizedDescription
-                                } else if let json = json {
-                                    print(json)
-                                    if json == "user created" {
-                                        self.viewRouter.currentPage = "email-v"
+                            if self.synapseAccept && self.comitatusAccept {
+                                self.viewRouter.currentPage = "loading"
+                                NetworkingClient().registerUser(username: self.viewRouter.handle, password: self.viewRouter.password, email: self.viewRouter.email, saveLogs: self.viewRouter.keepLogs, receiveEmails: self.emailAccept) { (json, error) in
+                                    if let error = error {
+                                        print(error)
+                                        //self.viewRouter.token = error.localizedDescription
+                                    } else if let json = json {
+                                        print(json)
+                                        if json == "user created" {
+                                            self.viewRouter.currentPage = "email-v"
+                                        }
                                     }
+                                    
                                 }
+                            } else {
+                                self.alertTitle = "Must Accept to Continue"
                                 
+                                var unaccepted: String
+                                
+                                if !self.synapseAccept {
+                                    unaccepted = "Synapse Wallet"
+                                } else {
+                                    unaccepted = "Comitatus Capital"
+                                }
+                                self.alertText = "Please Accept the \(unaccepted) Terms of Service and Privacy Policy"
+                                self.showAlert = true
                             }
                         }) {
                             Text("Sign Up").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
                         }.frame(minWidth: 0, maxWidth: .infinity)
                         .background(CustomColors().lg)
-                            .cornerRadius(30)
+                        .cornerRadius(30)
                         .padding()
-                            .foregroundColor(CustomColors().light)
+                        .foregroundColor(CustomColors().light)
+                        .alert(isPresented: $showAlert) {
+                            Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
+                        }
                     }
                     
                     Button(action: {
