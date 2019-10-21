@@ -83,7 +83,7 @@ struct SetHandle: View {
                         }.offset(x: -87, y: 0.0).foregroundColor(CustomColors().light)
                     }
                     
-                    //Spacer().frame(height: 70)
+                    //Spacer().frame(height: 100)
                     
                     VStack (spacing: 4) {
                         Button(action: {

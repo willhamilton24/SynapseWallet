@@ -22,7 +22,7 @@ struct WelcomePage: View {
                 
                 
                 VStack (spacing: 0) {
-                    Spacer().frame(height:235)
+                    Spacer().frame(height:180)
                     
                     Text("Welcome").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Light", size:60))
                     //Text(self.token)

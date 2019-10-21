@@ -93,16 +93,16 @@ struct EmailPassword: View {
                 
                 VStack (spacing: 4) {
                     Button(action: {
-                        if self.password.count >= 4 && self.password.count <= 24 {
+                        if self.password.count >= 8 && self.password.count <= 24 {
                             self.viewRouter.password = self.password
                             self.viewRouter.email = self.email
                             self.viewRouter.currentPage = "terms"
                         } else {
-                            self.alertText = "Your handle must be between 4 and 24 charaters in length. Please choose a different one."
+                            self.alertText = "Your password must be between 8 and 24 charaters in length. Please choose a different one."
                             if self.password.count < 4 {
-                                self.alertTitle = "Handle Too Short"
+                                self.alertTitle = "Password Too Short"
                             } else {
-                                self.alertTitle = "Handle Too Long"
+                                self.alertTitle = "Password Too Long"
                             }
                             self.showAlert = true
                         }
