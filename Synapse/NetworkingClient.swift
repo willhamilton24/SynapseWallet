@@ -60,16 +60,10 @@ class NetworkingClient  {
             "receiveEmails": receiveEmails
         ]
         
-        //var urlRequest = URLRequest(url: URL(string: "https://serverless.willhamilton24.now.sh/api/auth/signup")!)
-        //urlRequest.httpMethod = "POST"
-        
         Alamofire.request("https://serverless.willhamilton24.now.sh/api/auth/signup", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
                     if let error = response.error {
                         print(error)
                         completion(nil, error)
-        //            } else if let jsonArray = response.result.value as? [[String: Any]] {
-        //                print(jsonArray)
-        //                completion(jsonArray, nil)
                     } else if let jsonDict = response.result.value as? [String: Any] {
                         let succ = jsonDict["success"] as? String
                         print(succ)
@@ -90,9 +84,6 @@ class NetworkingClient  {
                     if let error = response.error {
                         print(error)
                         completion(nil, error)
-        //            } else if let jsonArray = response.result.value as? [[String: Any]] {
-        //                print(jsonArray)
-        //                completion(jsonArray, nil)
                     } else if let jsonDict = response.result.value as? [String: Any] {
                         let token = jsonDict["token"] as? String
                         if token != "email not verified" {
@@ -113,9 +104,6 @@ class NetworkingClient  {
                     if let error = response.error {
                         print(error)
                         completion(nil, error)
-        //            } else if let jsonArray = response.result.value as? [[String: Any]] {
-        //                print(jsonArray)
-        //                completion(jsonArray, nil)
                     } else if let jsonDict = response.result.value as? [String: Any] {
                         let token = jsonDict["success"] as? Bool
                         print(token)

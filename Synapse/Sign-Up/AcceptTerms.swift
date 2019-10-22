@@ -23,28 +23,41 @@ struct AcceptTerms: View {
     
     var body: some View {
         ZStack {
-            BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
+            BigLogo()
+                .frame(width: 500, height: 240)
+                .position(x: 180, y: 80)
+            
             VStack {
-                Spacer().frame(height: 235)
+                Spacer()
+                    .frame(height: 235)
                            
-                Text("Almost Done...").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Thin", size:30)).padding(.bottom, 20)
+                Text("Almost Done...")
+                    .foregroundColor(CustomColors().light)
+                    .font(Font.custom("Roboto-Thin", size:30))
+                    .padding(.bottom, 20)
                 
                 Divider()
                 
                 VStack {
                     Toggle(isOn: $synapseAccept) {
                         VStack {
-                            Text("I Have Read & Accepted the Synapse Wallet").foregroundColor(CustomColors().light)
+                            Text("I Have Read & Accepted the Synapse Wallet")
+                                .foregroundColor(CustomColors().light)
                                 .font(.system(size: 15))
                             
                             HStack(spacing: 0) {
-                                Button(action: {}) { Text("Terms of Service")}
-                                Text(" and ").foregroundColor(CustomColors().light)
-                                Button(action: {}) { Text("Privacy Policy")}
+                                Button(action: {}) { Text("Terms of Service") }
+                                
+                                Text(" and ")
+                                    .foregroundColor(CustomColors().light)
+                                
+                                Button(action: {}) { Text("Privacy Policy") }
                                 
                             }
-                        }.font(.system(size: 15))
-                    }.padding()
+                        }
+                        .font(.system(size: 15))
+                    }
+                    .padding()
                     .padding(.horizontal, 10)
                     
                     Divider()
@@ -52,23 +65,31 @@ struct AcceptTerms: View {
                     Toggle(isOn: $comitatusAccept) {
                         VStack {
                             Text("I Have Read & Accepted the Comitatus")
-                            .font(.system(size: 15)).foregroundColor(CustomColors().light)
+                                .font(.system(size: 15))
+                                .foregroundColor(CustomColors().light)
                             
                             HStack(spacing: 0) {
-                                Button(action: {}) { Text("Terms of Service")}
-                                Text(" and ").foregroundColor(CustomColors().light)
-                                Button(action: {}) { Text("Privacy Policy")}
+                                Button(action: {}) { Text("Terms of Service") }
                                 
+                                Text(" and ")
+                                    .foregroundColor(CustomColors().light)
+                                
+                                Button(action: {}) { Text("Privacy Policy") }
                             }
-                        }.font(.system(size: 15))
-                    }.padding()
+                        }
+                        .font(.system(size: 15))
+                    }
+                    .padding()
                     .padding(.horizontal, 10)
                     
                     Divider()
                     
                     Toggle(isOn: $emailAccept) {
-                        Text("Want Crypto Updates via Email?").font(.system(size: 13)).foregroundColor(CustomColors().light)
-                    }.padding()
+                        Text("Want Crypto Updates via Email?")
+                            .font(.system(size: 13))
+                            .foregroundColor(CustomColors().light)
+                    }
+                    .padding()
                     .padding(.horizontal, 10)
                     
                     Divider()
@@ -80,7 +101,9 @@ struct AcceptTerms: View {
                         }) {
                             HStack {
                                 Text("Connect with your Google Account")
-                                Image("google").resizable().frame(width: 20, height: 20)
+                                Image("google")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
                             }
                         }.frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
@@ -97,14 +120,12 @@ struct AcceptTerms: View {
                                 NetworkingClient().registerUser(username: self.viewRouter.handle, password: self.viewRouter.password, email: self.viewRouter.email, saveLogs: self.viewRouter.keepLogs, receiveEmails: self.emailAccept) { (json, error) in
                                     if let error = error {
                                         print(error)
-                                        //self.viewRouter.token = error.localizedDescription
                                     } else if let json = json {
                                         print(json)
                                         if json == "user created" {
                                             self.viewRouter.currentPage = "email-v"
                                         }
                                     }
-                                    
                                 }
                             } else {
                                 self.alertTitle = "Must Accept to Continue"
@@ -120,8 +141,12 @@ struct AcceptTerms: View {
                                 self.showAlert = true
                             }
                         }) {
-                            Text("Sign Up").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
-                        }.frame(minWidth: 0, maxWidth: .infinity)
+                            Text("Sign Up")
+                                .padding()
+                                .font(Font.custom("Roboto-Thin", size:35))
+                                .foregroundColor(CustomColors().light)
+                        }
+                        .frame(minWidth: 0, maxWidth: .infinity)
                         .background(CustomColors().lg)
                         .cornerRadius(30)
                         .padding()
@@ -135,18 +160,18 @@ struct AcceptTerms: View {
                         self.viewRouter.currentPage = "email-password"
                     }) {
                         Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
-                    }.frame(minWidth: 225, maxWidth: 250)
-                        .background(CustomColors().lg)
-                            .cornerRadius(25)
-                        .padding()
-                        .padding(.vertical, 0)
-                            .foregroundColor(CustomColors().light)
-                    
-                    
+                    }
+                    .frame(minWidth: 225, maxWidth: 250)
+                    .background(CustomColors().lg)
+                    .cornerRadius(25)
+                    .padding()
+                    .padding(.vertical, 0)
+                    .foregroundColor(CustomColors().light)
                 }
             }
-            
-        }.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
+        }
+        .background(CustomColors().dark)
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 

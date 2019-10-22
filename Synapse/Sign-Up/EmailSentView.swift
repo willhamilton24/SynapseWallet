@@ -28,7 +28,10 @@ struct EmailSentView: View {
                 Spacer()
                     .frame(height: 235)
                 
-                Image("mail").resizable().frame(width: 200, height: 200).offset(x:10)
+                Image("mail")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                    .offset(x:10)
                 
                 Text("Account Created")
                     .foregroundColor(CustomColors().light)
@@ -82,7 +85,6 @@ struct EmailSentView: View {
         }
         .background(CustomColors().dark)
         .edgesIgnoringSafeArea(.bottom)
-        
     }
 }
 

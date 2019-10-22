@@ -15,10 +15,17 @@ struct PersistantView: View {
     
     var body: some View {
         ZStack {
-            BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
+            
+            BigLogo()
+                .frame(width: 500, height: 240)
+                .position(x: 180, y: 80)
+            
             VStack {
-                Spacer().frame(height: 350)
+                Spacer()
+                    .frame(height: 350)
+                
                 Text("")
+                
                 Button(action: {
                     BiometricAuth().authenticateTapped() { didWork in
                         if didWork {
@@ -41,8 +48,6 @@ struct PersistantView: View {
                             print("Try again or login normally")
                         }
                     }
-                    
-                    
                 }) {
                     Text("Login With Biometrics").font(.title)
                 }
