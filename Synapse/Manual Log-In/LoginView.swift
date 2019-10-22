@@ -81,6 +81,11 @@ struct LoginView: View {
                                     self.viewRouter.token = json!
                                     self.viewRouter.currentPage = "main"
                                 }
+                            } else {
+                                self.alertTitle = "Server Error"
+                                self.alertText = "Noah screwed up, try again in a few minutes"
+                                self.showAlert = true
+                                if error != nil { print(error!) }
                             }
                         }
                     }) {
