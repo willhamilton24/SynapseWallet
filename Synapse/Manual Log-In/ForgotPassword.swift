@@ -57,9 +57,27 @@ struct ForgotPassword: View {
                     
                     VStack (spacing: 4) {
                         Button(action: {
-                            if (self.viewRouter.emails.contains(self.email)) {
-                                self.viewRouter.currentPage = "loading"
+                            if (self.viewRouter.emails.contains(self.email.lowercased())) {
+                                //self.viewRouter.currentPage = "loading"
                                 self.viewRouter.email = self.email
+                                NetworkingClient().forgotPassword( email: self.email.lowercased() ) { (json, error) in
+                                    if json != nil {
+                                        if json == true {
+                                            print("Success")
+                                            self.viewRouter.currentPage = "main"
+                                            self.showAlert = true
+                                        } else {
+                                            print("Failure")
+                                            self.viewRouter.currentPage = "email-v"
+                                            self.alertTitle = "Could't Send Reset Link"
+                                            self.alertText = "Make sure you have validated your email address"
+                                        }
+                                    } else {
+                                        self.alertTitle = "Server Error"
+                                        self.alertText = "Noah screwed up, try again in a few minutes"
+                                        self.showAlert = true
+                                    }
+                                }
                             } else {
                                 self.alertTitle = "Email Not Registered"
                                 self.alertText = "There is no account with that email. Try checking for typos."

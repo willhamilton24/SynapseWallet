@@ -55,7 +55,17 @@ struct LoginView: View {
                 }
                 
                 Button(action: {
-                    self.viewRouter.currentPage = "forgot-pass"
+                    self.viewRouter.currentPage = "loading"
+                    NetworkingClient().emailArray() { (json, error) in
+                        if let error = error {
+                            //print(error)
+                            self.viewRouter.emails = [error.localizedDescription]
+                        } else if let json = json {
+                            print(json)
+                            self.viewRouter.emails = json
+                            self.viewRouter.currentPage = "forgot-pass"
+                        }
+                    }
                 }) {
                     Text("Forgot password?")
                 }

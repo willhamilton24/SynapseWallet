@@ -15,6 +15,7 @@ class NetworkingClient  {
     
     typealias WebServiceResponseArray = ([String]?, Error?) -> Void
     typealias WebServiceResponseString = (String?, Error?) -> Void
+    typealias WebServiceResponseBoolean = (Bool?, Error?) -> Void
     
     func handleArray(completion: @escaping WebServiceResponseArray) {
         
@@ -98,6 +99,25 @@ class NetworkingClient  {
                             self.defaults.set(parameters["username"], forKey: defaultsKeys.handleKey)
                             self.defaults.set(parameters["password"], forKey: defaultsKeys.passwordKey)
                         }
+                        print(token)
+                        completion(token, nil)
+                    }
+                }
+    }
+    
+    
+    func forgotPassword(email: String, completion: @escaping WebServiceResponseBoolean) {
+        let parameters: [String: Any] = [ "email": email ]
+        
+        Alamofire.request("https://serverless.willhamilton24.now.sh/api/auth/sendPasswordResetEmail", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
+                    if let error = response.error {
+                        print(error)
+                        completion(nil, error)
+        //            } else if let jsonArray = response.result.value as? [[String: Any]] {
+        //                print(jsonArray)
+        //                completion(jsonArray, nil)
+                    } else if let jsonDict = response.result.value as? [String: Any] {
+                        let token = jsonDict["success"] as? Bool
                         print(token)
                         completion(token, nil)
                     }
