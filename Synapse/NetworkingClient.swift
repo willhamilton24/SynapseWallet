@@ -16,7 +16,7 @@ class NetworkingClient  {
     typealias WebServiceResponseArray = ([String]?, Error?) -> Void
     typealias WebServiceResponseString = (String?, Error?) -> Void
     typealias WebServiceResponseBoolean = (Bool?, Error?) -> Void
-    typealias WebServiceResponseDictionary = ([String: Any]?, Error?) -> Void
+    typealias WebServiceResponseDoubleDictionary = ([String: Double]?, Error?) -> Void
     typealias WebServiceResponseTuple = ((profile_pic: String?, joined: Int?, name: String?, location: String?, email: String?, balances: [String: Double]?)?, Error?) -> Void
     
     func handleArray(completion: @escaping WebServiceResponseArray) {
@@ -114,7 +114,7 @@ class NetworkingClient  {
                 }
     }
     
-    func getBalances(username: String, token: String, completion: @escaping WebServiceResponseDictionary) {
+    func getBalances(username: String, token: String, completion: @escaping WebServiceResponseDoubleDictionary) {
         let parameters: [String: Any] = [
             "username": username,
             "token": token
@@ -126,6 +126,7 @@ class NetworkingClient  {
                 completion(nil, error)
             } else if let jsonDict = response.result.value as? [String: Any] {
                 let balances = jsonDict as? [String: Double]
+                print(balances)
                 completion(balances, nil)
             }
         }

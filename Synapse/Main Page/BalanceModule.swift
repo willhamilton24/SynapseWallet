@@ -9,13 +9,15 @@
 import SwiftUI
 
 struct BalanceModule: View {
+    @ObservedObject var viewRouter: ViewRouter
+    
     var body: some View {
         
         VStack(spacing: 5) {
             Text("Balance") // Balance Label
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Light", size:18))
-            Text("321.2113" + " mBTC")
+            Text(String(self.viewRouter.balances.btc) + " BTC")
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Thin", size:46))
             Text("$" + "2708.84" + " USD")
@@ -34,6 +36,6 @@ struct BalanceModule: View {
 
 struct BalanceModule_Previews: PreviewProvider {
     static var previews: some View {
-        BalanceModule()
+        BalanceModule(viewRouter: ViewRouter())
     }
 }
