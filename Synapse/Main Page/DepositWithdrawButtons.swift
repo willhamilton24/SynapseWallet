@@ -23,7 +23,6 @@ struct DepositWithdrawButtons: View {
             .padding(.vertical, 0)
             .foregroundColor(CustomColors().light)
             
-            //Spacer().frame(width: 100)
             SwipeToPay()
             
             NavigationLink(destination: WithdrawPage()) {

@@ -16,6 +16,7 @@ class NetworkingClient  {
     typealias WebServiceResponseArray = ([String]?, Error?) -> Void
     typealias WebServiceResponseString = (String?, Error?) -> Void
     typealias WebServiceResponseBoolean = (Bool?, Error?) -> Void
+    typealias WebServiceResponseTuple = ((profile_pic: String?, joined: Int?, name: String?, location: String?, email: String?, balances: [String: Double]?)?, Error?) -> Void
     
     func handleArray(completion: @escaping WebServiceResponseArray) {
         
@@ -110,5 +111,31 @@ class NetworkingClient  {
                         completion(token, nil)
                     }
                 }
+    }
+    
+    func getMyProfileInfo(username: String, token: String, completion: @escaping WebServiceResponseTuple) {
+        let parameters: [String: Any] = [
+            "username": username,
+            "token": token
+        ]
+        
+        Alamofire.request("https://serverless.willhamilton24.now.sh/api/auth/getOwnInfo", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
+            if let error = response.error {
+                print(error)
+                completion(nil, error)
+            } else if let jsonDict = response.result.value as? [String: Any] {
+                let profile_pic = jsonDict["profile-pic"] as? String
+                let joined = jsonDict["joined"] as? Int
+                let name = jsonDict["name"] as? String
+                let location = jsonDict["location"] as? String
+                let email = jsonDict["email"] as? String
+                let balances = jsonDict["balances"] as? [String: Double]
+                
+                let profileTuple = (profile_pic: profile_pic, joined: joined, name: name, location: location, email: email, balances: balances)
+                
+                completion(profileTuple, nil)
+            }
+        }
+        
     }
 }
