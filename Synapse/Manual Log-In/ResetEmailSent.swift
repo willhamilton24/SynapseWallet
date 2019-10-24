@@ -26,8 +26,8 @@ struct ResetEmailSent: View {
                 
                 Image("mail")
                     .resizable()
-                    .frame(width: 200, height: 200)
-                    .offset(x:10)
+                    .frame(width: 170, height: 100)
+                    .padding(.bottom, 50)
                 
                 Text("Reset Link Sent")
                     .foregroundColor(CustomColors().light)
