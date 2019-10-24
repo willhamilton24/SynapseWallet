@@ -276,10 +276,14 @@
 		BE87EDA22342F10D00E267DE /* Synapse */ = {
 			isa = PBXGroup;
 			children = (
-				BE8F963B2361D1B000B4DD23 /* Utilities */,
 				BE87EDA32342F10D00E267DE /* AppDelegate.swift */,
 				BE87EDA52342F10D00E267DE /* SceneDelegate.swift */,
 				BE87EDA72342F10D00E267DE /* ContentView.swift */,
+				BE718A42234BD20300759BB1 /* ViewRouter.swift */,
+				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
+				BE8F96382361CE9200B4DD23 /* EmailValidator.swift */,
+				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
+				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
 				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
 				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
 				BE7B7BFA235694D2001039A3 /* Persistant Log-In */,
@@ -321,18 +325,6 @@
 				BE87EDBC2342F11100E267DE /* Info.plist */,
 			);
 			path = SynapseTests;
-			sourceTree = "<group>";
-		};
-		BE8F963B2361D1B000B4DD23 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				BE718A42234BD20300759BB1 /* ViewRouter.swift */,
-				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
-				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
-				BE8F96382361CE9200B4DD23 /* EmailValidator.swift */,
-				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -26,10 +26,14 @@ struct ForgotPassword: View {
 
             VStack {
                 
-                Spacer().frame(height:235)
+                Spacer()
+                    .frame(height:235)
                     
                     VStack {
-                        Text("Forgot Password").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Thin", size:30)).padding(.bottom, 20)
+                        Text("Forgot Password")
+                            .foregroundColor(CustomColors().light)
+                            .font(Font.custom("Roboto-Thin", size:30))
+                            .padding(.bottom, 20)
                         
                         
                         
@@ -51,11 +55,11 @@ struct ForgotPassword: View {
                             .lineLimit(3)
                             .foregroundColor(CustomColors().light)
                         
-                        Spacer().frame(height: 30)
+                        Spacer()
+                            .frame(height: 30)
                         
                     }
                     
-                    //Spacer().frame(height: 70)
                     
                     VStack (spacing: 4) {
                         Button(action: {
@@ -86,33 +90,40 @@ struct ForgotPassword: View {
                                 self.showAlert = true
                             }
                         }) {
-                            Text("Next").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
-                        }.frame(minWidth: 0, maxWidth: .infinity)
+                            Text("Next")
+                                .padding()
+                                .font(Font.custom("Roboto-Thin", size:35))
+                                .foregroundColor(CustomColors().light)
+                        }
+                        .frame(minWidth: 0, maxWidth: .infinity)
                         .background(CustomColors().lg)
-                            .cornerRadius(30)
+                        .cornerRadius(30)
                         .padding()
-                            .foregroundColor(CustomColors().light)
-                            .alert(isPresented: $showAlert) {
-                                Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
-                            }
+                        .foregroundColor(CustomColors().light)
+                        .alert(isPresented: $showAlert) {
+                            Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
+                        }
                         
                         Button(action: {
                             self.viewRouter.currentPage = "welcome"
                         }) {
-                            Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
-                        }.frame(minWidth: 225, maxWidth: 250)
-                            .background(CustomColors().lg)
-                                .cornerRadius(25)
-                            .padding()
-                            .padding(.vertical, 0)
+                            Text("Back")
+                                .padding()
+                                .font(.custom("Roboto-Thin", size:20))
                                 .foregroundColor(CustomColors().light)
-                    }//.position(x: 210, y:300)
-                    
-                    //Spacer().frame(height: 70)
-                //}.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
-            
+                        }
+                        .frame(minWidth: 225, maxWidth: 250)
+                        .background(CustomColors().lg)
+                        .cornerRadius(25)
+                        .padding()
+                        .padding(.vertical, 0)
+                        .foregroundColor(CustomColors().light)
+                    }
+                
             }
-        }.edgesIgnoringSafeArea(.bottom).background(CustomColors().dark)
+        }
+        .edgesIgnoringSafeArea(.bottom)
+        .background(CustomColors().dark)
     }
 }
 

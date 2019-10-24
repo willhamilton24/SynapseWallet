@@ -22,12 +22,19 @@ struct LoginView: View {
         ZStack {
             
             VStack {
-                Spacer().frame(height: 235)
+                Spacer()
+                    .frame(height: 235)
                 
-                Text("Login").foregroundColor(CustomColors().light).font(Font.custom("Roboto-Thin", size:45))
+                Text("Login")
+                    .foregroundColor(CustomColors().light)
+                    .font(Font.custom("Roboto-Thin", size:45))
                 
                 VStack (alignment: .leading) {
-                    Text("Handle").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().light).padding(.horizontal, 30)
+                    Text("Handle")
+                        .font(Font.custom("Roboto-Light", size:26))
+                        .padding(.vertical, 0)
+                        .foregroundColor(CustomColors().light)
+                        .padding(.horizontal, 30)
                         
                     TextField(" Your Handle", text: $handle)
                             .padding(.horizontal, 30)
@@ -38,9 +45,14 @@ struct LoginView: View {
                                     .padding(.horizontal, 25)
                             ).foregroundColor(CustomColors().light)
                     
-                    Spacer().frame(height: 20)
+                    Spacer()
+                        .frame(height: 20)
                     
-                    Text("Password").font(Font.custom("Roboto-Light", size:26)).padding(.vertical, 0).foregroundColor(CustomColors().light).padding(.horizontal, 30)
+                    Text("Password")
+                        .foregroundColor(CustomColors().light)
+                        .font(Font.custom("Roboto-Light", size:26))
+                        .padding(.vertical, 0)
+                        .padding(.horizontal, 30)
                         
                     SecureField(" Your Password", text: $password)
                             .padding(.horizontal, 30)
@@ -58,7 +70,6 @@ struct LoginView: View {
                     self.viewRouter.currentPage = "loading"
                     NetworkingClient().emailArray() { (json, error) in
                         if let error = error {
-                            //print(error)
                             self.viewRouter.emails = [error.localizedDescription]
                         } else if let json = json {
                             print(json)
@@ -99,34 +110,46 @@ struct LoginView: View {
                             }
                         }
                     }) {
-                        Text("Login").padding().font(Font.custom("Roboto-Thin", size:35)).foregroundColor(CustomColors().light)
-                    }.frame(minWidth: 0, maxWidth: .infinity)
+                        Text("Login")
+                            .font(Font.custom("Roboto-Thin", size:35))
+                            .foregroundColor(CustomColors().light)
+                            .padding()
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity)
                     .background(CustomColors().lg)
-                        .cornerRadius(30)
+                    .cornerRadius(30)
                     .padding()
-                        .foregroundColor(CustomColors().light)
+                    .foregroundColor(CustomColors().light)
                     .alert(isPresented: $showAlert) {
                         Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
                     }
-                        //.padding(0)
                     
                     Button(action: {
                         self.viewRouter.currentPage = "welcome"
                     }) {
-                        Text("Back").padding().font(Font.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
-                    }.frame(minWidth: 225, maxWidth: 250)
-                        .background(CustomColors().lg)
-                            .cornerRadius(25)
-                        .padding()
-                        .padding(.vertical, 0)
+                        Text("Back")
+                            .padding()
+                            .font(Font.custom("Roboto-Thin", size:20))
                             .foregroundColor(CustomColors().light)
-                }//.position(x: 210, y:300)
+                    }
+                    .frame(minWidth: 225, maxWidth: 250)
+                    .background(CustomColors().lg)
+                    .cornerRadius(25)
+                    .padding()
+                    .padding(.vertical, 0)
+                    .foregroundColor(CustomColors().light)
+                }
                 
                 
             }
-            BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
             
-        }.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
+            BigLogo()
+                .frame(width: 500, height: 240)
+                .position(x: 180, y: 80)
+            
+        }
+        .background(CustomColors().dark)
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 

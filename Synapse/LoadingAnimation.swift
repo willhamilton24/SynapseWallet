@@ -11,7 +11,8 @@ import Lottie
 
 struct LoadingAnimation: View {
     var body: some View {
-        LottieView(filename: "loader").frame(maxWidth: 200, maxHeight: 200)
+        LottieView(filename: "loader")
+            .frame(maxWidth: 200, maxHeight: 200)
     }
 }
 

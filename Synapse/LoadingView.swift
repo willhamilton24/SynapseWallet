@@ -13,13 +13,19 @@ struct LoadingView: View {
     
     var body: some View {
         ZStack {
-            BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
+            BigLogo()
+                .frame(width: 500, height: 240)
+                .position(x: 180, y: 80)
+            
             VStack {
-                Spacer().frame(height: 235)
+                Spacer()
+                    .frame(height: 235)
             
                 VStack {
                     LoadingAnimation()
-                    Text("  Loading...").foregroundColor(.white).font(Font.custom("Roboto-Light", size:50))
+                    Text("  Loading...")
+                        .foregroundColor(.white)
+                        .font(Font.custom("Roboto-Light", size:50))
                 }
             }
         }.background(CustomColors().dark)
