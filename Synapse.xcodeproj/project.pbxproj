@@ -54,6 +54,7 @@
 		BE87EDDA2346DB5B00E267DE /* WithdrawPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */; };
 		BE87EDDC2346DC4C00E267DE /* InstantTransferPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */; };
 		BE87EDDF2346E06900E267DE /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDDE2346E06900E267DE /* UpdateProfile.swift */; };
+		BE8F96372361CB6A00B4DD23 /* ResetEmailSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96362361CB6A00B4DD23 /* ResetEmailSent.swift */; };
 		BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FC9234BFAE90046EADE /* LoginView.swift */; };
 		BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FCB234BFB060046EADE /* SignUpView.swift */; };
 		BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED52E0F234BEFE2003D3D4A /* SWLogo.swift */; };
@@ -124,6 +125,7 @@
 		BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawPage.swift; sourceTree = "<group>"; };
 		BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantTransferPage.swift; sourceTree = "<group>"; };
 		BE87EDDE2346E06900E267DE /* UpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
+		BE8F96362361CB6A00B4DD23 /* ResetEmailSent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetEmailSent.swift; sourceTree = "<group>"; };
 		BEBD7FC9234BFAE90046EADE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BEBD7FCB234BFB060046EADE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BED52E0F234BEFE2003D3D4A /* SWLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLogo.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			children = (
 				BEBD7FC9234BFAE90046EADE /* LoginView.swift */,
 				BE7B7BF8235693CD001039A3 /* ForgotPassword.swift */,
+				BE8F96362361CB6A00B4DD23 /* ResetEmailSent.swift */,
 			);
 			path = "Manual Log-In";
 			sourceTree = "<group>";
@@ -271,13 +274,13 @@
 		BE87EDA22342F10D00E267DE /* Synapse */ = {
 			isa = PBXGroup;
 			children = (
+				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
 				BE87EDA32342F10D00E267DE /* AppDelegate.swift */,
 				BE87EDA52342F10D00E267DE /* SceneDelegate.swift */,
-				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
-				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
-				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
 				BE87EDA72342F10D00E267DE /* ContentView.swift */,
 				BE718A42234BD20300759BB1 /* ViewRouter.swift */,
+				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
+				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
 				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
 				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
 				BE7B7BFA235694D2001039A3 /* Persistant Log-In */,
@@ -510,6 +513,7 @@
 				BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */,
 				BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */,
 				BE87EDD023431E0700E267DE /* DepositWithdrawButtons.swift in Sources */,
+				BE8F96372361CB6A00B4DD23 /* ResetEmailSent.swift in Sources */,
 				BE6FEA87234FF64300758CD2 /* LoadingView.swift in Sources */,
 				BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */,
 				BE718A092346FBAA00759BB1 /* TransactionPage.swift in Sources */,

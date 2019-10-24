@@ -20,7 +20,9 @@ struct ForgotPassword: View {
     
     var body: some View {
         ZStack {
-            BigLogo().frame(width: 500, height: 240).position(x: 180, y: 80)
+            BigLogo()
+                .frame(width: 500, height: 240)
+                .position(x: 180, y: 80)
 
             VStack {
                 
@@ -64,7 +66,7 @@ struct ForgotPassword: View {
                                     if json != nil {
                                         if json == true {
                                             print("Success")
-                                            self.viewRouter.currentPage = "main"
+                                            self.viewRouter.currentPage = "forgot-pass-sent"
                                             self.showAlert = true
                                         } else {
                                             print("Failure")

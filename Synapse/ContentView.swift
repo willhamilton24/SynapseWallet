@@ -38,6 +38,8 @@ struct ContentView: View {
                     EmailSentView(viewRouter: viewRouter)
                 } else if viewRouter.currentPage == "forgot-pass" {
                     ForgotPassword(viewRouter: viewRouter)
+                } else if viewRouter.currentPage == "forgot-pass-sent" {
+                    ResetEmailSent(viewRouter: viewRouter)
                 }
             
         }.background(CustomColors().dark)
