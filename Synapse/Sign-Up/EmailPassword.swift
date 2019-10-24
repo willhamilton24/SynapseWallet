@@ -117,9 +117,15 @@ struct EmailPassword: View {
                 VStack (spacing: 4) {
                     Button(action: {
                         if self.password.count >= 8 && self.password.count <= 24 {
-                            self.viewRouter.password = self.password
-                            self.viewRouter.email = self.email
-                            self.viewRouter.currentPage = "terms"
+                            if EmailValidator().isValidEmail(testStr: self.email) {
+                                self.viewRouter.password = self.password
+                                self.viewRouter.email = self.email
+                                self.viewRouter.currentPage = "terms"
+                            } else {
+                                self.alertTitle = "Email Not Valid"
+                                self.alertText = "Please enter a valid email address."
+                                self.showAlert = true
+                            }
                         } else {
                             self.alertText = "Your password must be between 8 and 24 charaters in length. Please choose a different one."
                             if self.password.count < 4 {
