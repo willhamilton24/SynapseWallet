@@ -15,7 +15,7 @@ class ViewRouter: ObservableObject {
     let objectWillChange = PassthroughSubject<ViewRouter,Never>()
     
     
-    var currentPage: String = "welcome" {
+    var currentPage: String = "main" {
         didSet {
             withAnimation() {
                 objectWillChange.send(self)

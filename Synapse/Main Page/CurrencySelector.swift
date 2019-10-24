@@ -11,24 +11,24 @@ import SwiftUI
 struct CurrencySelector: View {
     var body: some View {
         VStack(alignment: .center) {
-            //Text("Currency").font(.headline)
-        HStack(spacing: 50) {
+            HStack(spacing: 50) {
                 Button(action: {}) {
-                    Image("btc").padding(9)
-                }.background(Color.yellow)
+                    Image("btc")
+                        .padding(9)
+                }
+                .background(Color.yellow)
                 .foregroundColor(.white)
                 .mask(Circle())
                 
-                //Spacer().frame(width: 50.0, height: 0.0)
                 
                 Button(action: {}) {
-                    Image("eth").padding(9)
+                    Image("eth")
+                        .padding(9)
                 }.foregroundColor(.yellow)
                 
-                //Spacer().frame(width: 50.0, height: 0.0)
-                
                 Button(action: {}) {
-                    Image("ltc").padding(9)
+                    Image("ltc")
+                        .padding(9)
                 }.foregroundColor(.yellow)
             }
         }

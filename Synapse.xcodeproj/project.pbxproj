@@ -56,6 +56,7 @@
 		BE87EDDF2346E06900E267DE /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE87EDDE2346E06900E267DE /* UpdateProfile.swift */; };
 		BE8F96372361CB6A00B4DD23 /* ResetEmailSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96362361CB6A00B4DD23 /* ResetEmailSent.swift */; };
 		BE8F96392361CE9200B4DD23 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96382361CE9200B4DD23 /* EmailValidator.swift */; };
+		BE8F963D2361DE8700B4DD23 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F963C2361DE8700B4DD23 /* ProfilePage.swift */; };
 		BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FC9234BFAE90046EADE /* LoginView.swift */; };
 		BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FCB234BFB060046EADE /* SignUpView.swift */; };
 		BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED52E0F234BEFE2003D3D4A /* SWLogo.swift */; };
@@ -128,6 +129,7 @@
 		BE87EDDE2346E06900E267DE /* UpdateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
 		BE8F96362361CB6A00B4DD23 /* ResetEmailSent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetEmailSent.swift; sourceTree = "<group>"; };
 		BE8F96382361CE9200B4DD23 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		BE8F963C2361DE8700B4DD23 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		BEBD7FC9234BFAE90046EADE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BEBD7FCB234BFB060046EADE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BED52E0F234BEFE2003D3D4A /* SWLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLogo.swift; sourceTree = "<group>"; };
@@ -223,12 +225,12 @@
 			children = (
 				BE718A402347BFBD00759BB1 /* MainPage.swift */,
 				BED52E0F234BEFE2003D3D4A /* SWLogo.swift */,
-				BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */,
-				BE87EDD32343413D00E267DE /* InstantTransferButton.swift */,
-				BE87EDD1234328AA00E267DE /* SwipeToPay.swift */,
-				BE87EDCF23431E0700E267DE /* DepositWithdrawButtons.swift */,
-				BE87EDCD234315E500E267DE /* CurrencySelector.swift */,
 				BE87EDC72343073C00E267DE /* BalanceModule.swift */,
+				BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */,
+				BE87EDCD234315E500E267DE /* CurrencySelector.swift */,
+				BE87EDD1234328AA00E267DE /* SwipeToPay.swift */,
+				BE87EDD32343413D00E267DE /* InstantTransferButton.swift */,
+				BE87EDCF23431E0700E267DE /* DepositWithdrawButtons.swift */,
 			);
 			path = "Main Page";
 			sourceTree = "<group>";
@@ -292,6 +294,7 @@
 				BE7B7BFD235695FB001039A3 /* Deprecated Auth Views */,
 				BE7B7BFE2356A10E001039A3 /* Main Page */,
 				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
+				BE8F963C2361DE8700B4DD23 /* ProfilePage.swift */,
 				BE87EDD72346DB1000E267DE /* DepositPage.swift */,
 				BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */,
 				BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */,
@@ -533,6 +536,7 @@
 				BE718A412347BFBD00759BB1 /* MainPage.swift in Sources */,
 				BE6FEA85234FD6AC00758CD2 /* NetworkingClient.swift in Sources */,
 				BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */,
+				BE8F963D2361DE8700B4DD23 /* ProfilePage.swift in Sources */,
 				BE6BAB1E2350287E00E2C17B /* LoadingAnimation.swift in Sources */,
 				BE718A43234BD20300759BB1 /* ViewRouter.swift in Sources */,
 				BE87EDD82346DB1000E267DE /* DepositPage.swift in Sources */,

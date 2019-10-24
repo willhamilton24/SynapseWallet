@@ -14,63 +14,69 @@ struct MainPage: View {
 
     var body: some View {
         NavigationView  {
-            VStack() {
-                
-                
-                // Top Bar
-                HStack(spacing: 10.0) {
+            VStack(spacing: 0) {
                     
-                    SWLogo()
+                    // Top Bar
+                    VStack {
+                        Spacer()
+                            .frame(height:100)
+                        HStack(spacing: 10.0) {
+                            
+                            SWLogo()
+                            
+                            Spacer()
+                                .frame(width: 140, height: 20, alignment: .center)
+                            
+                            //Profile Button
+                            NavigationLink(destination: ProfilePage()) {
+                                Image("profile")
+                                .resizable()
+                                .frame(width: 65, height: 65)
+                            }
+                            
+                                
+                        }
+                    }
+                    .font(Font.custom("Roboto-Thin", size:36))
+                    .padding()
+                    .foregroundColor(CustomColors().light)
+                    .frame(width: 500, height: 250)
+                    .fixedSize()
+                    .background(CustomColors().primeGradiant)
+                    .edgesIgnoringSafeArea(.top)
                     
-                    Spacer().frame(width: 150, height: 20, alignment: .center)
                     
                     
-                    //Logout Button
-                    Button(action: {}) {
-                        Text(self.viewRouter.token)
-                        //Image("logout2")
-                    }.foregroundColor(.yellow).background(Color.white)
-                        
-                }//.offset(x: 0.0, y: -100.0)
+                    // Balance Display Cluster
+                    BalanceModule()
+                    
+                    //Spacer().frame(height: 40)
+                    
+                    MyTransactionsButton().padding(.top, 30)
                 
-                Spacer().frame(height: 100)
-                
-                
-                // Balance Display Cluster
-                BalanceModule()//.offset(x: 0.0, y: -30.0)
-                
-                //Spacer().frame(height: 40)
-                
-                MyTransactionsButton().padding(.top, 30)
-            
-                Spacer().frame(height: 20)
-                
-                // Select Active Currency
-                CurrencySelector()//.offset(x: 0.0, y: -30.0)
-                           
-                SwipeToPay()
-                
-                // Deposit / Withdraw Funds
-                DepositWithdrawButtons()
-                
-                Spacer().frame(height: 20)
-                
-                // Instant Transfer Funds
-                InstantTransferButton()
-                
-                // Coin Value Display
-                //GraphModule()//.offset(x: 0.0, y: -50.0)
-                
-               
-                
-                //Divider().frame(width: 250, height: 20, alignment: .center)
-                
-                //Spacer().frame(height: 120)
-                
-                
-                
-            }.padding().offset(x: 0, y: -50)//.background(Color.blue.edgesIgnoringSafeArea(.all))
-        }
+                    Spacer().frame(height: 20)
+                    
+                    // Select Active Currency
+                    CurrencySelector()//.offset(x: 0.0, y: -30.0)
+                               
+                    SwipeToPay()
+                    
+                    // Deposit / Withdraw Funds
+                    DepositWithdrawButtons()
+                    
+                    Spacer().frame(height: 20)
+                    
+                    // Instant Transfer Funds
+                    InstantTransferButton()
+        
+                    
+                    Spacer().frame(height: 120)
+                    
+                    
+                    
+                }
+            }
+        
     }
 }
 

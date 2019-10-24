@@ -13,7 +13,7 @@ struct SWLogo: View {
         VStack(alignment: .leading) {
             Text("SYNAPSE")
             Text("WALLET.")
-        }.font(.title).foregroundColor(.yellow)
+        }
     }
 }
 
