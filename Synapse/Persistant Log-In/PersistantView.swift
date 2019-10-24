@@ -22,14 +22,16 @@ struct PersistantView: View {
             
             VStack {
                 Spacer()
-                    .frame(height: 350)
+                   .frame(height: 150)
                 
-                Text("")
+                Text("Welcome Back")
+                    .font(Font.custom("Roboto-Light", size:28))
+                    .foregroundColor(CustomColors().light)
                 
                 Button(action: {
                     BiometricAuth().authenticateTapped() { didWork in
                         if didWork {
-                            // Login
+                            self.viewRouter.currentPage = "loading"
                             let defaults = UserDefaults.standard
                             NetworkingClient().login(
                             username: defaults.string(forKey: defaultsKeys.handleKey)!,
@@ -43,14 +45,28 @@ struct PersistantView: View {
                                     }
                                 }
                             }
-                            self.viewRouter.currentPage = "main"
                         } else {
                             print("Try again or login normally")
                         }
                     }
                 }) {
-                    Text("Login With Biometrics").font(.title)
+                    HStack {
+                        Text("Express Login")
+                            .font(Font.custom("Roboto-Light", size:40))
+                            .padding(.vertical, 20)
+                            .padding(.horizontal, 0)
+                        
+                        Image("Arr-R")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                            .padding(.horizontal, 0)
+                    }
                 }
+                .frame(minWidth: 0, maxWidth: 350)
+                .background(CustomColors().lg)
+                .cornerRadius(30)
+                .padding()
+                .foregroundColor(CustomColors().light)
                 
                 Button(action: {
                     let defaults = UserDefaults.standard
@@ -60,6 +76,10 @@ struct PersistantView: View {
                 }) {
                     Text("or login normally")
                 }
+                .padding()
+                
+                
+                
             }
         }.onAppear {
             BiometricAuth().authenticateTapped() { didWork in
@@ -85,6 +105,9 @@ struct PersistantView: View {
             }
             
         }
+        .edgesIgnoringSafeArea(.bottom)
+        .background(CustomColors().dark)
+
     }
 }
 
