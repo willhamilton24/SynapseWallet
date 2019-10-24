@@ -11,14 +11,23 @@ import SwiftUI
 struct BalanceModule: View {
     var body: some View {
         
-        VStack() {
+        VStack(spacing: 5) {
             Text("Balance") // Balance Label
-                .font(.headline)
+                .foregroundColor(CustomColors().light)
+                .font(Font.custom("Roboto-Light", size:18))
             Text("321.2113" + " mBTC")
-                .font(.system(size: 45))
+                .foregroundColor(CustomColors().light)
+                .font(Font.custom("Roboto-Thin", size:46))
             Text("$" + "2708.84" + " USD")
-                .font(.subheadline)
-            Divider().frame(width: 250, height: 20, alignment: .center)
+                .foregroundColor(CustomColors().light)
+                .font(Font.custom("Roboto-Light", size:24))
+            Spacer()
+                .frame(height: 20)
+            Spacer()
+                .frame(width: 300, height: 2.5, alignment: .center)
+                .foregroundColor(.white)
+                .background(CustomColors().primeGradiant)
+                
         }
     }
 }

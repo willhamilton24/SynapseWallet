@@ -40,7 +40,7 @@ struct MainPage: View {
                     .font(Font.custom("Roboto-Thin", size:36))
                     .padding()
                     .foregroundColor(CustomColors().light)
-                    .frame(width: 500, height: 250)
+                    .frame(width: 500, height: 235)
                     .fixedSize()
                     .background(CustomColors().primeGradiant)
                     .edgesIgnoringSafeArea(.top)
@@ -75,7 +75,10 @@ struct MainPage: View {
                     
                     
                 }
+                .edgesIgnoringSafeArea(.bottom)
+                .background(CustomColors().dark)
             }
+            
         
     }
 }
