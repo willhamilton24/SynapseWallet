@@ -42,8 +42,8 @@ struct EmailSentView: View {
                     .padding(.bottom, 20)
                 
                 VStack (spacing: 0) {
-                    Text("We have sent a verification email to the address")
-                    Text("provided during sign up.")
+                    Text("We have sent a verification email to")
+                    Text(self.viewRouter.email)
                 }
                 .foregroundColor(CustomColors().light)
                 
@@ -84,7 +84,7 @@ struct EmailSentView: View {
             }
         }
         .background(CustomColors().dark)
-        .edgesIgnoringSafeArea(.bottom)
+        .edgesIgnoringSafeArea(.bottom) 
     }
 }
 

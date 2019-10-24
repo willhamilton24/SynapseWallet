@@ -48,19 +48,19 @@ class ViewRouter: ObservableObject {
         }
     }
     
-    var handle: String = "Will" {
+    var handle: String = "myHandle" {
         didSet {
             objectWillChange.send(self)
         }
     }
     
-    var email: String = "Will" {
+    var email: String = "example@domain.com" {
         didSet {
             objectWillChange.send(self)
         }
     }
     
-    var password: String = "Will" {
+    var password: String = "password" {
         didSet {
             objectWillChange.send(self)
         }
