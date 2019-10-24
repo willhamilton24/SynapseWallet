@@ -12,28 +12,31 @@ struct DepositWithdrawButtons: View {
     var body: some View {
         HStack() {
             NavigationLink(destination: DepositPage()) {
-               Text("Deposit")
-                .font(.headline)
-                .padding(.all, 12)
-                .foregroundColor(.yellow)
-                .overlay(
-                   RoundedRectangle(cornerRadius: 40)
-                       .stroke(Color.yellow, lineWidth: 2)
-               )
-            }.frame(width: 120)
+                Text("Deposit")
+                    .font(Font.custom("Roboto-Light", size:15))
+                    .padding()
+            }
+            .frame(minWidth: 75, maxWidth: 100)
+            .background(CustomColors().lg)
+            .cornerRadius(25)
+            .padding()
+            .padding(.vertical, 0)
+            .foregroundColor(CustomColors().light)
             
-            Spacer().frame(width: 120)
+            //Spacer().frame(width: 100)
+            SwipeToPay()
             
             NavigationLink(destination: WithdrawPage()) {
                Text("Withdraw")
-                .font(.headline)
-                .padding(.all, 12)
-                .foregroundColor(.yellow)
-                .overlay(
-                   RoundedRectangle(cornerRadius: 40)
-                       .stroke(Color.yellow, lineWidth: 2)
-               )
-            }.frame(width: 120)
+                .font(Font.custom("Roboto-Light", size:15))
+                .padding()
+            }
+            .frame(minWidth: 75, maxWidth: 100)
+            .background(CustomColors().lg)
+            .cornerRadius(25)
+            .padding()
+            .padding(.vertical, 0)
+            .foregroundColor(CustomColors().light)
                 
         }
     }

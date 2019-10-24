@@ -18,8 +18,10 @@ struct MainPage: View {
                     
                     // Top Bar
                     VStack {
+                        
                         Spacer()
-                            .frame(height:100)
+                            .frame(height:125)
+                        
                         HStack(spacing: 10.0) {
                             
                             SWLogo()
@@ -31,7 +33,7 @@ struct MainPage: View {
                             NavigationLink(destination: ProfilePage()) {
                                 Image("profile")
                                 .resizable()
-                                .frame(width: 65, height: 65)
+                                .frame(width: 45, height: 45)
                             }
                             
                                 
@@ -43,39 +45,19 @@ struct MainPage: View {
                     .frame(width: 500, height: 235)
                     .fixedSize()
                     .background(CustomColors().primeGradiant)
-                    .edgesIgnoringSafeArea(.top)
                     
-                    
-                    
-                    // Balance Display Cluster
-                    BalanceModule()
-                    
-                    //Spacer().frame(height: 40)
-                    
-                    MyTransactionsButton().padding(.top, 30)
-                
-                    Spacer().frame(height: 20)
-                    
-                    // Select Active Currency
-                    CurrencySelector()//.offset(x: 0.0, y: -30.0)
-                               
-                    SwipeToPay()
-                    
-                    // Deposit / Withdraw Funds
-                    DepositWithdrawButtons()
-                    
-                    Spacer().frame(height: 20)
-                    
-                    // Instant Transfer Funds
-                    InstantTransferButton()
-        
-                    
-                    Spacer().frame(height: 120)
+                    Spacer().frame(height: 70)
+                    BalanceModule() // Balance Display Cluster
+                    MyTransactionsButton().padding(.top, 30) // Display Account Transaction Log
+                    CurrencySelector()  // Select Active Currency
+                    DepositWithdrawButtons() // Deposit / Withdraw Funds + Pay Button
+                    InstantTransferButton() // Instant Transfer Funds
+                    Spacer().frame(height: 70)
                     
                     
                     
                 }
-                .edgesIgnoringSafeArea(.bottom)
+                .edgesIgnoringSafeArea(.all)
                 .background(CustomColors().dark)
             }
             

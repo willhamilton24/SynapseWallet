@@ -11,12 +11,18 @@ import SwiftUI
 struct SwipeToPay: View {
     var body: some View {
         Button(action: {}) {
-            VStack(alignment: .center, spacing: 0) {
-                Image("swipe-up").padding(.bottom, 0)
-                Text("PAY").font(.title).padding(.top, 0)
-            }.padding(.all, 25)
+            ZStack {
+                Image("swipe-up")
+                .resizable()
+                .frame(width: 120, height: 120)
+                .padding(.bottom, 40)
+                
+                Text("PAY")
+                    .font(Font.custom("Roboto-Thin", size:26))
+                    .padding(.top, 70)
+            }.padding(.all, 10)
         }
-        .background(Color.yellow)
+        .background(CustomColors().lg)
         .foregroundColor(.white)
         .mask(Circle())
     }

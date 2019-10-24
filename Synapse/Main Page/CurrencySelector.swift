@@ -16,20 +16,20 @@ struct CurrencySelector: View {
                     Image("btc")
                         .padding(9)
                 }
-                .background(Color.yellow)
-                .foregroundColor(.white)
+                .background(CustomColors().lg)
+                .foregroundColor(CustomColors().light)
                 .mask(Circle())
                 
                 
                 Button(action: {}) {
                     Image("eth")
                         .padding(9)
-                }.foregroundColor(.yellow)
+                }.foregroundColor(CustomColors().lg)
                 
                 Button(action: {}) {
                     Image("ltc")
                         .padding(9)
-                }.foregroundColor(.yellow)
+                }.foregroundColor(CustomColors().lg)
             }
         }
     }

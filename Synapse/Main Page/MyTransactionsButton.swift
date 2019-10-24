@@ -12,13 +12,14 @@ struct MyTransactionsButton: View {
     var body: some View {
         NavigationLink(destination: TransactionPage()) {
             Text("My Transactions")
-        }.font(.headline)
-             .padding(.all, 12)
-             .foregroundColor(.yellow)
-             .overlay(
-                RoundedRectangle(cornerRadius: 40)
-                    .stroke(Color.yellow, lineWidth: 2)
-            )
+            .font(Font.custom("Roboto-Light", size:16))
+            .padding()
+        }.frame(minWidth: 125, maxWidth: 150)
+        .background(CustomColors().lg)
+        .cornerRadius(25)
+        .padding()
+        .padding(.vertical, 0)
+        .foregroundColor(CustomColors().light)
     }
 }
 
@@ -27,3 +28,5 @@ struct MyTransactionsButton_Previews: PreviewProvider {
         MyTransactionsButton()
     }
 }
+
+
