@@ -19,10 +19,14 @@ struct BalanceModule: View {
             Text("Balance") // Balance Label
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Light", size:18))
-            Text(String(self.viewRouter.balances.btc) + " BTC")
-                .foregroundColor(CustomColors().light)
-                .font(Font.custom("Roboto-Thin", size:46))
-            Text("$" + String(self.accountValueBTC) + " USD")
+            HStack {
+                Text(String(self.viewRouter.balances.btc))
+                    .font(Font.custom("Roboto-Thin", size:46))
+                Text("BTC")
+                    .font(Font.custom("Roboto-Thin", size:32))
+                    .padding(.top, 10)
+            }.foregroundColor(CustomColors().light)
+            Text("$" + String(self.accountValueBTC) + "0" + " USD")
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Light", size:24))
             Spacer()
