@@ -57,6 +57,7 @@
 		BE8F96372361CB6A00B4DD23 /* ResetEmailSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96362361CB6A00B4DD23 /* ResetEmailSent.swift */; };
 		BE8F96392361CE9200B4DD23 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96382361CE9200B4DD23 /* EmailValidator.swift */; };
 		BE8F963D2361DE8700B4DD23 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F963C2361DE8700B4DD23 /* ProfilePage.swift */; };
+		BE8F963F2363096500B4DD23 /* CoinbaseMarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F963E2363096500B4DD23 /* CoinbaseMarketData.swift */; };
 		BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FC9234BFAE90046EADE /* LoginView.swift */; };
 		BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FCB234BFB060046EADE /* SignUpView.swift */; };
 		BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED52E0F234BEFE2003D3D4A /* SWLogo.swift */; };
@@ -130,6 +131,7 @@
 		BE8F96362361CB6A00B4DD23 /* ResetEmailSent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetEmailSent.swift; sourceTree = "<group>"; };
 		BE8F96382361CE9200B4DD23 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		BE8F963C2361DE8700B4DD23 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		BE8F963E2363096500B4DD23 /* CoinbaseMarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseMarketData.swift; sourceTree = "<group>"; };
 		BEBD7FC9234BFAE90046EADE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BEBD7FCB234BFB060046EADE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BED52E0F234BEFE2003D3D4A /* SWLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLogo.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
 				BE8F96382361CE9200B4DD23 /* EmailValidator.swift */,
 				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
+				BE8F963E2363096500B4DD23 /* CoinbaseMarketData.swift */,
 				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
 				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
 				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
@@ -508,6 +511,7 @@
 				BE822BB8234FCB63004B2FC6 /* GettingStartedText.swift in Sources */,
 				BE6ECB60234C17AA003F82A5 /* SetKeepLogs.swift in Sources */,
 				BE6BAB2E2352B06900E2C17B /* PersistantView.swift in Sources */,
+				BE8F963F2363096500B4DD23 /* CoinbaseMarketData.swift in Sources */,
 				BE87EDC82343073C00E267DE /* BalanceModule.swift in Sources */,
 				BE87EDD2234328AA00E267DE /* SwipeToPay.swift in Sources */,
 				BE718A3F2347BF9800759BB1 /* WelcomePage.swift in Sources */,

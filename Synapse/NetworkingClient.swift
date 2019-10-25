@@ -15,7 +15,9 @@ class NetworkingClient  {
     
     typealias WebServiceResponseArray = ([String]?, Error?) -> Void
     typealias WebServiceResponseString = (String?, Error?) -> Void
+    typealias WebServiceResponseDouble = (Double?, Error?) -> Void
     typealias WebServiceResponseBoolean = (Bool?, Error?) -> Void
+    typealias WebServiceResponseDictionary = ([String: Any]?, Error?) -> Void
     typealias WebServiceResponseDoubleDictionary = ([String: Double]?, Error?) -> Void
     typealias WebServiceResponseTuple = ((profile_pic: String?, joined: Int?, name: String?, location: String?, email: String?, balances: [String: Double]?)?, Error?) -> Void
     
@@ -120,7 +122,7 @@ class NetworkingClient  {
             "token": token
         ]
         
-        Alamofire.request("https://serverless.willhamilton24.now.sh/api/auth/getBalances", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
+        Alamofire.request("https://serverless.willhamilton24.now.sh/api/account/getBalances", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
             if let error = response.error {
                 print(error)
                 completion(nil, error)
@@ -139,7 +141,7 @@ class NetworkingClient  {
             "token": token
         ]
         
-        Alamofire.request("https://serverless.willhamilton24.now.sh/api/auth/getOwnInfo", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
+        Alamofire.request("https://serverless.willhamilton24.now.sh/api/account/getOwnInfo", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
             if let error = response.error {
                 print(error)
                 completion(nil, error)

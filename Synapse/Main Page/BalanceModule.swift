@@ -20,7 +20,7 @@ struct BalanceModule: View {
             Text(String(self.viewRouter.balances.btc) + " BTC")
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Thin", size:46))
-            Text("$" + "2708.84" + " USD")
+            Text("$" + String(self.viewRouter.prices.btc) + " USD")
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Light", size:24))
             Spacer()

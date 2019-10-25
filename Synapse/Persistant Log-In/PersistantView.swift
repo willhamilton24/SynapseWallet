@@ -44,6 +44,7 @@ struct PersistantView: View {
                                         self.viewRouter.currentPage = "loading"
                                         NetworkingClient().getBalances(username: defaults.string(forKey: defaultsKeys.handleKey)!, token: self.viewRouter.token) { (json, error) in
                                             if json != nil {
+                                                print(json)
                                                 let btc = json!["btc"] as? Double
                                                 let eth = json!["eth"] as? Double
                                                 let ltc = json!["ltc"] as? Double

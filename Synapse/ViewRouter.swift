@@ -77,6 +77,12 @@ class ViewRouter: ObservableObject {
             objectWillChange.send(self)
         }
     }
+    
+    var prices = (btc: 9000.0, eth: 220.0, ltc: 95.0) {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
 
     
 }

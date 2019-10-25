@@ -10,7 +10,9 @@ import SwiftUI
 
 struct MainPage: View {
     
-   @ObservedObject var viewRouter: ViewRouter
+    @ObservedObject var viewRouter: ViewRouter
+    
+    @State var btcValue: Double = 0
 
     var body: some View {
         NavigationView  {
@@ -59,6 +61,18 @@ struct MainPage: View {
                 }
                 .edgesIgnoringSafeArea(.all)
                 .background(CustomColors().dark)
+                .onAppear {
+                    CoinbaseMarketData().getQuote(currency: "BTC") { (price, error) in
+                        if error != nil {
+                            print(error)
+                        } else if price != nil {
+                            let adjustedPrice = price! * 0.97
+                            self.viewRouter.prices.btc = adjustedPrice
+                        } else {
+                            print("no dice")
+                        }
+                    }
+                }
             }
             
         

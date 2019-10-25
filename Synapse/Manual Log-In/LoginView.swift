@@ -103,10 +103,15 @@ struct LoginView: View {
                                     self.viewRouter.currentPage = "loading"
                                     NetworkingClient().getBalances(username: self.handle, token: self.viewRouter.token) { (json, error) in
                                         if json != nil {
-                                            let btc = json!["btc"] as? Double
-                                            let eth = json!["eth"] as? Double
-                                            let ltc = json!["ltc"] as? Double
-                                            self.viewRouter.balances = (btc: btc!, eth: eth!, ltc: ltc!)
+                                            if let btc = json!["btc"] as? Double {
+                                                self.viewRouter.balances.btc = btc
+                                            }
+                                            if let eth = json!["eth"] as? Double {
+                                                self.viewRouter.balances.eth = eth
+                                            }
+                                            if let ltc = json!["ltc"] as? Double {
+                                                self.viewRouter.balances.ltc = ltc
+                                            }
                                             self.viewRouter.currentPage = "main"
                                         } else {
                                             self.viewRouter.currentPage = "main"
