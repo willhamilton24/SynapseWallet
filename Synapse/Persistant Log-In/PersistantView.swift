@@ -40,6 +40,7 @@ struct PersistantView: View {
                                     if json == "invalid username/password" {
                                         print("INVALID")
                                     } else {
+                                        self.viewRouter.handle = defaults.string(forKey: defaultsKeys.handleKey)!
                                         self.viewRouter.token = json!
                                         self.viewRouter.currentPage = "loading"
                                         NetworkingClient().getBalances(username: defaults.string(forKey: defaultsKeys.handleKey)!, token: self.viewRouter.token) { (json2, error) in

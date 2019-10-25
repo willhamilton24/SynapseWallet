@@ -61,6 +61,8 @@
 		BE8F9641236324E400B4DD23 /* BalanceModuleETH.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F9640236324E400B4DD23 /* BalanceModuleETH.swift */; };
 		BE8F96432363348700B4DD23 /* BalanceModuleLTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96422363348700B4DD23 /* BalanceModuleLTC.swift */; };
 		BE8F9645236336A000B4DD23 /* ReloadProfileButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F9644236336A000B4DD23 /* ReloadProfileButtons.swift */; };
+		BE8F964723634E7500B4DD23 /* XButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F964623634E7500B4DD23 /* XButton.swift */; };
+		BE8F96492363500200B4DD23 /* PageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96482363500200B4DD23 /* PageHeader.swift */; };
 		BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FC9234BFAE90046EADE /* LoginView.swift */; };
 		BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FCB234BFB060046EADE /* SignUpView.swift */; };
 		BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED52E0F234BEFE2003D3D4A /* SWLogo.swift */; };
@@ -138,6 +140,8 @@
 		BE8F9640236324E400B4DD23 /* BalanceModuleETH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModuleETH.swift; sourceTree = "<group>"; };
 		BE8F96422363348700B4DD23 /* BalanceModuleLTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModuleLTC.swift; sourceTree = "<group>"; };
 		BE8F9644236336A000B4DD23 /* ReloadProfileButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadProfileButtons.swift; sourceTree = "<group>"; };
+		BE8F964623634E7500B4DD23 /* XButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButton.swift; sourceTree = "<group>"; };
+		BE8F96482363500200B4DD23 /* PageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHeader.swift; sourceTree = "<group>"; };
 		BEBD7FC9234BFAE90046EADE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BEBD7FCB234BFB060046EADE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BED52E0F234BEFE2003D3D4A /* SWLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLogo.swift; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 				BE7B7BFC235695BD001039A3 /* Manual Log-In */,
 				BE7B7BFD235695FB001039A3 /* Deprecated Auth Views */,
 				BE7B7BFE2356A10E001039A3 /* Main Page */,
+				BE8F964623634E7500B4DD23 /* XButton.swift */,
+				BE8F96482363500200B4DD23 /* PageHeader.swift */,
 				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
 				BE8F963C2361DE8700B4DD23 /* ProfilePage.swift */,
 				BE87EDD72346DB1000E267DE /* DepositPage.swift */,
@@ -527,6 +533,7 @@
 				BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */,
 				BE8F9641236324E400B4DD23 /* BalanceModuleETH.swift in Sources */,
 				BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */,
+				BE8F964723634E7500B4DD23 /* XButton.swift in Sources */,
 				BE87EDDA2346DB5B00E267DE /* WithdrawPage.swift in Sources */,
 				BE87EDD623436B0200E267DE /* AccountPage.swift in Sources */,
 				BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */,
@@ -538,6 +545,7 @@
 				BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */,
 				BE718A092346FBAA00759BB1 /* TransactionPage.swift in Sources */,
 				BE7B7BF9235693CD001039A3 /* ForgotPassword.swift in Sources */,
+				BE8F96492363500200B4DD23 /* PageHeader.swift in Sources */,
 				BE6BAB302352B28700E2C17B /* Biometrics.swift in Sources */,
 				BED52E12234BF6A1003D3D4A /* Socials.swift in Sources */,
 				BE822BA4234D3C33004B2FC6 /* CustomColors.swift in Sources */,

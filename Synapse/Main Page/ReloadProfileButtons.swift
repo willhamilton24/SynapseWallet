@@ -80,7 +80,7 @@ struct ReloadProfileButtons: View {
             
             Spacer().frame(width: 240)
             //Profile Button
-            NavigationLink(destination: ProfilePage()) {
+            NavigationLink(destination: ProfilePage(viewRouter: viewRouter)) {
                 Image("profile")
                 .resizable()
                 .frame(width: 55, height: 55)

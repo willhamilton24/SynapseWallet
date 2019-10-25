@@ -146,7 +146,7 @@ class NetworkingClient  {
                 print(error)
                 completion(nil, error)
             } else if let jsonDict = response.result.value as? [String: Any] {
-                let profile_pic = jsonDict["profile-pic"] as? String
+                let profile_pic = jsonDict["profilePic"] as? String
                 let joined = jsonDict["joined"] as? Int
                 let name = jsonDict["name"] as? String
                 let location = jsonDict["location"] as? String

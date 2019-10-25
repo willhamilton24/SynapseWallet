@@ -13,12 +13,12 @@ struct InstantTransferButton: View {
         NavigationLink(destination: InstantTransferPage()) {
             HStack(spacing: 0) {
                 Text("Instant")
-                    .font(Font.custom("Roboto-Light", size:14))
+                    .font(Font.custom("Roboto-Light", size:18))
                 Image("bolt")
                     .resizable()
-                    .frame(width: 25, height: 25)
+                    .frame(width: 30, height: 30)
                 Text("Transfer")
-                    .font(Font.custom("Roboto-Light", size:14))
+                    .font(Font.custom("Roboto-Light", size:18))
             }
             .padding(12)
         }
