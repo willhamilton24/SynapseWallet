@@ -40,7 +40,7 @@ class CoinbaseMarketData {
                 completion(nil, err)
             } else {
                 if var currentPrice = (json!["price"] as? NSString)?.doubleValue {
-                    currentPrice = currentPrice * 0.97
+                    currentPrice = currentPrice * 0.985
                     completion(currentPrice, nil)
                 } else {
                     print("Something went wrong")

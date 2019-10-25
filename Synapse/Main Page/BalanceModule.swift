@@ -11,6 +11,8 @@ import SwiftUI
 struct BalanceModule: View {
     @ObservedObject var viewRouter: ViewRouter
     
+    @State private var accountValueBTC: Double = 0.0
+    
     var body: some View {
         
         VStack(spacing: 5) {
@@ -20,7 +22,7 @@ struct BalanceModule: View {
             Text(String(self.viewRouter.balances.btc) + " BTC")
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Thin", size:46))
-            Text("$" + String(self.viewRouter.prices.btc) + " USD")
+            Text("$" + String(self.accountValueBTC) + " USD")
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Light", size:24))
             Spacer()
@@ -30,6 +32,9 @@ struct BalanceModule: View {
                 .foregroundColor(.white)
                 .background(CustomColors().primeGradiant)
                 
+        }.onAppear {
+            self.accountValueBTC = self.viewRouter.prices.btc * self.viewRouter.balances.btc
+            self.accountValueBTC = round(100.0 * self.accountValueBTC) / 100.0
         }
     }
 }
