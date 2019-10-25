@@ -72,6 +72,12 @@ class ViewRouter: ObservableObject {
         }
     }
     
+    var coin: String = "BTC" {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
     var balances = (btc: 0.0, eth: 0.0, ltc: 0.0) {
         didSet {
             objectWillChange.send(self)

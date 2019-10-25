@@ -51,7 +51,7 @@ struct MainPage: View {
                     Spacer().frame(height: 70)
                     BalanceModule(viewRouter: viewRouter) // Balance Display Cluster
                     MyTransactionsButton().padding(.top, 30) // Display Account Transaction Log
-                    CurrencySelector()  // Select Active Currency
+                    CurrencySelector(viewRouter: viewRouter)  // Select Active Currency
                     DepositWithdrawButtons() // Deposit / Withdraw Funds + Pay Button
                     InstantTransferButton() // Instant Transfer Funds
                     Spacer().frame(height: 70)
