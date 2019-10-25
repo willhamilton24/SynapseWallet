@@ -29,14 +29,7 @@ struct MainPage: View {
                             SWLogo()
                             
                             Spacer()
-                                .frame(width: 140, height: 20, alignment: .center)
-                            
-                            //Profile Button
-                            NavigationLink(destination: ProfilePage()) {
-                                Image("profile")
-                                .resizable()
-                                .frame(width: 45, height: 45)
-                            }
+                                .frame(width: 200, height: 20, alignment: .center)
                             
                                 
                         }
@@ -47,8 +40,14 @@ struct MainPage: View {
                     .frame(width: 500, height: 235)
                     .fixedSize()
                     .background(CustomColors().primeGradiant)
+                
+                
+                    Spacer().frame(height: 20)
                     
-                    Spacer().frame(height: 70)
+                
+                    ReloadProfileButtons(viewRouter: viewRouter)
+                
+                    Spacer().frame(height: 20)
                 
                     // Balance Display Cluster
                     if self.viewRouter.coin == "ETH" {

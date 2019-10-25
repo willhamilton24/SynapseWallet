@@ -60,6 +60,7 @@
 		BE8F963F2363096500B4DD23 /* CoinbaseMarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F963E2363096500B4DD23 /* CoinbaseMarketData.swift */; };
 		BE8F9641236324E400B4DD23 /* BalanceModuleETH.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F9640236324E400B4DD23 /* BalanceModuleETH.swift */; };
 		BE8F96432363348700B4DD23 /* BalanceModuleLTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96422363348700B4DD23 /* BalanceModuleLTC.swift */; };
+		BE8F9645236336A000B4DD23 /* ReloadProfileButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F9644236336A000B4DD23 /* ReloadProfileButtons.swift */; };
 		BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FC9234BFAE90046EADE /* LoginView.swift */; };
 		BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FCB234BFB060046EADE /* SignUpView.swift */; };
 		BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED52E0F234BEFE2003D3D4A /* SWLogo.swift */; };
@@ -136,6 +137,7 @@
 		BE8F963E2363096500B4DD23 /* CoinbaseMarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbaseMarketData.swift; sourceTree = "<group>"; };
 		BE8F9640236324E400B4DD23 /* BalanceModuleETH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModuleETH.swift; sourceTree = "<group>"; };
 		BE8F96422363348700B4DD23 /* BalanceModuleLTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModuleLTC.swift; sourceTree = "<group>"; };
+		BE8F9644236336A000B4DD23 /* ReloadProfileButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadProfileButtons.swift; sourceTree = "<group>"; };
 		BEBD7FC9234BFAE90046EADE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BEBD7FCB234BFB060046EADE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BED52E0F234BEFE2003D3D4A /* SWLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLogo.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			children = (
 				BE718A402347BFBD00759BB1 /* MainPage.swift */,
 				BED52E0F234BEFE2003D3D4A /* SWLogo.swift */,
+				BE8F9644236336A000B4DD23 /* ReloadProfileButtons.swift */,
 				BE87EDC72343073C00E267DE /* BalanceModule.swift */,
 				BE8F9640236324E400B4DD23 /* BalanceModuleETH.swift */,
 				BE8F96422363348700B4DD23 /* BalanceModuleLTC.swift */,
@@ -545,6 +548,7 @@
 				BE87EDA62342F10D00E267DE /* SceneDelegate.swift in Sources */,
 				BE8F96392361CE9200B4DD23 /* EmailValidator.swift in Sources */,
 				BE718A412347BFBD00759BB1 /* MainPage.swift in Sources */,
+				BE8F9645236336A000B4DD23 /* ReloadProfileButtons.swift in Sources */,
 				BE6FEA85234FD6AC00758CD2 /* NetworkingClient.swift in Sources */,
 				BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */,
 				BE8F963D2361DE8700B4DD23 /* ProfilePage.swift in Sources */,

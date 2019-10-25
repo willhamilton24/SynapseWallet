@@ -42,16 +42,16 @@ struct PersistantView: View {
                                     } else {
                                         self.viewRouter.token = json!
                                         self.viewRouter.currentPage = "loading"
-                                        NetworkingClient().getBalances(username: defaults.string(forKey: defaultsKeys.handleKey)!, token: self.viewRouter.token) { (json, error) in
-                                            if json != nil {
+                                        NetworkingClient().getBalances(username: defaults.string(forKey: defaultsKeys.handleKey)!, token: self.viewRouter.token) { (json2, error) in
+                                            if json2 != nil {
                                                 print("Balance Retrieved")
-                                                if let btc = json!["btc"] as? Double {
+                                                if let btc = json2!["btc"] as? Double {
                                                     self.viewRouter.balances.btc = btc
                                                 }
-                                                if let eth = json!["eth"] as? Double {
+                                                if let eth = json2!["eth"] as? Double {
                                                     self.viewRouter.balances.eth = eth
                                                 }
-                                                if let ltc = json!["ltc"] as? Double {
+                                                if let ltc = json2!["ltc"] as? Double {
                                                     self.viewRouter.balances.ltc = ltc
                                                 }
                                                 self.viewRouter.currentPage = "main"
