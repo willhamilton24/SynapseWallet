@@ -1,14 +1,13 @@
 //
-//  BalanceModule.swift
+//  BalanceModuleLTC.swift
 //  Synapse
 //
-//  Created by Will Hamilton on 10/1/19.
+//  Created by Will Hamilton on 10/25/19.
 //  Copyright © 2019 Comitatus Capital. All rights reserved.
 //
-
 import SwiftUI
 
-struct BalanceModule: View {
+struct BalanceModuleLTC: View {
     @ObservedObject var viewRouter: ViewRouter
     
     var body: some View {
@@ -18,13 +17,13 @@ struct BalanceModule: View {
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Light", size:18))
             HStack {
-                Text(String(self.viewRouter.balances.btc))
+                Text(String(self.viewRouter.balances.ltc))
                     .font(Font.custom("Roboto-Thin", size:46))
-                Text("BTC")
+                Text("LTC")
                     .font(Font.custom("Roboto-Thin", size:32))
                     .padding(.top, 10)
             }.foregroundColor(CustomColors().light)
-            Text("$" + String(self.viewRouter.accountValues.btc) + "0" + " USD")
+            Text("$" + String(self.viewRouter.accountValues.ltc) + "0" + " USD")
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Light", size:24))
             Spacer()
@@ -35,15 +34,13 @@ struct BalanceModule: View {
                 .background(CustomColors().primeGradiant)
                 
         }.onAppear {
-            self.viewRouter.accountValues.btc = self.viewRouter.prices.btc * self.viewRouter.balances.btc
-            self.viewRouter.accountValues.btc = round(100.0 * self.viewRouter.accountValues.btc) / 100.0
-
+            print(self.viewRouter.prices.ltc)
         }
     }
 }
 
-struct BalanceModule_Previews: PreviewProvider {
+struct BalanceModuleLTC_Previews: PreviewProvider {
     static var previews: some View {
-        BalanceModule(viewRouter: ViewRouter())
+        BalanceModuleLTC(viewRouter: ViewRouter())
     }
 }

@@ -15,7 +15,7 @@ class CoinbaseMarketData {
     typealias WebServiceResponseDictionary = ([String: Any]?, Error?) -> Void
     
     func getTicker(currency: String, completion: @escaping WebServiceResponseDictionary) {
-        var urlRequest = URLRequest(url: URL(string: "https://api.pro.coinbase.com/products/BTC-USD/ticker")!) // TODO custon curr
+        var urlRequest = URLRequest(url: URL(string: "https://api.pro.coinbase.com/products/" + currency + "-USD/ticker")!) // TODO custon curr
         urlRequest.httpMethod = "GET"
         
         Alamofire.request(urlRequest).validate().responseJSON { response in

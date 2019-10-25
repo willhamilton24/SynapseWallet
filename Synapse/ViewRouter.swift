@@ -89,6 +89,12 @@ class ViewRouter: ObservableObject {
             objectWillChange.send(self)
         }
     }
+    
+    var accountValues = (btc: 0.0, eth: 0.0, ltc: 0.0) {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
 
     
 }

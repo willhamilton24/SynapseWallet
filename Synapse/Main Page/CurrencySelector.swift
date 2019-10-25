@@ -15,41 +15,112 @@ struct CurrencySelector: View {
         VStack(alignment: .center) {
             HStack(spacing: 50) {
                 if self.viewRouter.coin == "BTC" {
-                    Button(action: {}) {
+                    Button(action: {
+                        CoinbaseMarketData().getQuote(currency: "BTC") { (price, error) in
+                            if error != nil {
+                                print(error)
+                            } else if price != nil {
+                                let adjustedPrice = price! * 0.97
+                                self.viewRouter.prices.btc = adjustedPrice
+                            } else {
+                                print("no dice")
+                            }
+                        }
+                    }) {
                         Image("btc").padding(9)
                     }
                     .background(CustomColors().lg)
                     .foregroundColor(CustomColors().light)
                     .mask(Circle())
                 } else {
-                    Button(action: {self.viewRouter.coin = "BTC"}) {
+                    Button(action: {
+                        self.viewRouter.coin = "BTC"
+                        CoinbaseMarketData().getQuote(currency: "BTC") { (price, error) in
+                            if error != nil {
+                                print(error)
+                            } else if price != nil {
+                                let adjustedPrice = price! * 0.97
+                                self.viewRouter.prices.btc = adjustedPrice
+                            } else {
+                                print("no dice")
+                            }
+                        }
+                    }) {
                         Image("btc").padding(9)
                     }.foregroundColor(CustomColors().lg)
                 }
                 
                 
                 if self.viewRouter.coin == "ETH" {
-                    Button(action: {}) {
+                    Button(action: {
+                        CoinbaseMarketData().getQuote(currency: "ETH") { (price, error) in
+                            if error != nil {
+                                print(error)
+                            } else if price != nil {
+                                let adjustedPrice = price! * 0.97
+                                self.viewRouter.prices.eth = adjustedPrice
+                            } else {
+                                print("no dice")
+                            }
+                        }
+                    }) {
                         Image("eth").padding(9)
                     }
                     .background(CustomColors().lg)
                     .foregroundColor(CustomColors().light)
                     .mask(Circle())
                 } else {
-                    Button(action: {self.viewRouter.coin = "ETH"}) {
+                    Button(action: {
+                        self.viewRouter.coin = "ETH"
+                        CoinbaseMarketData().getQuote(currency: "ETH") { (price, error) in
+                            if error != nil {
+                                print(error)
+                            } else if price != nil {
+                                let adjustedPrice = price! * 0.97
+                                self.viewRouter.prices.eth = adjustedPrice
+                            } else {
+                                print("no dice")
+                            }
+                        }
+                        
+                    }) {
                         Image("eth").padding(9)
                     }.foregroundColor(CustomColors().lg)
                 }
                 
                 if self.viewRouter.coin == "LTC" {
-                    Button(action: {}) {
+                    Button(action: {
+                        CoinbaseMarketData().getQuote(currency: "LTC") { (price, error) in
+                            if error != nil {
+                                print(error)
+                            } else if price != nil {
+                                let adjustedPrice = price! * 0.97
+                                self.viewRouter.prices.ltc = adjustedPrice
+                            } else {
+                                print("no dice")
+                            }
+                        }
+                    }) {
                         Image("ltc").padding(9)
                     }
                     .background(CustomColors().lg)
                     .foregroundColor(CustomColors().light)
                     .mask(Circle())
                 } else {
-                    Button(action: {self.viewRouter.coin = "LTC"}) {
+                    Button(action: {
+                        self.viewRouter.coin = "LTC"
+                        CoinbaseMarketData().getQuote(currency: "LTC") { (price, error) in
+                            if error != nil {
+                                print(error)
+                            } else if price != nil {
+                                let adjustedPrice = price! * 0.97
+                                self.viewRouter.prices.ltc = adjustedPrice
+                            } else {
+                                print("no dice")
+                            }
+                        }
+                        
+                    }) {
                         Image("ltc").padding(9)
                     }.foregroundColor(CustomColors().lg)
                 }
