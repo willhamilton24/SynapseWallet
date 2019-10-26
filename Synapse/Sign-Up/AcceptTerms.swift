@@ -123,6 +123,7 @@ struct AcceptTerms: View {
                                     } else if let json = json {
                                         print(json)
                                         if json == "user created" {
+                                            // Save Credentials
                                             self.viewRouter.currentPage = "email-v"
                                         }
                                     }

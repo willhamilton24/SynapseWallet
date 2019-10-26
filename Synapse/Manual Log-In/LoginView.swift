@@ -101,6 +101,7 @@ struct LoginView: View {
                                 } else {
                                     self.viewRouter.token = json!
                                     self.viewRouter.currentPage = "loading"
+                                    // Save Credentials
                                     NetworkingClient().getBalances(username: self.handle, token: self.viewRouter.token) { (json2, error) in
                                         if json2 != nil {
                                             if let btc = json2!["btc"] as? Double {

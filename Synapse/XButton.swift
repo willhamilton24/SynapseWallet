@@ -15,7 +15,7 @@ struct XButton: View {
         Button(action: {
             self.viewRouter.currentPage = "main"
         }) {
-            Image("X")
+            Image("x")
             .resizable()
             .frame(width: 55, height: 55)
             .foregroundColor(CustomColors().light)

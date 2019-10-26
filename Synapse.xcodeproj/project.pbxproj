@@ -190,6 +190,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE2312E32364A8A600C16DCC /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				BE6BAB1D2350287E00E2C17B /* LoadingAnimation.swift */,
+				BE6BAB1F235028E200E2C17B /* LottieView.swift */,
+				BE6FEA86234FF64300758CD2 /* LoadingView.swift */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		BE7B7BFA235694D2001039A3 /* Persistant Log-In */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,34 +304,32 @@
 			isa = PBXGroup;
 			children = (
 				BE87EDA32342F10D00E267DE /* AppDelegate.swift */,
+				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
 				BE87EDA52342F10D00E267DE /* SceneDelegate.swift */,
 				BE87EDA72342F10D00E267DE /* ContentView.swift */,
 				BE718A42234BD20300759BB1 /* ViewRouter.swift */,
-				BE822BA3234D3C33004B2FC6 /* CustomColors.swift */,
 				BE8F96382361CE9200B4DD23 /* EmailValidator.swift */,
 				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
 				BE8F963E2363096500B4DD23 /* CoinbaseMarketData.swift */,
 				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
 				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
 				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
+				BE2312E32364A8A600C16DCC /* Lottie */,
 				BE7B7BFA235694D2001039A3 /* Persistant Log-In */,
 				BE7B7BFB23569556001039A3 /* Sign-Up */,
 				BE7B7BFC235695BD001039A3 /* Manual Log-In */,
-				BE7B7BFD235695FB001039A3 /* Deprecated Auth Views */,
 				BE7B7BFE2356A10E001039A3 /* Main Page */,
 				BE8F964623634E7500B4DD23 /* XButton.swift */,
 				BE8F96482363500200B4DD23 /* PageHeader.swift */,
-				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
 				BE8F963C2361DE8700B4DD23 /* ProfilePage.swift */,
+				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
 				BE87EDD72346DB1000E267DE /* DepositPage.swift */,
 				BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */,
 				BE87EDDB2346DC4C00E267DE /* InstantTransferPage.swift */,
 				BE87EDD523436B0200E267DE /* AccountPage.swift */,
+				BE7B7BFD235695FB001039A3 /* Deprecated Auth Views */,
 				BE7B7BFF2356A12D001039A3 /* Misc. Deprecated  */,
 				BE87EDA92342F11000E267DE /* Assets.xcassets */,
-				BE6FEA86234FF64300758CD2 /* LoadingView.swift */,
-				BE6BAB1D2350287E00E2C17B /* LoadingAnimation.swift */,
-				BE6BAB1F235028E200E2C17B /* LottieView.swift */,
 				BE822BAE234DA4B2004B2FC6 /* Fonts */,
 				BE87EDAE2342F11000E267DE /* LaunchScreen.storyboard */,
 				BE87EDB12342F11000E267DE /* Info.plist */,
