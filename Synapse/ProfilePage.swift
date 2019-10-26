@@ -43,7 +43,7 @@ struct ProfilePage: View {
                     Text("@" + self.viewRouter.handle)
                     
                     HStack {
-                        Text("Joined " + self.joinDate )
+                        Text("Joined " + self.joinDate)
                         
                         if self.profileInfo.location != nil {
                             // Show Location
@@ -118,7 +118,7 @@ struct ProfilePage: View {
                     dateFormatter.timeStyle = .none
                     
                     dateFormatter.locale = Locale(identifier: "en_US")
-                    let joinDateRaw = Date(timeIntervalSince1970: unwrappedJSON.joined!)
+                    let joinDateRaw = Date(timeIntervalSince1970: self.profileInfo.joined / 1000)
                     
                     self.joinDate = dateFormatter.string(from: joinDateRaw)
                     print(self.joinDate)
