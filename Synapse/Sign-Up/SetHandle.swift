@@ -73,7 +73,7 @@ struct SetHandle: View {
                         }.offset(x: -64, y: 0.0).foregroundColor(CustomColors().light)
                         
                         HStack (spacing: 15){
-                            if self.viewRouter.users.contains(self.handle) {
+                            if self.viewRouter.users.contains(self.handle.lowercased()) {
                                 Image("x").resizable().frame(width: 28, height: 28).background(CustomColors().prime).cornerRadius(30)
                             } else {
                                  Image("check").resizable()
@@ -91,10 +91,10 @@ struct SetHandle: View {
                     
                     VStack (spacing: 4) {
                         Button(action: {
-                            if ( (self.handle.count >= 4 && self.handle.count <= 24) && self.viewRouter.users.contains(self.handle) != true) {
+                            if ( (self.handle.count >= 4 && self.handle.count <= 24) && self.viewRouter.users.contains(self.handle.lowercased()) != true) {
                                 self.viewRouter.currentPage = "keep-logs"
                                 self.viewRouter.handle = self.handle
-                            } else if (self.viewRouter.users.contains(self.handle)) {
+                            } else if (self.viewRouter.users.contains(self.handle.lowercased())) {
                                 self.alertTitle = "Handle Taken"
                                 self.alertText = "This handle has already been registered. Please choose a different one."
                                 self.showAlert = true
