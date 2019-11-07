@@ -9,39 +9,38 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     let defaults = UserDefaults.standard
     
     var body: some View {
         VStack {
                 if viewRouter.currentPage == "welcome" {
-                    WelcomePage(viewRouter: viewRouter)
+                    WelcomePage()
                 } else if viewRouter.currentPage == "loading" {
-                    LoadingView(viewRouter: viewRouter)
+                    LoadingView()
                 } else if viewRouter.currentPage == "login" {
-                    LoginView(viewRouter: viewRouter)
-                } else if viewRouter.currentPage == "signup" {
-                    SignUpView(viewRouter: viewRouter)
+                    LoginView()
                 } else if viewRouter.currentPage == "keep-logs" {
-                    SetKeepLogs(viewRouter: viewRouter)
+                    SetKeepLogs()
                 } else if viewRouter.currentPage == "handle" {
-                    SetHandle(viewRouter: viewRouter)
+                    SetHandle()
                 } else if viewRouter.currentPage == "terms" {
-                    AcceptTerms(viewRouter: viewRouter)
+                    AcceptTerms()
                 } else if viewRouter.currentPage == "main" {
-                    MainPage(viewRouter: viewRouter)
+                    MainPage()
                 } else if viewRouter.currentPage == "email-password" {
-                    EmailPassword(viewRouter: viewRouter)
+                    EmailPassword()
                 } else if viewRouter.currentPage == "persist" {
-                    PersistantView(viewRouter: viewRouter)
+                    PersistantView()
                 } else if viewRouter.currentPage == "email-v" {
-                    EmailSentView(viewRouter: viewRouter)
+                    EmailSentView()
                 } else if viewRouter.currentPage == "forgot-pass" {
-                    ForgotPassword(viewRouter: viewRouter)
+                    ForgotPassword()
                 } else if viewRouter.currentPage == "forgot-pass-sent" {
-                    ResetEmailSent(viewRouter: viewRouter)
+                    ResetEmailSent()
+                } else if viewRouter.currentPage == "profile" {
+                    ProfilePage()
                 }
-            
         }.background(CustomColors().dark)
             .edgesIgnoringSafeArea(.vertical)
     }
@@ -79,6 +78,6 @@ extension UIColor {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewRouter: ViewRouter())
+        ContentView().environmentObject(ViewRouter())
     }
 }

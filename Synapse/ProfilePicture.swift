@@ -9,13 +9,32 @@
 import SwiftUI
 
 struct ProfilePicture: View {
+    
+    @State var profilePic: String?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if self.profilePic != nil {
+                //Convert Base64 to Image
+                Image("profpic")
+                .resizable()
+                .frame(width: 175, height: 175)
+                .mask(Circle())
+            } else {
+                Image("profpic")
+                    .resizable()
+                    .frame(width: 175, height: 175)
+                    .mask(Circle())
+            }
+            Button(action: {}) {
+                Text("Change Profile Picture")
+            }
+        }
     }
 }
 
 struct ProfilePicture_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilePicture()
+        ProfilePicture(profilePic: nil)
     }
 }

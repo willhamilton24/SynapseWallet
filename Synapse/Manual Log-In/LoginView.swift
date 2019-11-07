@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     @State var handle: String = ""
     @State var password: String = ""
@@ -174,6 +174,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewRouter: ViewRouter())
+        LoginView().environmentObject(ViewRouter())
     }
 }

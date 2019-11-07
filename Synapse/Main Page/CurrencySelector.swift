@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CurrencySelector: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         VStack(alignment: .center) {
@@ -131,6 +131,6 @@ struct CurrencySelector: View {
 
 struct CurrencySelector_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencySelector(viewRouter: ViewRouter())
+        CurrencySelector().environmentObject(ViewRouter())
     }
 }

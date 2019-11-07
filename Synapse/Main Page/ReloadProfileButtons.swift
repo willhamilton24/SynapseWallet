@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ReloadProfileButtons: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         HStack {
@@ -80,7 +80,7 @@ struct ReloadProfileButtons: View {
             
             Spacer().frame(width: 240)
             //Profile Button
-            NavigationLink(destination: ProfilePage(viewRouter: viewRouter)) {
+            Button(action: {self.viewRouter.currentPage = "profile"}){
                 Image("profile")
                 .resizable()
                 .frame(width: 55, height: 55)
@@ -92,6 +92,6 @@ struct ReloadProfileButtons: View {
 
 struct ReloadProfileButtons_Previews: PreviewProvider {
     static var previews: some View {
-        ReloadProfileButtons(viewRouter: ViewRouter())
+        ReloadProfileButtons().environmentObject(ViewRouter())
     }
 }

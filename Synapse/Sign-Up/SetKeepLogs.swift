@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SetKeepLogs: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     @State var keepLogsBool = true
     
     var body: some View {
@@ -97,6 +97,6 @@ struct SetKeepLogs: View {
 
 struct SetKeepLogs_Previews: PreviewProvider {
     static var previews: some View {
-        SetKeepLogs(viewRouter: ViewRouter())
+        SetKeepLogs().environmentObject(ViewRouter())
     }
 }

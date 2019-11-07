@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ForgotPassword: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     @State var email: String = ""
     @State private var exists: Bool = false
@@ -129,6 +129,6 @@ struct ForgotPassword: View {
 
 struct ForgotPassword_Previews: PreviewProvider {
     static var previews: some View {
-        ForgotPassword(viewRouter: ViewRouter())
+        ForgotPassword().environmentObject(ViewRouter())
     }
 }

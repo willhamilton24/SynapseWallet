@@ -9,11 +9,15 @@
 import SwiftUI
 
 struct ProfilePage: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
-    @State var profileInfo: (name: String?,  email: String, profilePic: String?, joined: Double, balances: (btc: Double, eth: Double, ltc: Double), location: String?) = (name: nil, email: "", profilePic: nil, joined: 5000000000, balances: (btc: 0.0, eth: 0.0, ltc: 0.0), location: nil)
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @State private var joinDate: String = ""
+    @State var profileInfo: (name: String,  email: String, profilePic: String?, joined: Double, balances: (btc: Double, eth: Double, ltc: Double), location: String) = (name: "", email: "example@", profilePic: nil, joined: 0, balances: (btc: 0.0, eth: 0.0, ltc: 0.0), location: "")
+    
+    @State private var joinDate: String = "Jan 1, 1970"
+    
+    @State private var defaultName: String = "Anonymous"
     
     @State private var showAlert: Bool = false
     @State private var alertTitle: String = ""
@@ -22,59 +26,61 @@ struct ProfilePage: View {
     var body: some View {
         NavigationView {
             VStack {
-                PageHeader(viewRouter: viewRouter)
+                ProfileHeader()
                 
-                if self.profileInfo.profilePic != nil {
-                    //Convert Base64 to Image
-                } else {
-                    Image("profpic")
-                        .resizable()
-                        .frame(width: 175, height: 175)
-                        .mask(Circle())
-                }
+                Spacer().frame(height: 50)
                 
-                VStack (alignment: .leading) {
-                    if self.profileInfo.name != nil {
-                        // Display Name
+                ProfilePicture(profilePic: self.profileInfo.profilePic)
+                
+                
+                VStack () {
+                    Spacer().frame(width: 400, height: 0)
+                    
+                    if !self.profileInfo.name.isEmpty {
+                        Text(self.profileInfo.name)
+                            .font(Font.custom("Roboto-Thin", size:70))
+                            .padding(.leading, 10)
                     } else {
-                        Text("Name")
-                    }
-                    
-                    Text("@" + self.viewRouter.handle)
-                    
-                    HStack {
-                        Text("Joined " + self.joinDate)
+                        Text(self.defaultName)
+                            .font(Font.custom("Roboto-Thin", size:70))
+                            .padding(.leading, 10)
                         
-                        if self.profileInfo.location != nil {
-                            // Show Location
-                        } else {
-                            Text("Location")
+                    }
+                    
+                    HStack() {
+                        ProfileAccountInfo(handle: self.viewRouter.handle, profileInfo: (email: self.profileInfo.email, location: self.profileInfo.location, joinDate: self.joinDate))
+                        
+                        Spacer().frame(width: 70, height: 0)
+                        
+                        VStack {
+                            Text("Balances").font(Font.custom("Roboto-Light", size:20))
+                            
+                            HStack {
+                                Text("BTC").font(Font.custom("Roboto-Light", size:14))
+                                
+                                Text(String(self.profileInfo.balances.btc)).font(Font.custom("Roboto-Thin", size:14))
+                            }
+                            HStack {
+                                Text("ETH").font(Font.custom("Roboto-Light", size:14))
+                                
+                                Text(String(self.profileInfo.balances.eth)).font(Font.custom("Roboto-Thin", size:14))
+                            }
+                            HStack {
+                                Text("LTC").font(Font.custom("Roboto-Light", size:14))
+                                
+                                Text(String(self.profileInfo.balances.ltc)).font(Font.custom("Roboto-Thin", size:14))
+                            }
                         }
+                            
                     }
-                    
-                    
-                    HStack {
-                        Text(self.profileInfo.email)
-                        // Edit Email Button
-                    }
+                        
                 }.foregroundColor(CustomColors().light)
+                    
+                    
                 
-                Text("Balances")
-                VStack {
-                    HStack {
-                        Text("BTC")
-                        Text(String(self.profileInfo.balances.btc))
-                    }
-                    HStack {
-                        Text("ETH")
-                        Text(String(self.profileInfo.balances.eth))
-                    }
-                    HStack {
-                        Text("LTC")
-                        Text(String(self.profileInfo.balances.ltc))
-                    }
-                }
                 
+                Spacer().frame(height: 50)
+            
                 HStack {
                     Button(action: {
                         // Check Altered Fields
@@ -92,9 +98,11 @@ struct ProfilePage: View {
                 }
                 
             }
-            .edgesIgnoringSafeArea(.bottom)
+            .edgesIgnoringSafeArea(.vertical)
             .background(CustomColors().dark)
         }
+        .edgesIgnoringSafeArea(.vertical)
+        .background(CustomColors().dark)
         .onAppear {
             NetworkingClient().getMyProfileInfo(username: self.viewRouter.handle, token: self.viewRouter.token) { (json, error) in
                 if error != nil { self.viewRouter.currentPage = "persist"}
@@ -131,6 +139,6 @@ struct ProfilePage: View {
 
 struct ProfilePage_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilePage(viewRouter: ViewRouter())
+        ProfilePage().environmentObject(ViewRouter())
     }
 }

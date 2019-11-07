@@ -9,12 +9,10 @@
 import SwiftUI
 
 struct XButton: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
 
     var body: some View {
-        Button(action: {
-            self.viewRouter.currentPage = "main"
-        }) {
+        Button(action: {self.viewRouter.currentPage = "main"}) {
             Image("x")
             .resizable()
             .frame(width: 55, height: 55)
@@ -25,6 +23,6 @@ struct XButton: View {
 
 struct XButton_Previews: PreviewProvider {
     static var previews: some View {
-        XButton(viewRouter: ViewRouter())
+        XButton().environmentObject(ViewRouter())
     }
 }

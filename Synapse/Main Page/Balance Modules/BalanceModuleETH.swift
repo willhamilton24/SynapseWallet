@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct BalanceModuleETH: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         
@@ -42,6 +42,6 @@ struct BalanceModuleETH: View {
 
 struct BalanceModuleETH_Previews: PreviewProvider {
     static var previews: some View {
-        BalanceModuleETH(viewRouter: ViewRouter())
+        BalanceModuleETH().environmentObject(ViewRouter())
     }
 }

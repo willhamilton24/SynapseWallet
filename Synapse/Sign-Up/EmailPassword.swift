@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct EmailPassword: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     @State var email: String = ""
     @State var password: String = ""
     @State var showPass: Bool = false
@@ -169,6 +169,6 @@ struct EmailPassword: View {
 
 struct EmailPassword_Previews: PreviewProvider {
     static var previews: some View {
-        EmailPassword(viewRouter: ViewRouter())
+        EmailPassword().environmentObject(ViewRouter())
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BalanceModuleLTC: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         
@@ -41,6 +41,6 @@ struct BalanceModuleLTC: View {
 
 struct BalanceModuleLTC_Previews: PreviewProvider {
     static var previews: some View {
-        BalanceModuleLTC(viewRouter: ViewRouter())
+        BalanceModuleLTC().environmentObject(ViewRouter())
     }
 }

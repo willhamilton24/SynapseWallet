@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ResetEmailSent: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         
@@ -65,6 +65,6 @@ struct ResetEmailSent: View {
 
 struct ResetEmailSent_Previews: PreviewProvider {
     static var previews: some View {
-        ResetEmailSent(viewRouter: ViewRouter())
+        ResetEmailSent().environmentObject(ViewRouter())
     }
 }

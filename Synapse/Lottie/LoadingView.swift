@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct LoadingView: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         ZStack {
@@ -35,6 +35,6 @@ struct LoadingView: View {
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingView(viewRouter: ViewRouter())
+        LoadingView().environmentObject(ViewRouter())
     }
 }

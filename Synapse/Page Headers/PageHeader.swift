@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct PageHeader: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         VStack {
@@ -23,7 +23,7 @@ struct PageHeader: View {
                 Spacer()
                     .frame(width: 150, height: 20, alignment: .center)
                 
-                XButton(viewRouter: viewRouter)
+                XButton()
                 
                     
             }
@@ -39,6 +39,6 @@ struct PageHeader: View {
 
 struct PageHeader_Previews: PreviewProvider {
     static var previews: some View {
-        PageHeader(viewRouter: ViewRouter())
+        PageHeader().environmentObject(ViewRouter())
     }
 }

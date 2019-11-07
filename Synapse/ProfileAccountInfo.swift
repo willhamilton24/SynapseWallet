@@ -9,13 +9,45 @@
 import SwiftUI
 
 struct ProfileAccountInfo: View {
+    @State var handle: String
+    @State var profileInfo = (email: "", location: "", joinDate: "")
+    
+    @State var defaultLocation = "The Internet, USA"
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        VStack (alignment: .leading) {
+        
+            Text(self.handle)
+                .font(Font.custom("Roboto-Thin", size:28))
+                .padding(.leading, 10)
+
+            HStack {
+                Text(self.profileInfo.email)
+                    .font(Font.custom("Roboto-Thin", size:18))
+                    .padding(.leading, 10)
+                // Edit Email Button
+            }
+            
+            if !self.profileInfo.location.isEmpty {
+                Text(self.profileInfo.location)
+                    .font(Font.custom("Roboto-Thin", size:18))
+                    .padding(.leading, 10)
+            } else {
+                Text(self.defaultLocation)
+                    .font(Font.custom("Roboto-Thin", size:18))
+                    .padding(.leading, 10)
+            }
+            
+            
+            Text("Joined: " + self.profileInfo.joinDate)
+                .font(Font.custom("Roboto-Light", size:12))
+                .padding(.leading, 10)
+        }
     }
 }
 
 struct ProfileAccountInfo_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileAccountInfo()
+        ProfileAccountInfo(handle: "Handle", profileInfo: (email: "email", location: "location", joinDate: ""))
     }
 }

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SetHandle: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     @State var handle: String = ""
     @State private var isTaken: Bool = false
@@ -139,6 +139,6 @@ struct SetHandle: View {
 
 struct SetHandle_Previews: PreviewProvider {
     static var previews: some View {
-        SetHandle(viewRouter: ViewRouter())
+        SetHandle().environmentObject(ViewRouter())
     }
 }

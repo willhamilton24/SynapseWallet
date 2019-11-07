@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ProfileHeader: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         VStack {
@@ -18,17 +18,17 @@ struct ProfileHeader: View {
             
             HStack(spacing: 10.0) {
                 
-                SWLogo()
+                Text("Profile")
                 
                 Spacer()
                     .frame(width: 150, height: 20, alignment: .center)
                 
-                XButton(viewRouter: viewRouter)
+                XButton()
                 
                     
             }
         }
-        .font(Font.custom("Roboto-Thin", size:36))
+        .font(Font.custom("Roboto-Thin", size:72))
         .padding()
         .foregroundColor(CustomColors().light)
         .frame(width: 500, height: 235)
@@ -40,6 +40,6 @@ struct ProfileHeader: View {
 
 struct ProfileHeader_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileHeader(viewRouter: ViewRouter())
+        ProfileHeader().environmentObject(ViewRouter())
     }
 }

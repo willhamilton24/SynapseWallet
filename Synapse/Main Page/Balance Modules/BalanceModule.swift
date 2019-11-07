@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct BalanceModule: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         
@@ -44,6 +44,6 @@ struct BalanceModule: View {
 
 struct BalanceModule_Previews: PreviewProvider {
     static var previews: some View {
-        BalanceModule(viewRouter: ViewRouter())
+        BalanceModule().environmentObject(ViewRouter())
     }
 }

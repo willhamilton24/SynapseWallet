@@ -11,7 +11,7 @@ import SafariServices
 
 
 struct AcceptTerms: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     @State var synapseAccept = false
     @State var comitatusAccept = false
     @State var emailAccept = false
@@ -178,6 +178,6 @@ struct AcceptTerms: View {
 
 struct AcceptTerms_Previews: PreviewProvider {
     static var previews: some View {
-        AcceptTerms(viewRouter: ViewRouter())
+        AcceptTerms().environmentObject(ViewRouter())
     }
 }

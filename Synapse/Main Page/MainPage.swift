@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MainPage: View {
     
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     @State var btcValue: Double = 0
 
@@ -45,20 +45,20 @@ struct MainPage: View {
                     Spacer().frame(height: 20)
                     
                 
-                    ReloadProfileButtons(viewRouter: viewRouter)
+                    ReloadProfileButtons()
                 
                     Spacer().frame(height: 20)
                 
                     // Balance Display Cluster
                     if self.viewRouter.coin == "ETH" {
-                        BalanceModuleETH(viewRouter: viewRouter)
+                        BalanceModuleETH()
                     } else if self.viewRouter.coin == "LTC" {
-                        BalanceModuleLTC(viewRouter: viewRouter)
+                        BalanceModuleLTC() 
                     } else {
-                        BalanceModule(viewRouter: viewRouter)
+                        BalanceModule()
                     }
                     MyTransactionsButton().padding(.top, 30) // Display Account Transaction Log
-                    CurrencySelector(viewRouter: viewRouter)  // Select Active Currency
+                    CurrencySelector()  // Select Active Currency
                     DepositWithdrawButtons() // Deposit / Withdraw Funds + Pay Button
                     InstantTransferButton() // Instant Transfer Funds
                     Spacer().frame(height: 70)
@@ -135,6 +135,6 @@ struct MainPage: View {
 
 struct MainPage_Previews: PreviewProvider {
     static var previews: some View {
-        MainPage(viewRouter: ViewRouter())
+        MainPage().environmentObject(ViewRouter())
     }
 }

@@ -10,7 +10,7 @@ import LocalAuthentication
 import SwiftUI
 
 struct PersistantView: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     
     var body: some View {
@@ -130,6 +130,6 @@ struct PersistantView: View {
 
 struct PersistantView_Previews: PreviewProvider {
     static var previews: some View {
-        PersistantView(viewRouter: ViewRouter())
+        PersistantView().environmentObject(ViewRouter())
     }
 }

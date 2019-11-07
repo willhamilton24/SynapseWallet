@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		77B1F85E130840F790818FD5 /* Pods_Synapse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D84D447599553617826479 /* Pods_Synapse.framework */; };
 		A19F850A7E24DC768952B79D /* Pods_SynapseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C208035EAC5F80A9F7EB2EC /* Pods_SynapseTests.framework */; };
+		BE2312E52365260C00C16DCC /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2312E42365260C00C16DCC /* ProfileHeader.swift */; };
+		BE2312E823652EFB00C16DCC /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2312E723652EFB00C16DCC /* ProfilePicture.swift */; };
+		BE2312EA2365301E00C16DCC /* ProfileAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2312E92365301E00C16DCC /* ProfileAccountInfo.swift */; };
 		BE6BAB1E2350287E00E2C17B /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB1D2350287E00E2C17B /* LoadingAnimation.swift */; };
 		BE6BAB20235028E200E2C17B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB1F235028E200E2C17B /* LottieView.swift */; };
 		BE6BAB2C23503AED00E2C17B /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = BE6BAB2B23503AED00E2C17B /* loader.json */; };
@@ -84,6 +87,9 @@
 		93FA58CAD0A83AEA63EADE07 /* Pods-SynapseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynapseTests.release.xcconfig"; path = "Target Support Files/Pods-SynapseTests/Pods-SynapseTests.release.xcconfig"; sourceTree = "<group>"; };
 		A579E0EAD7E5682E99BBB81C /* Pods-SynapseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SynapseTests.debug.xcconfig"; path = "Target Support Files/Pods-SynapseTests/Pods-SynapseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8BA29DB202E6307048475DC /* Pods-Synapse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Synapse.debug.xcconfig"; path = "Target Support Files/Pods-Synapse/Pods-Synapse.debug.xcconfig"; sourceTree = "<group>"; };
+		BE2312E42365260C00C16DCC /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		BE2312E723652EFB00C16DCC /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
+		BE2312E92365301E00C16DCC /* ProfileAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountInfo.swift; sourceTree = "<group>"; };
 		BE6BAB1D2350287E00E2C17B /* LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
 		BE6BAB1F235028E200E2C17B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		BE6BAB2B23503AED00E2C17B /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
@@ -200,6 +206,25 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
+		BE2312E62365265800C16DCC /* Page Headers */ = {
+			isa = PBXGroup;
+			children = (
+				BE8F96482363500200B4DD23 /* PageHeader.swift */,
+				BE2312E42365260C00C16DCC /* ProfileHeader.swift */,
+			);
+			path = "Page Headers";
+			sourceTree = "<group>";
+		};
+		BE2312EB236538F000C16DCC /* Balance Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BE87EDC72343073C00E267DE /* BalanceModule.swift */,
+				BE8F9640236324E400B4DD23 /* BalanceModuleETH.swift */,
+				BE8F96422363348700B4DD23 /* BalanceModuleLTC.swift */,
+			);
+			path = "Balance Modules";
+			sourceTree = "<group>";
+		};
 		BE7B7BFA235694D2001039A3 /* Persistant Log-In */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,9 +273,7 @@
 				BE718A402347BFBD00759BB1 /* MainPage.swift */,
 				BED52E0F234BEFE2003D3D4A /* SWLogo.swift */,
 				BE8F9644236336A000B4DD23 /* ReloadProfileButtons.swift */,
-				BE87EDC72343073C00E267DE /* BalanceModule.swift */,
-				BE8F9640236324E400B4DD23 /* BalanceModuleETH.swift */,
-				BE8F96422363348700B4DD23 /* BalanceModuleLTC.swift */,
+				BE2312EB236538F000C16DCC /* Balance Modules */,
 				BE718A0A2347005600759BB1 /* MyTransactionsButton.swift */,
 				BE87EDCD234315E500E267DE /* CurrencySelector.swift */,
 				BE87EDD1234328AA00E267DE /* SwipeToPay.swift */,
@@ -320,8 +343,10 @@
 				BE7B7BFC235695BD001039A3 /* Manual Log-In */,
 				BE7B7BFE2356A10E001039A3 /* Main Page */,
 				BE8F964623634E7500B4DD23 /* XButton.swift */,
-				BE8F96482363500200B4DD23 /* PageHeader.swift */,
+				BE2312E62365265800C16DCC /* Page Headers */,
 				BE8F963C2361DE8700B4DD23 /* ProfilePage.swift */,
+				BE2312E723652EFB00C16DCC /* ProfilePicture.swift */,
+				BE2312E92365301E00C16DCC /* ProfileAccountInfo.swift */,
 				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
 				BE87EDD72346DB1000E267DE /* DepositPage.swift */,
 				BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */,
@@ -536,6 +561,7 @@
 				BE6BAB2E2352B06900E2C17B /* PersistantView.swift in Sources */,
 				BE8F963F2363096500B4DD23 /* CoinbaseMarketData.swift in Sources */,
 				BE87EDC82343073C00E267DE /* BalanceModule.swift in Sources */,
+				BE2312E823652EFB00C16DCC /* ProfilePicture.swift in Sources */,
 				BE87EDD2234328AA00E267DE /* SwipeToPay.swift in Sources */,
 				BE718A3F2347BF9800759BB1 /* WelcomePage.swift in Sources */,
 				BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */,
@@ -547,6 +573,7 @@
 				BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */,
 				BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */,
 				BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */,
+				BE2312E52365260C00C16DCC /* ProfileHeader.swift in Sources */,
 				BE87EDD023431E0700E267DE /* DepositWithdrawButtons.swift in Sources */,
 				BE8F96372361CB6A00B4DD23 /* ResetEmailSent.swift in Sources */,
 				BE6FEA87234FF64300758CD2 /* LoadingView.swift in Sources */,
@@ -556,6 +583,7 @@
 				BE8F96492363500200B4DD23 /* PageHeader.swift in Sources */,
 				BE6BAB302352B28700E2C17B /* Biometrics.swift in Sources */,
 				BED52E12234BF6A1003D3D4A /* Socials.swift in Sources */,
+				BE2312EA2365301E00C16DCC /* ProfileAccountInfo.swift in Sources */,
 				BE822BA4234D3C33004B2FC6 /* CustomColors.swift in Sources */,
 				BE87EDCA2343077700E267DE /* GraphModule.swift in Sources */,
 				BE87EDCE234315E500E267DE /* CurrencySelector.swift in Sources */,

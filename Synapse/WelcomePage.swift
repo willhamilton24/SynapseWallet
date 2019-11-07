@@ -10,7 +10,7 @@ import SwiftUI
 
 struct WelcomePage: View {
     
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     @State var token: String = "Your Handle"
     
@@ -91,7 +91,7 @@ struct WelcomePage: View {
         }.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
         .onAppear {
             let defaults = UserDefaults.standard
-            if let savedHandle = defaults.string(forKey: defaultsKeys.handleKey) {
+            if (defaults.string(forKey: defaultsKeys.handleKey) != nil) {
                 self.viewRouter.currentPage = "persist"
             }
         }
@@ -100,6 +100,6 @@ struct WelcomePage: View {
 
 struct WelcomePage_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomePage(viewRouter: ViewRouter())
+        WelcomePage().environmentObject(ViewRouter())
     }
 }

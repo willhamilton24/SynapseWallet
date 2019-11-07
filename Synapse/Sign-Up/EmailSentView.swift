@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct EmailSentView: View {
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     @State private var showAlert: Bool = false
     @State private var alertTitle: String = ""
@@ -90,6 +90,6 @@ struct EmailSentView: View {
 
 struct EmailSentView_Previews: PreviewProvider {
     static var previews: some View {
-        EmailSentView(viewRouter: ViewRouter())
+        EmailSentView().environmentObject(ViewRouter())
     }
 }
