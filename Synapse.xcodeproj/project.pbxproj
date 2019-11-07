@@ -28,6 +28,8 @@
 		BE718A3F2347BF9800759BB1 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A3E2347BF9800759BB1 /* WelcomePage.swift */; };
 		BE718A412347BFBD00759BB1 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A402347BFBD00759BB1 /* MainPage.swift */; };
 		BE718A43234BD20300759BB1 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE718A42234BD20300759BB1 /* ViewRouter.swift */; };
+		BE7996AC2374AD4000243D28 /* BigNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7996AB2374AD4000243D28 /* BigNavigationButton.swift */; };
+		BE7996B02374B99900243D28 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7996AF2374B99900243D28 /* BackButton.swift */; };
 		BE7B7BF72356913F001039A3 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = BE7B7BF62356913F001039A3 /* success.json */; };
 		BE7B7BF9235693CD001039A3 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B7BF8235693CD001039A3 /* ForgotPassword.swift */; };
 		BE7F6D672352CFB40065F8DB /* EmailSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F6D662352CFB40065F8DB /* EmailSentView.swift */; };
@@ -106,6 +108,8 @@
 		BE718A3E2347BF9800759BB1 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		BE718A402347BFBD00759BB1 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		BE718A42234BD20300759BB1 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		BE7996AB2374AD4000243D28 /* BigNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigNavigationButton.swift; sourceTree = "<group>"; };
+		BE7996AF2374B99900243D28 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		BE7B7BF62356913F001039A3 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		BE7B7BF8235693CD001039A3 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		BE7F6D662352CFB40065F8DB /* EmailSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSentView.swift; sourceTree = "<group>"; };
@@ -336,6 +340,8 @@
 				BE8F963E2363096500B4DD23 /* CoinbaseMarketData.swift */,
 				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
 				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
+				BE7996AB2374AD4000243D28 /* BigNavigationButton.swift */,
+				BE7996AF2374B99900243D28 /* BackButton.swift */,
 				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
 				BE2312E32364A8A600C16DCC /* Lottie */,
 				BE7B7BFA235694D2001039A3 /* Persistant Log-In */,
@@ -581,6 +587,7 @@
 				BE718A092346FBAA00759BB1 /* TransactionPage.swift in Sources */,
 				BE7B7BF9235693CD001039A3 /* ForgotPassword.swift in Sources */,
 				BE8F96492363500200B4DD23 /* PageHeader.swift in Sources */,
+				BE7996AC2374AD4000243D28 /* BigNavigationButton.swift in Sources */,
 				BE6BAB302352B28700E2C17B /* Biometrics.swift in Sources */,
 				BED52E12234BF6A1003D3D4A /* Socials.swift in Sources */,
 				BE2312EA2365301E00C16DCC /* ProfileAccountInfo.swift in Sources */,
@@ -603,6 +610,7 @@
 				BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */,
 				BE7F6D672352CFB40065F8DB /* EmailSentView.swift in Sources */,
 				BE822BA6234D4031004B2FC6 /* SignUpProgress.swift in Sources */,
+				BE7996B02374B99900243D28 /* BackButton.swift in Sources */,
 				BE6BAB20235028E200E2C17B /* LottieView.swift in Sources */,
 				BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */,
 				BE87EDDF2346E06900E267DE /* UpdateProfile.swift in Sources */,

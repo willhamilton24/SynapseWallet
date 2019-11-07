@@ -73,20 +73,7 @@ struct SetKeepLogs: View {
                     .padding()
                     .foregroundColor(CustomColors().light)
                     
-                    Button(action: {
-                        self.viewRouter.currentPage = "handle"
-                    }) {
-                        Text("Back")
-                            .padding()
-                            .font(.custom("Roboto-Thin", size:20))
-                            .foregroundColor(CustomColors().light)
-                    }
-                    .frame(minWidth: 225, maxWidth: 250)
-                    .background(CustomColors().lg)
-                    .cornerRadius(25)
-                    .padding()
-                    .padding(.vertical, 0)
-                    .foregroundColor(CustomColors().light)
+                    BackButton(destination: "handle")
                 }
             }
         }

@@ -81,6 +81,8 @@ struct EmailSentView: View {
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
                 }
+                
+                BackButton(destination: "email-v")
             }
         }
         .background(CustomColors().dark)

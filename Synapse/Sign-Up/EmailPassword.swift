@@ -147,17 +147,7 @@ struct EmailPassword: View {
                         Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
                     }
                     
-                    Button(action: {
-                        self.viewRouter.currentPage = "keep-logs"
-                    }) {
-                        Text("Back").padding().font(Font.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
-                    }
-                    .frame(minWidth: 225, maxWidth: 250)
-                    .background(CustomColors().lg)
-                    .cornerRadius(25)
-                    .padding()
-                    .padding(.vertical, 0)
-                    .foregroundColor(CustomColors().light)
+                    BackButton(destination: "keep-logs")
                 }
             }
             

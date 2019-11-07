@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct WelcomePage: View {
-    
     @EnvironmentObject var viewRouter: ViewRouter
     
     @State var token: String = "Your Handle"
@@ -25,19 +24,7 @@ struct WelcomePage: View {
                         .foregroundColor(CustomColors().light)
                         .font(Font.custom("Roboto-Light", size:60))
                 
-                    
-                    Button(action: {
-                        self.viewRouter.currentPage = "login"
-                    }) {
-                        Text("Login")
-                            .padding()
-                            .font(Font.custom("Roboto-Thin", size:35))
-                            .foregroundColor(CustomColors().light)
-                    }.frame(minWidth: 0, maxWidth: .infinity)
-                    .background(CustomColors().lg)
-                    .cornerRadius(30)
-                    .padding()
-                    .foregroundColor(CustomColors().light)
+                    BigNavigationButton(text: "Login", destination: "login")
                     
                     HStack {
                         
@@ -58,7 +45,7 @@ struct WelcomePage: View {
                                 self.viewRouter.currentPage = "handle"
                             }
                         }
-                        
+
                     }) {
                         Text("Get Started")
                             .padding()

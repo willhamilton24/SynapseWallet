@@ -157,17 +157,7 @@ struct AcceptTerms: View {
                         }
                     }
                     
-                    Button(action: {
-                        self.viewRouter.currentPage = "email-password"
-                    }) {
-                        Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
-                    }
-                    .frame(minWidth: 225, maxWidth: 250)
-                    .background(CustomColors().lg)
-                    .cornerRadius(25)
-                    .padding()
-                    .padding(.vertical, 0)
-                    .foregroundColor(CustomColors().light)
+                    BackButton(destination: "email-password")
                 }
             }
         }
