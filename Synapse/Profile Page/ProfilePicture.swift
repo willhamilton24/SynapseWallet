@@ -18,12 +18,12 @@ struct ProfilePicture: View {
                 //Convert Base64 to Image
                 Image("profpic")
                 .resizable()
-                .frame(width: 175, height: 175)
+                .frame(width: 250, height: 250)
                 .mask(Circle())
             } else {
                 Image("profpic")
                     .resizable()
-                    .frame(width: 175, height: 175)
+                    .frame(width: 250, height: 250)
                     .mask(Circle())
             }
             Button(action: {}) {

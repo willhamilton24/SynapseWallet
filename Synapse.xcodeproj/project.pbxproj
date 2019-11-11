@@ -12,6 +12,11 @@
 		BE2312E52365260C00C16DCC /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2312E42365260C00C16DCC /* ProfileHeader.swift */; };
 		BE2312E823652EFB00C16DCC /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2312E723652EFB00C16DCC /* ProfilePicture.swift */; };
 		BE2312EA2365301E00C16DCC /* ProfileAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2312E92365301E00C16DCC /* ProfileAccountInfo.swift */; };
+		BE38D8712379F920003C087C /* EditName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38D8702379F920003C087C /* EditName.swift */; };
+		BE38D8742379FCBE003C087C /* EditHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38D8732379FCBE003C087C /* EditHandle.swift */; };
+		BE38D8762379FE34003C087C /* EditEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38D8752379FE34003C087C /* EditEmail.swift */; };
+		BE38D8782379FFAD003C087C /* EditLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38D8772379FFAD003C087C /* EditLocation.swift */; };
+		BE38D87A237A0354003C087C /* ProfileButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE38D879237A0354003C087C /* ProfileButtons.swift */; };
 		BE6BAB1E2350287E00E2C17B /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB1D2350287E00E2C17B /* LoadingAnimation.swift */; };
 		BE6BAB20235028E200E2C17B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB1F235028E200E2C17B /* LottieView.swift */; };
 		BE6BAB2C23503AED00E2C17B /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = BE6BAB2B23503AED00E2C17B /* loader.json */; };
@@ -92,6 +97,11 @@
 		BE2312E42365260C00C16DCC /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		BE2312E723652EFB00C16DCC /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		BE2312E92365301E00C16DCC /* ProfileAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountInfo.swift; sourceTree = "<group>"; };
+		BE38D8702379F920003C087C /* EditName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditName.swift; sourceTree = "<group>"; };
+		BE38D8732379FCBE003C087C /* EditHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHandle.swift; sourceTree = "<group>"; };
+		BE38D8752379FE34003C087C /* EditEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEmail.swift; sourceTree = "<group>"; };
+		BE38D8772379FFAD003C087C /* EditLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocation.swift; sourceTree = "<group>"; };
+		BE38D879237A0354003C087C /* ProfileButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtons.swift; sourceTree = "<group>"; };
 		BE6BAB1D2350287E00E2C17B /* LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
 		BE6BAB1F235028E200E2C17B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		BE6BAB2B23503AED00E2C17B /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
@@ -229,6 +239,21 @@
 			path = "Balance Modules";
 			sourceTree = "<group>";
 		};
+		BE38D8722379F928003C087C /* Profile Page */ = {
+			isa = PBXGroup;
+			children = (
+				BE8F963C2361DE8700B4DD23 /* ProfilePage.swift */,
+				BE2312E723652EFB00C16DCC /* ProfilePicture.swift */,
+				BE2312E92365301E00C16DCC /* ProfileAccountInfo.swift */,
+				BE38D8732379FCBE003C087C /* EditHandle.swift */,
+				BE38D8752379FE34003C087C /* EditEmail.swift */,
+				BE38D8772379FFAD003C087C /* EditLocation.swift */,
+				BE38D8702379F920003C087C /* EditName.swift */,
+				BE38D879237A0354003C087C /* ProfileButtons.swift */,
+			);
+			path = "Profile Page";
+			sourceTree = "<group>";
+		};
 		BE7B7BFA235694D2001039A3 /* Persistant Log-In */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,9 +375,7 @@
 				BE7B7BFE2356A10E001039A3 /* Main Page */,
 				BE8F964623634E7500B4DD23 /* XButton.swift */,
 				BE2312E62365265800C16DCC /* Page Headers */,
-				BE8F963C2361DE8700B4DD23 /* ProfilePage.swift */,
-				BE2312E723652EFB00C16DCC /* ProfilePicture.swift */,
-				BE2312E92365301E00C16DCC /* ProfileAccountInfo.swift */,
+				BE38D8722379F928003C087C /* Profile Page */,
 				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
 				BE87EDD72346DB1000E267DE /* DepositPage.swift */,
 				BE87EDD92346DB5B00E267DE /* WithdrawPage.swift */,
@@ -572,6 +595,7 @@
 				BE718A3F2347BF9800759BB1 /* WelcomePage.swift in Sources */,
 				BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */,
 				BE8F9641236324E400B4DD23 /* BalanceModuleETH.swift in Sources */,
+				BE38D8712379F920003C087C /* EditName.swift in Sources */,
 				BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */,
 				BE8F964723634E7500B4DD23 /* XButton.swift in Sources */,
 				BE87EDDA2346DB5B00E267DE /* WithdrawPage.swift in Sources */,
@@ -582,6 +606,7 @@
 				BE2312E52365260C00C16DCC /* ProfileHeader.swift in Sources */,
 				BE87EDD023431E0700E267DE /* DepositWithdrawButtons.swift in Sources */,
 				BE8F96372361CB6A00B4DD23 /* ResetEmailSent.swift in Sources */,
+				BE38D8762379FE34003C087C /* EditEmail.swift in Sources */,
 				BE6FEA87234FF64300758CD2 /* LoadingView.swift in Sources */,
 				BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */,
 				BE718A092346FBAA00759BB1 /* TransactionPage.swift in Sources */,
@@ -590,12 +615,15 @@
 				BE7996AC2374AD4000243D28 /* BigNavigationButton.swift in Sources */,
 				BE6BAB302352B28700E2C17B /* Biometrics.swift in Sources */,
 				BED52E12234BF6A1003D3D4A /* Socials.swift in Sources */,
+				BE38D8782379FFAD003C087C /* EditLocation.swift in Sources */,
 				BE2312EA2365301E00C16DCC /* ProfileAccountInfo.swift in Sources */,
+				BE38D87A237A0354003C087C /* ProfileButtons.swift in Sources */,
 				BE822BA4234D3C33004B2FC6 /* CustomColors.swift in Sources */,
 				BE87EDCA2343077700E267DE /* GraphModule.swift in Sources */,
 				BE87EDCE234315E500E267DE /* CurrencySelector.swift in Sources */,
 				BE87EDDC2346DC4C00E267DE /* InstantTransferPage.swift in Sources */,
 				BE6ECB64234C2787003F82A5 /* AcceptTerms.swift in Sources */,
+				BE38D8742379FCBE003C087C /* EditHandle.swift in Sources */,
 				BE87EDA62342F10D00E267DE /* SceneDelegate.swift in Sources */,
 				BE8F96392361CE9200B4DD23 /* EmailValidator.swift in Sources */,
 				BE718A412347BFBD00759BB1 /* MainPage.swift in Sources */,

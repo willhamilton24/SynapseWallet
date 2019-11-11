@@ -19,6 +19,9 @@ struct ProfilePage: View {
     
     @State private var defaultName: String = "Anonymous"
     
+    @State private var editingName: Bool = false
+    @State private var newName: String = ""
+    
     @State private var showAlert: Bool = false
     @State private var alertTitle: String = ""
     @State private var alertText: String = ""
@@ -32,71 +35,48 @@ struct ProfilePage: View {
                 
                 ProfilePicture(profilePic: self.profileInfo.profilePic)
                 
+                Spacer().frame(height: 30)
                 
-                VStack () {
+                VStack (alignment: .leading) {
                     Spacer().frame(width: 400, height: 0)
                     
-                    if !self.profileInfo.name.isEmpty {
-                        Text(self.profileInfo.name)
-                            .font(Font.custom("Roboto-Thin", size:70))
-                            .padding(.leading, 10)
+                    if self.profileInfo.name.isEmpty {
+                        EditName(name: "Anonymous")
                     } else {
-                        Text(self.defaultName)
-                            .font(Font.custom("Roboto-Thin", size:70))
-                            .padding(.leading, 10)
-                        
+                        EditName(name: self.profileInfo.name)
                     }
                     
-                    HStack() {
-                        ProfileAccountInfo(handle: self.viewRouter.handle, profileInfo: (email: self.profileInfo.email, location: self.profileInfo.location, joinDate: self.joinDate))
-                        
-                        Spacer().frame(width: 70, height: 0)
-                        
-                        VStack {
-                            Text("Balances").font(Font.custom("Roboto-Light", size:20))
-                            
-                            HStack {
-                                Text("BTC").font(Font.custom("Roboto-Light", size:14))
-                                
-                                Text(String(self.profileInfo.balances.btc)).font(Font.custom("Roboto-Thin", size:14))
-                            }
-                            HStack {
-                                Text("ETH").font(Font.custom("Roboto-Light", size:14))
-                                
-                                Text(String(self.profileInfo.balances.eth)).font(Font.custom("Roboto-Thin", size:14))
-                            }
-                            HStack {
-                                Text("LTC").font(Font.custom("Roboto-Light", size:14))
-                                
-                                Text(String(self.profileInfo.balances.ltc)).font(Font.custom("Roboto-Thin", size:14))
-                            }
-                        }
-                            
-                    }
+                    
+                    ProfileAccountInfo(handle: self.viewRouter.handle, profileInfo: (email: self.profileInfo.email, location: self.profileInfo.location, joinDate: self.joinDate))
+                    
+                    Spacer().frame(width: 70, height: 0)
+                    
+//                    VStack {
+//                        Text("Balances").font(Font.custom("Roboto-Light", size:20))
+//                        
+//                        HStack {
+//                            Text("BTC").font(Font.custom("Roboto-Light", size:14))
+//                            
+//                            Text(String(self.profileInfo.balances.btc)).font(Font.custom("Roboto-Thin", size:14))
+//                        }
+//                        HStack {
+//                            Text("ETH").font(Font.custom("Roboto-Light", size:14))
+//                            
+//                            Text(String(self.profileInfo.balances.eth)).font(Font.custom("Roboto-Thin", size:14))
+//                        }
+//                        HStack {
+//                            Text("LTC").font(Font.custom("Roboto-Light", size:14))
+//                            
+//                            Text(String(self.profileInfo.balances.ltc)).font(Font.custom("Roboto-Thin", size:14))
+//                        }
+//                    }
                         
                 }.foregroundColor(CustomColors().light)
-                    
-                    
                 
-                
-                Spacer().frame(height: 50)
+                Spacer().frame(height: 60)
+                ProfileButtons()
+                Spacer().frame(height: 60)
             
-                HStack {
-                    Button(action: {
-                        // Check Altered Fields
-                        // Send Requests
-                    }) {
-                        Text("save")
-                    }
-                    
-                    Button(action: {
-                        self.viewRouter.currentPage = "welcome"
-                        // Delete Stored Data
-                    }) {
-                        Text("logout")
-                    }
-                }
-                
             }
             .edgesIgnoringSafeArea(.vertical)
             .background(CustomColors().dark)

@@ -14,14 +14,14 @@ struct ProfileHeader: View {
     var body: some View {
         VStack {
             Spacer()
-                .frame(height:125)
+                .frame(height:135)
             
             HStack(spacing: 10.0) {
                 
-                Text("Profile")
+                Text("Profile ")
                 
                 Spacer()
-                    .frame(width: 150, height: 20, alignment: .center)
+                    .frame(width: 100, height: 20, alignment: .center)
                 
                 XButton()
                 
@@ -31,7 +31,7 @@ struct ProfileHeader: View {
         .font(Font.custom("Roboto-Thin", size:72))
         .padding()
         .foregroundColor(CustomColors().light)
-        .frame(width: 500, height: 235)
+        .frame(width: 500, height: 225)
         .fixedSize()
         .background(CustomColors().primeGradiant)
     }

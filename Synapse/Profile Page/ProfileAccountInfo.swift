@@ -17,25 +17,14 @@ struct ProfileAccountInfo: View {
     var body: some View {
         VStack (alignment: .leading) {
         
-            Text(self.handle)
-                .font(Font.custom("Roboto-Thin", size:28))
-                .padding(.leading, 10)
+            EditHandle(handle: self.handle)
 
-            HStack {
-                Text(self.profileInfo.email)
-                    .font(Font.custom("Roboto-Thin", size:18))
-                    .padding(.leading, 10)
-                // Edit Email Button
-            }
+            EditEmail(email: self.profileInfo.email)
             
             if !self.profileInfo.location.isEmpty {
-                Text(self.profileInfo.location)
-                    .font(Font.custom("Roboto-Thin", size:18))
-                    .padding(.leading, 10)
+                EditLocation(locale: self.profileInfo.location)
             } else {
-                Text(self.defaultLocation)
-                    .font(Font.custom("Roboto-Thin", size:18))
-                    .padding(.leading, 10)
+                EditLocation(locale: self.defaultLocation)
             }
             
             
