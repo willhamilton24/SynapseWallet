@@ -11,14 +11,32 @@ import SwiftUI
 struct ProfileButtons: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
+    @State private var showingAlert = false
+    @State private var alertTitle = ""
+    @State private var alertText = ""
+    
     var body: some View {
         HStack (spacing: 25) {
             Button(action: {
                 return NetworkingClient().updateMyProfileInfo(username: self.viewRouter.handle, token: self.viewRouter.token, name: self.viewRouter.profileInfo.name, profilePic: self.viewRouter.profileInfo.profilePic, location: self.viewRouter.profileInfo.location) { (json, error) in
                     print(json)
-//                    if json == "user info changed" {
-//                        print("Profile Updated")
-//                    }
+                    if json! == "user info changed" {
+                        print("Profile Updated")
+                        self.alertTitle = "Changes Saved"
+                        self.alertText = "Your changes have been saved"
+                        self.showingAlert = true
+                        
+                    } else if json! == "invalid username/token"  {
+                        self.viewRouter.currentPage = "welcome"
+                        self.alertTitle = "Login Invalid"
+                        self.alertText = "Something went wrong. Please log back in."
+                        self.showingAlert = true
+                    } else {
+                        self.alertText = "Server Error"
+                        self.alertTitle = "Something went wrong. Please try again in a few minutes."
+                        self.showingAlert = true
+
+                    }
                 }
             }) {
                 Text("Save").font(.custom("Roboto-Thin", size:28))
@@ -26,6 +44,9 @@ struct ProfileButtons: View {
             .frame(minWidth: 150, minHeight: 60)
             .background(CustomColors().lg)
             .cornerRadius(25)
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
+            }
             
             Button(action: {}) {
                 Text("Logout").font(.custom("Roboto-Thin", size:28))
