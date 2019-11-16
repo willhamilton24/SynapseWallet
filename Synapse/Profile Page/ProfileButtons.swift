@@ -9,9 +9,18 @@
 import SwiftUI
 
 struct ProfileButtons: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
         HStack (spacing: 25) {
-            Button(action: {}) {
+            Button(action: {
+                return NetworkingClient().updateMyProfileInfo(username: self.viewRouter.handle, token: self.viewRouter.token, name: self.viewRouter.profileInfo.name, profilePic: self.viewRouter.profileInfo.profilePic, location: self.viewRouter.profileInfo.location) { (json, error) in
+                    print(json)
+//                    if json == "user info changed" {
+//                        print("Profile Updated")
+//                    }
+                }
+            }) {
                 Text("Save").font(.custom("Roboto-Thin", size:28))
             }
             .frame(minWidth: 150, minHeight: 60)
@@ -31,6 +40,6 @@ struct ProfileButtons: View {
 
 struct ProfileButtons_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileButtons()
+        ProfileButtons().environmentObject(ViewRouter())
     }
 }

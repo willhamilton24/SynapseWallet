@@ -29,7 +29,10 @@ struct EditName: View {
             }
             
             
-            Button(action: {self.editingName.toggle()}) {
+            Button(action: {
+                self.editingName.toggle()
+                self.viewRouter.profileInfo.name = self.name
+            }) {
                 if self.editingName {
                     Image("check")
                         .resizable()

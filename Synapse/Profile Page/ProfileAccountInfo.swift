@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ProfileAccountInfo: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @State var handle: String
     @State var profileInfo = (email: "", location: "", joinDate: "")
     
@@ -19,12 +21,12 @@ struct ProfileAccountInfo: View {
         
             EditHandle(handle: self.handle)
 
-            EditEmail(email: self.profileInfo.email)
+            EditEmail(email: self.profileInfo.email).environmentObject(ViewRouter())
             
             if !self.profileInfo.location.isEmpty {
-                EditLocation(locale: self.profileInfo.location)
+                EditLocation(locale: self.profileInfo.location).environmentObject(ViewRouter())
             } else {
-                EditLocation(locale: self.defaultLocation)
+                EditLocation(locale: self.defaultLocation).environmentObject(ViewRouter())
             }
             
             
@@ -37,6 +39,6 @@ struct ProfileAccountInfo: View {
 
 struct ProfileAccountInfo_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileAccountInfo(handle: "Handle", profileInfo: (email: "email", location: "location", joinDate: ""))
+        ProfileAccountInfo(handle: "Handle", profileInfo: (email: "email", location: "location", joinDate: "")).environmentObject(ViewRouter())
     }
 }

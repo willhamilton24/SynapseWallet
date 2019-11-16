@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct EditLocation: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @State var locale: String
     @State private var editingLocale: Bool = false
     
@@ -27,7 +29,10 @@ struct EditLocation: View {
             }
             
             
-            Button(action: {self.editingLocale.toggle()}) {
+            Button(action: {
+                self.editingLocale.toggle()
+                self.viewRouter.profileInfo.location = self.locale
+            }) {
                 if self.editingLocale {
                     Image("check")
                         .resizable()
@@ -49,6 +54,6 @@ struct EditLocation: View {
 
 struct EditLocation_Previews: PreviewProvider {
     static var previews: some View {
-        EditLocation(locale: "Palm Beach, FL")
+        EditLocation(locale: "Palm Beach, FL").environmentObject(ViewRouter())
     }
 }

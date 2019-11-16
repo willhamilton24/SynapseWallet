@@ -160,4 +160,27 @@ class NetworkingClient  {
         }
         
     }
+    
+    func updateMyProfileInfo(username: String, token: String, name: String?, profilePic: String?, location: String?, completion: @escaping WebServiceResponseString) {
+        let parameters: [String: Any] = [
+            "username": username,
+            "token": token,
+            "newName": name,
+            "newProfilePic": profilePic,
+            "newLocation":location
+        ]
+        
+        Alamofire.request("https://serverless.willhamilton24.now.sh/api/account/editOwnInfo", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { response in
+            if let error = response.error {
+                print(error)
+                completion(nil, error)
+            } else if let jsonDict = response.result.value as? [String: Any] {
+                let didUpdate = jsonDict["success"] as? String
+                print(didUpdate)
+                completion(didUpdate, nil)
+            }
+            
+        }
+        
+    }
 }

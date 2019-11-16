@@ -37,13 +37,13 @@ struct ProfilePage: View {
                     Spacer().frame(width: 400, height: 0)
                     
                     if self.viewRouter.profileInfo.name.isEmpty {
-                        EditName(name: "Anonymous")
+                        EditName(name: "Anonymous").environmentObject(ViewRouter())
                     } else {
-                        EditName(name: self.viewRouter.profileInfo.name)
+                        EditName(name: self.viewRouter.profileInfo.name).environmentObject(ViewRouter())
                     }
                     
                     
-                    ProfileAccountInfo(handle: self.viewRouter.handle, profileInfo: (email: self.viewRouter.profileInfo.email, location: self.viewRouter.profileInfo.location, joinDate: self.viewRouter.joinDate))
+                    ProfileAccountInfo(handle: self.viewRouter.handle, profileInfo: (email: self.viewRouter.profileInfo.email, location: self.viewRouter.profileInfo.location, joinDate: self.viewRouter.joinDate)).environmentObject(ViewRouter())
                     
                     Spacer().frame(width: 70, height: 0)
                     
@@ -70,7 +70,7 @@ struct ProfilePage: View {
                 }.foregroundColor(CustomColors().light)
                 
                 Spacer().frame(height: 60)
-                ProfileButtons()
+                ProfileButtons().environmentObject(ViewRouter())
                 Spacer().frame(height: 60)
             
             }

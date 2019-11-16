@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct EditEmail: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @State var email: String
     @State private var editingEmail: Bool = false
     
@@ -27,7 +29,10 @@ struct EditEmail: View {
             }
             
             
-            Button(action: {self.editingEmail.toggle()}) {
+            Button(action: {
+                self.editingEmail.toggle()
+                self.viewRouter.profileInfo.email = self.email
+            }) {
                 if self.editingEmail {
                     Image("check")
                         .resizable()
@@ -49,6 +54,6 @@ struct EditEmail: View {
 
 struct EditEmail_Previews: PreviewProvider {
     static var previews: some View {
-        EditEmail(email: "email@example.com")
+        EditEmail(email: "email@example.com").environmentObject(ViewRouter())
     }
 }
