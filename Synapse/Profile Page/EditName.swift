@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct EditName: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @State var name: String
     @State private var editingName: Bool = false
     
@@ -49,6 +51,6 @@ struct EditName: View {
 
 struct EditName_Previews: PreviewProvider {
     static var previews: some View {
-        EditName(name: "Anonymous")
+        EditName(name: "Anonymous").environmentObject(ViewRouter())
     }
 }

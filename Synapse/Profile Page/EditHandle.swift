@@ -28,22 +28,22 @@ struct EditHandle: View {
             }
             
             
-            Button(action: {self.editingHandle.toggle()}) {
-                if self.editingHandle {
-                    Image("check")
-                        .resizable()
-                        .frame(width: 28, height: 28)
-                        .foregroundColor(CustomColors().lg)
-                        .padding(.top, 15)
-                } else {
-                    Image("edit")
-                        .resizable()
-                        .frame(width: 28, height: 28)
-                        .foregroundColor(CustomColors().prime)
-                        .padding(.top, 0)
-                }
-            }
-            .padding(.bottom, 0)
+//            Button(action: {self.editingHandle.toggle()}) {
+//                if self.editingHandle {
+//                    Image("check")
+//                        .resizable()
+//                        .frame(width: 28, height: 28)
+//                        .foregroundColor(CustomColors().lg)
+//                        .padding(.top, 15)
+//                } else {
+//                    Image("edit")
+//                        .resizable()
+//                        .frame(width: 28, height: 28)
+//                        .foregroundColor(CustomColors().prime)
+//                        .padding(.top, 0)
+//                }
+//            }
+//            .padding(.bottom, 0)
         }
     }
 }

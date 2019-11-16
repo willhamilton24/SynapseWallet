@@ -23,6 +23,18 @@ class ViewRouter: ObservableObject {
         }
     }
     
+    var joinDate: String  = "" {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
+    var profileInfo = (email: "", location: "", joined: Double(0.0), name: "", profilePic: "") {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
     var users: [String] = ["404"] {
         didSet {
             objectWillChange.send(self)
@@ -91,6 +103,18 @@ class ViewRouter: ObservableObject {
     }
     
     var accountValues = (btc: 0.0, eth: 0.0, ltc: 0.0) {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
+    var location = "" {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
+    var name = "" {
         didSet {
             objectWillChange.send(self)
         }

@@ -80,7 +80,39 @@ struct ReloadProfileButtons: View {
             
             Spacer().frame(width: 240)
             //Profile Button
-            Button(action: {self.viewRouter.currentPage = "profile"}){
+            Button(action: {
+                self.viewRouter.currentPage = "loading"
+                NetworkingClient().getMyProfileInfo(username: self.viewRouter.handle, token: self.viewRouter.token) { (json, error) in
+                    if error != nil { self.viewRouter.currentPage = "persist"}
+                    if json != nil {
+                        let unwrappedJSON = json!
+                        self.viewRouter.profileInfo.email = unwrappedJSON.email!
+                        self.viewRouter.profileInfo.joined = unwrappedJSON.joined!
+                        if unwrappedJSON.name != "" {
+                            self.viewRouter.profileInfo.name = unwrappedJSON.name!
+                        }
+                        if unwrappedJSON.profile_pic != "" {
+                            self.viewRouter.profileInfo.profilePic = unwrappedJSON.profile_pic!
+                        }
+                        if unwrappedJSON.location != nil {
+                            self.viewRouter.profileInfo.location = unwrappedJSON.location!
+                        }
+                        
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateStyle = .medium
+                        dateFormatter.timeStyle = .none
+                        
+                        dateFormatter.locale = Locale(identifier: "en_US")
+                        let joinDateRaw = Date(timeIntervalSince1970: self.viewRouter.profileInfo.joined / 1000)
+                        
+                        self.viewRouter.joinDate = dateFormatter.string(from: joinDateRaw)
+                        
+                        self.viewRouter.currentPage = "profile"
+                    }
+                }
+                
+                
+            }){
                 Image("profile")
                 .resizable()
                 .frame(width: 55, height: 55)
