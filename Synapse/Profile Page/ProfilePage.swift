@@ -24,6 +24,8 @@ struct ProfilePage: View {
     
     var body: some View {
             VStack {
+                Spacer().frame(height: 20)
+                
                 ProfileHeader()
                 
                 Spacer().frame(height: 50)
@@ -47,9 +49,14 @@ struct ProfilePage: View {
                     Spacer().frame(width: 70, height: 0)
                 }.foregroundColor(CustomColors().light)
                 
-                Spacer().frame(height: 60)
-                ProfileButtons()
-                Spacer().frame(height: 60)
+                Spacer().frame(height: 80)
+                ProfileButtons().padding(.bottom, 20)
+                
+                
+                Button(action: {self.viewRouter.currentPage = "credits"}) {
+                    Text("Legal & Credits")
+                }
+                Spacer().frame(height: 20)
             
             }
             .edgesIgnoringSafeArea(.vertical)
