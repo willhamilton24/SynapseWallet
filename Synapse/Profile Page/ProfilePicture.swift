@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct ProfilePicture: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     
+    @State private var showingSheet = false
     @State var profilePic: String?
     
     var body: some View {
@@ -26,8 +28,13 @@ struct ProfilePicture: View {
                     .frame(width: 230, height: 230)
                     .mask(Circle())
             }
-            Button(action: {}) {
+            Button(action: {
+                self.showingSheet = true
+            }) {
                 Text("Change Profile Picture")
+            }.actionSheet(isPresented: $showingSheet) {
+                ActionSheet(title: Text("Change Profile Page"), buttons: [ .default(Text("Take Photo with Camera"), action: {}), .default(Text("Choose Photo From Camera Roll"), action: {}),
+                    .destructive(Text("Cancel").foregroundColor(Color.red))])
             }
         }
     }
