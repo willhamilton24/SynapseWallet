@@ -16,6 +16,8 @@ struct CustomColors {
     let second = Color(UIColor(red:0.35, green:0.39, blue:0.97, alpha:1.0))
     let third = Color(UIColor(red:0.45, green:0.82, blue:0.87, alpha:1.0))
     
+    let light2 = Color(UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0))
+    
     let prime2 = Color(UIColor(red:0.00, green:1.00, blue:0.78, alpha:1.0))
     
     let primeGradiant = LinearGradient(gradient: Gradient(colors: [Color(UIColor(red:0.00, green:0.28, blue:1.00, alpha:1.0)), Color(UIColor(red:0.00, green:1.00, blue:0.78, alpha:1.0))]), startPoint: .leading, endPoint: .trailing)

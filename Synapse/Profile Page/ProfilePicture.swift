@@ -14,27 +14,38 @@ struct ProfilePicture: View {
     @State private var showingSheet = false
     @State var profilePic: String?
     
+    @State var showCaptureImageView: Bool  = false
+    @State var image: Image? = nil
+    
     var body: some View {
-        VStack {
-            if self.profilePic != nil {
-                //Convert Base64 to Image
-                Image("profpic")
-                .resizable()
-                .frame(width: 230, height: 230)
-                .mask(Circle())
-            } else {
-                Image("profpic")
-                    .resizable()
-                    .frame(width: 230, height: 230)
-                    .mask(Circle())
+        ZStack {
+            VStack {
+                if self.image != nil {
+                    //Convert Base64 to Image
+                    image!
+                        .resizable()
+                        .frame(width: 230, height: 230)
+                        .mask(Circle())
+                } else {
+                    Image("profpic")
+                        .resizable()
+                        .frame(width: 230, height: 230)
+                        .mask(Circle())
+                }
+                Button(action: {
+                    self.showingSheet = true
+                }) {
+                    Text("Change Profile Picture")
+                }.actionSheet(isPresented: $showingSheet) {
+                    ActionSheet(title: Text("Change Profile Page"), buttons: [ .default(Text("Take Photo with Camera"), action: {}), .default(Text("Choose Photo From Camera Roll"), action: {self.showCaptureImageView.toggle()}),
+                        .destructive(Text("Cancel").foregroundColor(Color.red))])
+                }
             }
-            Button(action: {
-                self.showingSheet = true
-            }) {
-                Text("Change Profile Picture")
-            }.actionSheet(isPresented: $showingSheet) {
-                ActionSheet(title: Text("Change Profile Page"), buttons: [ .default(Text("Take Photo with Camera"), action: {}), .default(Text("Choose Photo From Camera Roll"), action: {}),
-                    .destructive(Text("Cancel").foregroundColor(Color.red))])
+            if (showCaptureImageView) {
+                VStack {
+                    Spacer().frame(height: 360)
+                    CaptureImageView(isShown: $showCaptureImageView, image: $image).frame(width: 410, height: 900)
+                }.background(CustomColors().light2) // TODO: Change to Match
             }
         }
     }

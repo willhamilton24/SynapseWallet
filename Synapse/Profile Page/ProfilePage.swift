@@ -57,6 +57,7 @@ struct ProfilePage: View {
                     Text("Legal & Credits")
                 }
                 Spacer().frame(height: 20)
+                
             
             }
             .edgesIgnoringSafeArea(.vertical)
