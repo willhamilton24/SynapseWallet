@@ -39,7 +39,10 @@ struct ProfileButtons: View {
                     }
                 }
             }) {
-                Text("Save").font(.custom("Roboto-Thin", size:28))
+                HStack {
+                    Text("Save").font(.custom("Roboto-Thin", size:28))
+                    Image("save").resizable().frame(width: 24, height: 24)
+                }
             }
             .frame(minWidth: 150, minHeight: 60)
             .background(CustomColors().lg)
@@ -49,10 +52,13 @@ struct ProfileButtons: View {
             }
             
             Button(action: {}) {
-                Text("Logout").font(.custom("Roboto-Thin", size:28))
+                HStack {
+                    Text("Logout").font(.custom("Roboto-Thin", size:28))
+                    Image("logout2").resizable().frame(width: 24, height: 24)
+                }
             }
             .frame(minWidth: 150, minHeight: 60)
-            .background(CustomColors().lg)
+            .background(Color.red)
             .cornerRadius(25)
         }
         .foregroundColor(CustomColors().light)
