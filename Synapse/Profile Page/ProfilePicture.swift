@@ -26,7 +26,7 @@ struct ProfilePicture: View {
                         .frame(width: 230, height: 230)
                         .mask(Circle())
                 } else {
-                    Image("profpic")
+                    Image("placeholder-pic")
                         .resizable()
                         .frame(width: 230, height: 230)
                         .mask(Circle())
