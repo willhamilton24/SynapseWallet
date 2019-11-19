@@ -13,6 +13,7 @@ struct SWLogo: View {
         VStack(alignment: .leading) {
             Text("SYNAPSE")
             Text("WALLET.")
+            Spacer().frame(height: 30)
         }
     }
 }

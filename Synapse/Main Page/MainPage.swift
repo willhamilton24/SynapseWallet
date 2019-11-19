@@ -15,13 +15,12 @@ struct MainPage: View {
     @State var btcValue: Double = 0
 
     var body: some View {
-            VStack(spacing: 0) {
-                    
+            VStack(spacing: 2) {
                     // Top Bar
                     VStack {
                         
                         Spacer()
-                            .frame(height:125)
+                            .frame(height:165)
                         
                         HStack(spacing: 10.0) {
                             
@@ -35,8 +34,9 @@ struct MainPage: View {
                     }
                     .font(Font.custom("Roboto-Thin", size:36))
                     .padding()
+                    .padding(.top, 30)
                     .foregroundColor(CustomColors().light)
-                    .frame(width: 500, height: 235)
+                    .frame(width: 500, height: 270)
                     .fixedSize()
                     .background(CustomColors().primeGradiant)
                 
@@ -60,7 +60,7 @@ struct MainPage: View {
                     CurrencySelector()  // Select Active Currency
                     DepositWithdrawButtons() // Deposit / Withdraw Funds + Pay Button
                     InstantTransferButton() // Instant Transfer Funds
-                    Spacer().frame(height: 70)
+                    Spacer().frame(height: 30)
                     
                     
                     
