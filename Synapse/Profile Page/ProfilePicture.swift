@@ -15,6 +15,7 @@ struct ProfilePicture: View {
     @State var profilePic: String?
     
     @State var showCaptureImageView: Bool  = false
+    @State var showTakeImageView: Bool  = false
     @State var image: Image? = nil
     
     var body: some View {
@@ -37,7 +38,7 @@ struct ProfilePicture: View {
                 }) {
                     Text("Change Profile Picture")
                 }.actionSheet(isPresented: $showingSheet) {
-                    ActionSheet(title: Text("Change Profile Page"), buttons: [ .default(Text("Take Photo with Camera"), action: {}), .default(Text("Choose Photo From Camera Roll"), action: {self.showCaptureImageView.toggle()}),
+                    ActionSheet(title: Text("Change Profile Page"), buttons: [ .default(Text("Take Photo with Camera"), action: {self.showTakeImageView.toggle()}), .default(Text("Choose Photo From Camera Roll"), action: {self.showCaptureImageView.toggle()}),
                         .destructive(Text("Cancel").foregroundColor(Color.red))])
                 }
             }
@@ -46,6 +47,12 @@ struct ProfilePicture: View {
                     Spacer().frame(height: 360)
                     CaptureImageView(isShown: $showCaptureImageView, image: $image).frame(width: 410, height: 900)
                 }.background(CustomColors().light2) // TODO: Change to Match
+            }
+            if (showTakeImageView) {
+                VStack {
+                    Spacer().frame(height: 360)
+                    TakeImageView(isShown: $showTakeImageView, image: $image).frame(width: 410, height: 900)
+                }
             }
         }
     }
