@@ -20,7 +20,7 @@ struct ProfilePicture: View {
     var body: some View {
         ZStack {
             VStack {
-                if self.viewRouter.image != nil {
+                if (self.viewRouter.image != nil)  {
                     Image(uiImage: viewRouter.image!)
                         .resizable()
                         .frame(width: 230, height: 230)

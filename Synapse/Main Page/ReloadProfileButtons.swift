@@ -11,6 +11,18 @@ import SwiftUI
 struct ReloadProfileButtons: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
+    func base64Convert(base64String: String?) -> UIImage{
+      if (base64String?.isEmpty)! {
+          return #imageLiteral(resourceName: "no_image_found")
+      } else {
+          // !!! Separation part is optional, depends on your Base64String !!!
+          let temp = base64String?.components(separatedBy: ",")
+          let dataDecoded : Data = Data(base64Encoded: temp![1], options: .ignoreUnknownCharacters)!
+          let decodedimage = UIImage(data: dataDecoded)
+          return decodedimage!
+      }
+    }
+    
     var body: some View {
         HStack {
             Button(action: {
@@ -93,6 +105,7 @@ struct ReloadProfileButtons: View {
                         }
                         if unwrappedJSON.profile_pic != "" {
                             self.viewRouter.profileInfo.profilePic = unwrappedJSON.profile_pic!
+                            self.viewRouter.image = self.base64Convert(base64String: self.viewRouter.profileInfo.profilePic)
                         }
                         if unwrappedJSON.location != nil {
                             self.viewRouter.profileInfo.location = unwrappedJSON.location!
