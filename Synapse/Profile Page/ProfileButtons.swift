@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ProfileButtons: View {
+    let defaults = UserDefaults.standard
+    
     @EnvironmentObject var viewRouter: ViewRouter
     
     @State private var showingAlert = false
@@ -51,7 +53,11 @@ struct ProfileButtons: View {
                 Alert(title: Text(self.alertTitle), message: Text(self.alertText), dismissButton: .default(Text("Got it!")))
             }
             
-            Button(action: {}) {
+            Button(action: {
+                self.defaults.set("", forKey: defaultsKeys.handleKey)
+                self.defaults.set("", forKey: defaultsKeys.passwordKey)
+                self.viewRouter.currentPage = "welcome"
+            }) {
                 HStack {
                     Text("Logout").font(.custom("Roboto-Thin", size:28))
                     Image("logout2").resizable().frame(width: 24, height: 24)

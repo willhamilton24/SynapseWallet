@@ -23,7 +23,6 @@ struct ProfilePage: View {
     @State private var alertText: String = ""
     
     var body: some View {
-        NavigationView {
             VStack {
                 ProfileHeader()
                 
@@ -37,49 +36,24 @@ struct ProfilePage: View {
                     Spacer().frame(width: 400, height: 0)
                     
                     if self.viewRouter.profileInfo.name.isEmpty {
-                        EditName(name: "Anonymous").environmentObject(ViewRouter())
+                        EditName(name: "Anonymous")
                     } else {
-                        EditName(name: self.viewRouter.profileInfo.name).environmentObject(ViewRouter())
+                        EditName(name: self.viewRouter.profileInfo.name)
                     }
                     
                     
-                    ProfileAccountInfo(handle: self.viewRouter.handle, profileInfo: (email: self.viewRouter.profileInfo.email, location: self.viewRouter.profileInfo.location, joinDate: self.viewRouter.joinDate)).environmentObject(ViewRouter())
+                    ProfileAccountInfo(handle: self.viewRouter.handle, profileInfo: (email: self.viewRouter.profileInfo.email, location: self.viewRouter.profileInfo.location, joinDate: self.viewRouter.joinDate))
                     
                     Spacer().frame(width: 70, height: 0)
-                    
-//                    VStack {
-//                        Text("Balances").font(Font.custom("Roboto-Light", size:20))
-//                        
-//                        HStack {
-//                            Text("BTC").font(Font.custom("Roboto-Light", size:14))
-//                            
-//                            Text(String(self.profileInfo.balances.btc)).font(Font.custom("Roboto-Thin", size:14))
-//                        }
-//                        HStack {
-//                            Text("ETH").font(Font.custom("Roboto-Light", size:14))
-//                            
-//                            Text(String(self.profileInfo.balances.eth)).font(Font.custom("Roboto-Thin", size:14))
-//                        }
-//                        HStack {
-//                            Text("LTC").font(Font.custom("Roboto-Light", size:14))
-//                            
-//                            Text(String(self.profileInfo.balances.ltc)).font(Font.custom("Roboto-Thin", size:14))
-//                        }
-//                    }
-                        
                 }.foregroundColor(CustomColors().light)
                 
                 Spacer().frame(height: 60)
-                ProfileButtons().environmentObject(ViewRouter())
+                ProfileButtons()
                 Spacer().frame(height: 60)
             
             }
             .edgesIgnoringSafeArea(.vertical)
             .background(CustomColors().dark)
-        }
-        .edgesIgnoringSafeArea(.vertical)
-        .background(CustomColors().dark)
-        .onAppear {}
     }
 }
 

@@ -15,7 +15,6 @@ struct MainPage: View {
     @State var btcValue: Double = 0
 
     var body: some View {
-        NavigationView  {
             VStack(spacing: 0) {
                     
                     // Top Bar
@@ -127,7 +126,6 @@ struct MainPage: View {
                     }
                     
                 }
-            }
             
         
     }

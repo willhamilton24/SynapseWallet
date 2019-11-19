@@ -78,7 +78,7 @@ struct WelcomePage: View {
         }.background(CustomColors().dark).edgesIgnoringSafeArea(.bottom)
         .onAppear {
             let defaults = UserDefaults.standard
-            if (defaults.string(forKey: defaultsKeys.handleKey) != nil) {
+            if (defaults.string(forKey: defaultsKeys.handleKey) != nil && defaults.string(forKey: defaultsKeys.handleKey) != "") {
                 self.viewRouter.currentPage = "persist"
             }
         }
