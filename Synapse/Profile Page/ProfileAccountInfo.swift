@@ -21,12 +21,12 @@ struct ProfileAccountInfo: View {
         
             EditHandle(handle: self.handle)
 
-            EditEmail(email: self.profileInfo.email).environmentObject(ViewRouter())
+            EditEmail(email: self.profileInfo.email)
             
             if !self.profileInfo.location.isEmpty {
-                EditLocation(locale: self.profileInfo.location).environmentObject(ViewRouter())
+                EditLocation(locale: self.profileInfo.location)
             } else {
-                EditLocation(locale: self.defaultLocation).environmentObject(ViewRouter())
+                EditLocation(locale: self.defaultLocation)
             }
             
             

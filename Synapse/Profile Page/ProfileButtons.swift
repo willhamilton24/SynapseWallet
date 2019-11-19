@@ -17,18 +17,31 @@ struct ProfileButtons: View {
     @State private var alertTitle = ""
     @State private var alertText = ""
     
+    func encodeProfilePicture(pic: UIImage?) -> String? {
+        if pic != nil {
+            if let encodedPic = pic!.pngData() {
+                return encodedPic.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
+            } else {
+                return "Not Encoded"
+            }
+        } else {
+            return nil
+        }
+    }
+    
     var body: some View {
         HStack (spacing: 25) {
             Button(action: {
-                return NetworkingClient().updateMyProfileInfo(username: self.viewRouter.handle, token: self.viewRouter.token, name: self.viewRouter.profileInfo.name, profilePic: self.viewRouter.profileInfo.profilePic, location: self.viewRouter.profileInfo.location) { (json, error) in
+                self.viewRouter.imageEncoding = self.encodeProfilePicture(pic: self.viewRouter.image)
+                return NetworkingClient().updateMyProfileInfo(username: self.viewRouter.handle, token: self.viewRouter.token, name: self.viewRouter.profileInfo.name, profilePic: self.viewRouter.imageEncoding, location: self.viewRouter.profileInfo.location) { (json, error) in
                     print(json)
-                    if json! == "user info changed" {
+                    if json == "user info changed" {
                         print("Profile Updated")
                         self.alertTitle = "Changes Saved"
                         self.alertText = "Your changes have been saved"
                         self.showingAlert = true
                         
-                    } else if json! == "invalid username/token"  {
+                    } else if json == "invalid username/token"  {
                         self.viewRouter.currentPage = "welcome"
                         self.alertTitle = "Login Invalid"
                         self.alertText = "Something went wrong. Please log back in."

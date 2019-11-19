@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 import SwiftUI
-
+import UIKit
 
 class ViewRouter: ObservableObject {
     let objectWillChange = PassthroughSubject<ViewRouter,Never>()
@@ -24,6 +24,18 @@ class ViewRouter: ObservableObject {
     }
     
     var joinDate: String  = "" {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
+    var image: UIImage?  = nil {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
+    var imageEncoding: String?  = nil {
         didSet {
             objectWillChange.send(self)
         }

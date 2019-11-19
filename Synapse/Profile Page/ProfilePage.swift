@@ -30,7 +30,7 @@ struct ProfilePage: View {
                 
                 Spacer().frame(height: 50)
                 
-                ProfilePicture(profilePic: self.viewRouter.profileInfo.profilePic)
+                ProfilePicture()
                 
                 Spacer().frame(height: 30)
                 

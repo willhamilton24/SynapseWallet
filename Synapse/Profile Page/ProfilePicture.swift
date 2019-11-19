@@ -7,23 +7,21 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ProfilePicture: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     @State private var showingSheet = false
-    @State var profilePic: String?
     
     @State var showCaptureImageView: Bool  = false
     @State var showTakeImageView: Bool  = false
-    @State var image: Image? = nil
     
     var body: some View {
         ZStack {
             VStack {
-                if self.image != nil {
-                    //Convert Base64 to Image
-                    image!
+                if self.viewRouter.image != nil {
+                    Image(uiImage: viewRouter.image!)
                         .resizable()
                         .frame(width: 230, height: 230)
                         .mask(Circle())
@@ -45,13 +43,13 @@ struct ProfilePicture: View {
             if (showCaptureImageView) {
                 VStack {
                     Spacer().frame(height: 360)
-                    CaptureImageView(isShown: $showCaptureImageView, image: $image).frame(width: 410, height: 900)
+                    CaptureImageView(isShown: $showCaptureImageView, image: $viewRouter.image).frame(width: 410, height: 900)
                 }.background(CustomColors().light2) // TODO: Change to Match
             }
             if (showTakeImageView) {
                 VStack {
                     Spacer().frame(height: 360)
-                    TakeImageView(isShown: $showTakeImageView, image: $image).frame(width: 410, height: 900)
+                    TakeImageView(isShown: $showTakeImageView, image: $viewRouter.image).frame(width: 410, height: 900)
                 }
             }
         }
@@ -60,6 +58,6 @@ struct ProfilePicture: View {
 
 struct ProfilePicture_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilePicture(profilePic: nil)
+        ProfilePicture()
     }
 }
