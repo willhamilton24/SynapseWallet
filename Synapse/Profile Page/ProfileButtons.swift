@@ -19,7 +19,7 @@ struct ProfileButtons: View {
     
     func encodeProfilePicture(pic: UIImage?) -> String? {
         if pic != nil {
-            let newPic = pic!.resized(toWidth: 150)!
+            let newPic = pic!.resized(toWidth: 250)!
             if let encodedPic = newPic.pngData() {
                 return encodedPic.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
             } else {

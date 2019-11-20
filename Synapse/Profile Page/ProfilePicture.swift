@@ -34,11 +34,18 @@ struct ProfilePicture: View {
                 Button(action: {
                     self.showingSheet = true
                 }) {
-                    Text("Change Profile Picture")
+                    Text("Change Photo")
+                        .foregroundColor(CustomColors().light2)
+                        .padding(.bottom, 15)
                 }.actionSheet(isPresented: $showingSheet) {
                     ActionSheet(title: Text("Change Profile Page"), buttons: [ .default(Text("Take Photo with Camera"), action: {self.showTakeImageView.toggle()}), .default(Text("Choose Photo From Camera Roll"), action: {self.showCaptureImageView.toggle()}),
                         .destructive(Text("Cancel").foregroundColor(Color.red))])
                 }
+                Spacer()
+                .frame(width: 400, height: 2.5, alignment: .center)
+                .foregroundColor(.white)
+                .background(CustomColors().primeGradiant)
+                
             }
             if (showCaptureImageView) {
                 VStack {

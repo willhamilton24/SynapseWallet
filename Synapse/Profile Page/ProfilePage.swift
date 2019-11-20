@@ -28,7 +28,7 @@ struct ProfilePage: View {
                 
                 ProfileHeader()
                 
-                Spacer().frame(height: 50)
+                Spacer().frame(height: 30)
                 
                 ProfilePicture()
                 
