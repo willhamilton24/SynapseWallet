@@ -13,11 +13,11 @@ struct ReloadProfileButtons: View {
     
     func base64Convert(base64String: String?) -> UIImage{
       if (base64String?.isEmpty)! {
-          return #imageLiteral(resourceName: "no_image_found")
+          return UIImage()
       } else {
           // !!! Separation part is optional, depends on your Base64String !!!
           let temp = base64String?.components(separatedBy: ",")
-          let dataDecoded : Data = Data(base64Encoded: temp![1], options: .ignoreUnknownCharacters)!
+          let dataDecoded : Data = Data(base64Encoded: temp![0], options: .ignoreUnknownCharacters)!
           let decodedimage = UIImage(data: dataDecoded)
           return decodedimage!
       }
@@ -103,7 +103,7 @@ struct ReloadProfileButtons: View {
                         if unwrappedJSON.name != "" {
                             self.viewRouter.profileInfo.name = unwrappedJSON.name!
                         }
-                        if unwrappedJSON.profile_pic != "" {
+                        if unwrappedJSON.profile_pic != nil {
                             self.viewRouter.profileInfo.profilePic = unwrappedJSON.profile_pic!
                             self.viewRouter.image = self.base64Convert(base64String: self.viewRouter.profileInfo.profilePic)
                         }

@@ -19,7 +19,8 @@ struct ProfileButtons: View {
     
     func encodeProfilePicture(pic: UIImage?) -> String? {
         if pic != nil {
-            if let encodedPic = pic!.pngData() {
+            let newPic = pic!.resized(toWidth: 150)!
+            if let encodedPic = newPic.pngData() {
                 return encodedPic.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
             } else {
                 return "Not Encoded"
@@ -32,8 +33,7 @@ struct ProfileButtons: View {
     var body: some View {
         HStack (spacing: 25) {
             Button(action: {
-                self.viewRouter.imageEncoding = self.encodeProfilePicture(pic: self.viewRouter.image)
-                return NetworkingClient().updateMyProfileInfo(username: self.viewRouter.handle, token: self.viewRouter.token, name: self.viewRouter.profileInfo.name, profilePic: self.viewRouter.imageEncoding, location: self.viewRouter.profileInfo.location) { (json, error) in
+                return NetworkingClient().updateMyProfileInfo(username: self.viewRouter.handle, token: self.viewRouter.token, name: self.viewRouter.profileInfo.name, profilePic: self.encodeProfilePicture(pic: self.viewRouter.image), location: self.viewRouter.profileInfo.location) { (json, error) in
                     print(json)
                     if json == "user info changed" {
                         print("Profile Updated")
