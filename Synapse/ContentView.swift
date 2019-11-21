@@ -40,6 +40,8 @@ struct ContentView: View {
                     ResetEmailSent()
                 } else if viewRouter.currentPage == "profile" {
                     ProfilePage()
+                } else if viewRouter.currentPage == "credits" {
+                    CreditsPage()
                 }
         }.background(CustomColors().dark)
             .edgesIgnoringSafeArea(.vertical)
