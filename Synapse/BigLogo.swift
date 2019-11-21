@@ -20,7 +20,6 @@ struct BigLogo: View {
             .foregroundColor(CustomColors().light)
             .frame(width: 500, height: 320)
             .fixedSize()
-            .background(CustomColors().primeGradiant)
             .edgesIgnoringSafeArea(.top)
     }
 }
