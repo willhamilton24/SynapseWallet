@@ -78,6 +78,8 @@
 		BE8F96492363500200B4DD23 /* PageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96482363500200B4DD23 /* PageHeader.swift */; };
 		BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FC9234BFAE90046EADE /* LoginView.swift */; };
 		BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FCB234BFB060046EADE /* SignUpView.swift */; };
+		BECA1D30238694E50041E829 /* CreditsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA1D2F238694E50041E829 /* CreditsHeader.swift */; };
+		BECA1D32238695A60041E829 /* CreditsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA1D31238695A60041E829 /* CreditsPage.swift */; };
 		BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED52E0F234BEFE2003D3D4A /* SWLogo.swift */; };
 		BED52E12234BF6A1003D3D4A /* Socials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED52E11234BF6A1003D3D4A /* Socials.swift */; };
 /* End PBXBuildFile section */
@@ -170,6 +172,8 @@
 		BE8F96482363500200B4DD23 /* PageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHeader.swift; sourceTree = "<group>"; };
 		BEBD7FC9234BFAE90046EADE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BEBD7FCB234BFB060046EADE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		BECA1D2F238694E50041E829 /* CreditsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsHeader.swift; sourceTree = "<group>"; };
+		BECA1D31238695A60041E829 /* CreditsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsPage.swift; sourceTree = "<group>"; };
 		BED52E0F234BEFE2003D3D4A /* SWLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLogo.swift; sourceTree = "<group>"; };
 		BED52E11234BF6A1003D3D4A /* Socials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socials.swift; sourceTree = "<group>"; };
 		E6D84D447599553617826479 /* Pods_Synapse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Synapse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +235,7 @@
 			children = (
 				BE8F96482363500200B4DD23 /* PageHeader.swift */,
 				BE2312E42365260C00C16DCC /* ProfileHeader.swift */,
+				BECA1D2F238694E50041E829 /* CreditsHeader.swift */,
 			);
 			path = "Page Headers";
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				BE8F964623634E7500B4DD23 /* XButton.swift */,
 				BE2312E62365265800C16DCC /* Page Headers */,
 				BE38D8722379F928003C087C /* Profile Page */,
+				BECA1D31238695A60041E829 /* CreditsPage.swift */,
 				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
 				BE848AA723845BC20093AB5C /* CaptureImageView.swift */,
 				BE848AAB238463BF0093AB5C /* TakeImageView.swift */,
@@ -647,9 +653,11 @@
 				BE87EDD82346DB1000E267DE /* DepositPage.swift in Sources */,
 				BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */,
 				BE7F6D672352CFB40065F8DB /* EmailSentView.swift in Sources */,
+				BECA1D32238695A60041E829 /* CreditsPage.swift in Sources */,
 				BE822BA6234D4031004B2FC6 /* SignUpProgress.swift in Sources */,
 				BE7996B02374B99900243D28 /* BackButton.swift in Sources */,
 				BE6BAB20235028E200E2C17B /* LottieView.swift in Sources */,
+				BECA1D30238694E50041E829 /* CreditsHeader.swift in Sources */,
 				BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */,
 				BE87EDDF2346E06900E267DE /* UpdateProfile.swift in Sources */,
 				BE848AAA23845C2F0093AB5C /* Coordinator.swift in Sources */,

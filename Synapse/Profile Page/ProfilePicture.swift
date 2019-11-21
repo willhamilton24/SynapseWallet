@@ -42,7 +42,7 @@ struct ProfilePicture: View {
                         .destructive(Text("Cancel").foregroundColor(Color.red))])
                 }
                 Spacer()
-                .frame(width: 400, height: 2.5, alignment: .center)
+                .frame(width: 250, height: 2.5, alignment: .center)
                 .foregroundColor(.white)
                 .background(CustomColors().primeGradiant)
                 
