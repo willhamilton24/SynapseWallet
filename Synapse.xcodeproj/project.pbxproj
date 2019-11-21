@@ -23,6 +23,8 @@
 		BE6BAB2E2352B06900E2C17B /* PersistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB2D2352B06900E2C17B /* PersistantView.swift */; };
 		BE6BAB302352B28700E2C17B /* Biometrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB2F2352B28700E2C17B /* Biometrics.swift */; };
 		BE6BAB322352BE5800E2C17B /* defaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */; };
+		BE6EB9DE2386A23800CA9A45 /* CreditInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6EB9DD2386A23800CA9A45 /* CreditInfo.swift */; };
+		BE6EB9E02386A2E800CA9A45 /* LegalLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6EB9DF2386A2E800CA9A45 /* LegalLinks.swift */; };
 		BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */; };
 		BE6ECB60234C17AA003F82A5 /* SetKeepLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */; };
 		BE6ECB64234C2787003F82A5 /* AcceptTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */; };
@@ -113,6 +115,8 @@
 		BE6BAB2D2352B06900E2C17B /* PersistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistantView.swift; sourceTree = "<group>"; };
 		BE6BAB2F2352B28700E2C17B /* Biometrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics.swift; sourceTree = "<group>"; };
 		BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = defaultsKeys.swift; sourceTree = "<group>"; };
+		BE6EB9DD2386A23800CA9A45 /* CreditInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditInfo.swift; sourceTree = "<group>"; };
+		BE6EB9DF2386A2E800CA9A45 /* LegalLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalLinks.swift; sourceTree = "<group>"; };
 		BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHandle.swift; sourceTree = "<group>"; };
 		BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetKeepLogs.swift; sourceTree = "<group>"; };
 		BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTerms.swift; sourceTree = "<group>"; };
@@ -265,6 +269,16 @@
 			path = "Profile Page";
 			sourceTree = "<group>";
 		};
+		BE6EB9E12386A2FD00CA9A45 /* Credits Page */ = {
+			isa = PBXGroup;
+			children = (
+				BECA1D31238695A60041E829 /* CreditsPage.swift */,
+				BE6EB9DD2386A23800CA9A45 /* CreditInfo.swift */,
+				BE6EB9DF2386A2E800CA9A45 /* LegalLinks.swift */,
+			);
+			path = "Credits Page";
+			sourceTree = "<group>";
+		};
 		BE7B7BFA235694D2001039A3 /* Persistant Log-In */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,7 +401,7 @@
 				BE8F964623634E7500B4DD23 /* XButton.swift */,
 				BE2312E62365265800C16DCC /* Page Headers */,
 				BE38D8722379F928003C087C /* Profile Page */,
-				BECA1D31238695A60041E829 /* CreditsPage.swift */,
+				BE6EB9E12386A2FD00CA9A45 /* Credits Page */,
 				BE718A082346FBAA00759BB1 /* TransactionPage.swift */,
 				BE848AA723845BC20093AB5C /* CaptureImageView.swift */,
 				BE848AAB238463BF0093AB5C /* TakeImageView.swift */,
@@ -604,6 +618,7 @@
 				BE6ECB60234C17AA003F82A5 /* SetKeepLogs.swift in Sources */,
 				BE6BAB2E2352B06900E2C17B /* PersistantView.swift in Sources */,
 				BE8F963F2363096500B4DD23 /* CoinbaseMarketData.swift in Sources */,
+				BE6EB9DE2386A23800CA9A45 /* CreditInfo.swift in Sources */,
 				BE87EDC82343073C00E267DE /* BalanceModule.swift in Sources */,
 				BE2312E823652EFB00C16DCC /* ProfilePicture.swift in Sources */,
 				BE87EDD2234328AA00E267DE /* SwipeToPay.swift in Sources */,
@@ -648,6 +663,7 @@
 				BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */,
 				BE8F963D2361DE8700B4DD23 /* ProfilePage.swift in Sources */,
 				BE8F96432363348700B4DD23 /* BalanceModuleLTC.swift in Sources */,
+				BE6EB9E02386A2E800CA9A45 /* LegalLinks.swift in Sources */,
 				BE6BAB1E2350287E00E2C17B /* LoadingAnimation.swift in Sources */,
 				BE718A43234BD20300759BB1 /* ViewRouter.swift in Sources */,
 				BE87EDD82346DB1000E267DE /* DepositPage.swift in Sources */,

@@ -20,7 +20,7 @@ struct CreditsHeader: View {
                 Text("Credits ")
                 
                 Spacer()
-                    .frame(width: 100, height: 20, alignment: .center)
+                    .frame(width: 90, height: 20, alignment: .center)
                 
                 XButton()
                 
