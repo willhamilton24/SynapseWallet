@@ -35,23 +35,13 @@ struct WelcomePage: View {
                     Spacer()
                         .frame(height:20)
                     
-                    Text("Welcome")
+                    Text("Welcome!")
                         .foregroundColor(CustomColors().dark)
                         .font(Font.custom("Roboto-Light", size:55))
                         .padding(.top, 12)
                     
                     Button(action: {
-                        self.viewRouter.currentPage = "loading"
-                        NetworkingClient().handleArray() { (json, error) in
-                            if let error = error {
-                                self.viewRouter.users = [error.localizedDescription]
-                            } else if let json = json {
-                                print(json)
-                                self.viewRouter.users = json//.description
-                                self.viewRouter.currentPage = "handle"
-                            }
-                        }
-
+                        self.viewRouter.currentPage = "login"
                     }) {
                         Text("Login")
                             .padding(.vertical, 8)
@@ -125,7 +115,7 @@ struct WelcomePage: View {
                 .shadow(color: .gray, radius: 4)
                 
                 Spacer()
-                .frame(height:60)
+                .frame(height:80)
                 
                 
                 Text("CC LOGO")
