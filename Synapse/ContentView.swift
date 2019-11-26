@@ -17,31 +17,31 @@ struct ContentView: View {
                 if viewRouter.currentPage == "welcome" {
                     WelcomePage().transition(.opacity)
                 } else if viewRouter.currentPage == "loading" {
-                    LoadingView()
+                    LoadingView().transition(.opacity)
                 } else if viewRouter.currentPage == "login" {
-                    LoginView()
+                    LoginView().transition(.opacity)
                 } else if viewRouter.currentPage == "keep-logs" {
-                    SetKeepLogs()
+                    SetKeepLogs().transition(.opacity)
                 } else if viewRouter.currentPage == "handle" {
-                    SetHandle()
+                    SetHandle().transition(.opacity)
                 } else if viewRouter.currentPage == "terms" {
-                    AcceptTerms()
+                    AcceptTerms().transition(.opacity)
                 } else if viewRouter.currentPage == "main" {
-                    MainPage()
+                    MainPage().transition(.opacity)
                 } else if viewRouter.currentPage == "email-password" {
-                    EmailPassword()
+                    EmailPassword().transition(.opacity)
                 } else if viewRouter.currentPage == "persist" {
-                    PersistantView()
+                    PersistantView().transition(.opacity)
                 } else if viewRouter.currentPage == "email-v" {
-                    EmailSentView()
+                    EmailSentView().transition(.opacity)
                 } else if viewRouter.currentPage == "forgot-pass" {
-                    ForgotPassword()
+                    ForgotPassword().transition(.opacity)
                 } else if viewRouter.currentPage == "forgot-pass-sent" {
-                    ResetEmailSent()
+                    ResetEmailSent().transition(.opacity)
                 } else if viewRouter.currentPage == "profile" {
-                    ProfilePage()
+                    ProfilePage().transition(.opacity)
                 } else if viewRouter.currentPage == "credits" {
-                    CreditsPage()
+                    CreditsPage().transition(.opacity)
                 }
         }.background(CustomColors().dark)
             .edgesIgnoringSafeArea(.vertical)

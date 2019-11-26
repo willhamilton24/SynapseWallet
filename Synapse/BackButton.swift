@@ -16,9 +16,9 @@ struct BackButton: View {
         Button(action: {
             self.viewRouter.currentPage = self.destination
         }) {
-            Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().light)
+            Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().dark)
         }.frame(minWidth: 225, maxWidth: 250)
-            .background(CustomColors().lg)
+            //.background(CustomColors().lg)
             .cornerRadius(25)
             .padding()
             .padding(.vertical, 0)
