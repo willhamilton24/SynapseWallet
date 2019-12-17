@@ -45,6 +45,9 @@
 		BE7B7BF9235693CD001039A3 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B7BF8235693CD001039A3 /* ForgotPassword.swift */; };
 		BE7F6D672352CFB40065F8DB /* EmailSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F6D662352CFB40065F8DB /* EmailSentView.swift */; };
 		BE7F6D692352FCD00065F8DB /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BE7F6D682352FCD00065F8DB /* applogo.png */; };
+		BE7F9A7C23A9207F00DDB10C /* WelcomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F9A7B23A9207F00DDB10C /* WelcomeButtons.swift */; };
+		BE7F9A7E23A9290A00DDB10C /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F9A7D23A9290A00DDB10C /* SignUpPage.swift */; };
+		BE7F9A8123A929E400DDB10C /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F9A8023A929E400DDB10C /* OnboardingFlow.swift */; };
 		BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */; };
 		BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA1234D12BC004B2FC6 /* BigLogo.swift */; };
 		BE822BA4234D3C33004B2FC6 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA3234D3C33004B2FC6 /* CustomColors.swift */; };
@@ -141,6 +144,9 @@
 		BE7B7BF8235693CD001039A3 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		BE7F6D662352CFB40065F8DB /* EmailSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSentView.swift; sourceTree = "<group>"; };
 		BE7F6D682352FCD00065F8DB /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
+		BE7F9A7B23A9207F00DDB10C /* WelcomeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeButtons.swift; sourceTree = "<group>"; };
+		BE7F9A7D23A9290A00DDB10C /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
+		BE7F9A8023A929E400DDB10C /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPassword.swift; sourceTree = "<group>"; };
 		BE822BA1234D12BC004B2FC6 /* BigLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLogo.swift; sourceTree = "<group>"; };
 		BE822BA3234D3C33004B2FC6 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
@@ -299,11 +305,9 @@
 		BE7B7BFB23569556001039A3 /* Sign-Up */ = {
 			isa = PBXGroup;
 			children = (
-				BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */,
-				BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */,
-				BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */,
-				BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */,
-				BE7F6D662352CFB40065F8DB /* EmailSentView.swift */,
+				BE7F9A7F23A9291600DDB10C /* v1 Onboarding */,
+				BE7F9A7D23A9290A00DDB10C /* SignUpPage.swift */,
+				BE7F9A8023A929E400DDB10C /* OnboardingFlow.swift */,
 			);
 			path = "Sign-Up";
 			sourceTree = "<group>";
@@ -313,11 +317,8 @@
 			children = (
 				BEBD7FC9234BFAE90046EADE /* LoginView.swift */,
 				BE7474D923A8EE0F002A6BDE /* HandleAndPassword.swift */,
-				BE7474DD23A9048E002A6BDE /* LoginButtonCluster.swift */,
-				BE7474DB23A9012E002A6BDE /* LoginButton.swift */,
-				BE7474E123A90D51002A6BDE /* NeedAccount.swift */,
-				BE7B7BF8235693CD001039A3 /* ForgotPassword.swift */,
-				BE8F96362361CB6A00B4DD23 /* ResetEmailSent.swift */,
+				BE7F9A7923A91F2A00DDB10C /* Login Page Buttons */,
+				BE7F9A7823A91F0F00DDB10C /* Password Reset */,
 			);
 			path = "Manual Log-In";
 			sourceTree = "<group>";
@@ -356,6 +357,46 @@
 				BE87EDC92343077700E267DE /* GraphModule.swift */,
 			);
 			path = "Misc. Deprecated ";
+			sourceTree = "<group>";
+		};
+		BE7F9A7823A91F0F00DDB10C /* Password Reset */ = {
+			isa = PBXGroup;
+			children = (
+				BE7B7BF8235693CD001039A3 /* ForgotPassword.swift */,
+				BE8F96362361CB6A00B4DD23 /* ResetEmailSent.swift */,
+			);
+			path = "Password Reset";
+			sourceTree = "<group>";
+		};
+		BE7F9A7923A91F2A00DDB10C /* Login Page Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				BE7474DD23A9048E002A6BDE /* LoginButtonCluster.swift */,
+				BE7474DB23A9012E002A6BDE /* LoginButton.swift */,
+				BE7474E123A90D51002A6BDE /* NeedAccount.swift */,
+			);
+			path = "Login Page Buttons";
+			sourceTree = "<group>";
+		};
+		BE7F9A7A23A91FCB00DDB10C /* Welcome Page */ = {
+			isa = PBXGroup;
+			children = (
+				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
+				BE7F9A7B23A9207F00DDB10C /* WelcomeButtons.swift */,
+			);
+			path = "Welcome Page";
+			sourceTree = "<group>";
+		};
+		BE7F9A7F23A9291600DDB10C /* v1 Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BE6ECB5D234C0E61003F82A5 /* SetHandle.swift */,
+				BE6ECB5F234C17AA003F82A5 /* SetKeepLogs.swift */,
+				BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */,
+				BE6ECB63234C2787003F82A5 /* AcceptTerms.swift */,
+				BE7F6D662352CFB40065F8DB /* EmailSentView.swift */,
+			);
+			path = "v1 Onboarding";
 			sourceTree = "<group>";
 		};
 		BE822BAE234DA4B2004B2FC6 /* Fonts */ = {
@@ -401,7 +442,7 @@
 				BE6FEA84234FD6AC00758CD2 /* NetworkingClient.swift */,
 				BE8F963E2363096500B4DD23 /* CoinbaseMarketData.swift */,
 				BE6BAB312352BE5700E2C17B /* defaultsKeys.swift */,
-				BE718A3E2347BF9800759BB1 /* WelcomePage.swift */,
+				BE7F9A7A23A91FCB00DDB10C /* Welcome Page */,
 				BE7996AB2374AD4000243D28 /* BigNavigationButton.swift */,
 				BE7996AF2374B99900243D28 /* BackButton.swift */,
 				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
@@ -647,12 +688,14 @@
 				BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */,
 				BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */,
 				BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */,
+				BE7F9A7C23A9207F00DDB10C /* WelcomeButtons.swift in Sources */,
 				BE2312E52365260C00C16DCC /* ProfileHeader.swift in Sources */,
 				BE87EDD023431E0700E267DE /* DepositWithdrawButtons.swift in Sources */,
 				BE8F96372361CB6A00B4DD23 /* ResetEmailSent.swift in Sources */,
 				BE38D8762379FE34003C087C /* EditEmail.swift in Sources */,
 				BE6FEA87234FF64300758CD2 /* LoadingView.swift in Sources */,
 				BE6ECB5E234C0E61003F82A5 /* SetHandle.swift in Sources */,
+				BE7F9A7E23A9290A00DDB10C /* SignUpPage.swift in Sources */,
 				BE718A092346FBAA00759BB1 /* TransactionPage.swift in Sources */,
 				BE7B7BF9235693CD001039A3 /* ForgotPassword.swift in Sources */,
 				BE8F96492363500200B4DD23 /* PageHeader.swift in Sources */,
@@ -691,6 +734,7 @@
 				BE6BAB20235028E200E2C17B /* LottieView.swift in Sources */,
 				BECA1D30238694E50041E829 /* CreditsHeader.swift in Sources */,
 				BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */,
+				BE7F9A8123A929E400DDB10C /* OnboardingFlow.swift in Sources */,
 				BE87EDDF2346E06900E267DE /* UpdateProfile.swift in Sources */,
 				BE848AAA23845C2F0093AB5C /* Coordinator.swift in Sources */,
 				BE848AA823845BC20093AB5C /* CaptureImageView.swift in Sources */,
