@@ -11,25 +11,40 @@ import SwiftUI
 struct LoadingView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
+    let screenSize: CGRect = UIScreen.main.bounds
+    
     var body: some View {
         ZStack {
-            BigLogo()
-                .frame(width: 500, height: 240)
-                .position(x: 180, y: 80)
+            Text("")
+            .frame(minWidth: screenSize.width, minHeight: screenSize.height + 80)
+            .edgesIgnoringSafeArea(.vertical)
+            .background(CustomColors().primeGradiant)
             
             VStack {
+                BigLogo()
+                .frame(width: 500, height: 240)
+                
                 Spacer()
-                    .frame(height: 235)
+                    .frame(height: 40)
             
                 VStack {
                     LoadingAnimation()
+                        .padding()
                     Text("  Loading...")
-                        .foregroundColor(.white)
-                        .font(Font.custom("Roboto-Light", size:50))
+                        .foregroundColor(CustomColors().prime)
+                        .font(Font.custom("Roboto-Light", size:35))
+                    Spacer().frame(height: 20)
                 }
+                .background(Color.white)
+                .cornerRadius(20)
+                .frame(minWidth: 350, maxWidth: 420)
+                .clipped()
+                .shadow(color: .gray, radius: 8)
+                
+                Spacer()
+                .frame(height: 50)
             }
-        }.background(CustomColors().dark)
-            .edgesIgnoringSafeArea(.bottom)
+        }
     }
 }
 
