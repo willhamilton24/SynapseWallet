@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SignUpPage: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    let screenSize: CGRect = UIScreen.main.bounds
     
     var body: some View {
         ZStack {
@@ -22,7 +23,11 @@ struct SignUpPage: View {
                 BigLogo()
                 .frame(width: 500, height: 240)
                 
+                Spacer().frame(height: 30)
+                
                 OnboardingFlow()
+                
+                Spacer().frame(height: 40)
             }
         }
     }

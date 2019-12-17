@@ -131,6 +131,10 @@ class ViewRouter: ObservableObject {
             objectWillChange.send(self)
         }
     }
-
     
+    var signUpPage = 0 {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
 }

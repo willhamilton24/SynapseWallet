@@ -9,29 +9,29 @@
 import SwiftUI
 
 struct OnboardingFlow: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
+    @State var pageIndex: Int = 0
+    
     var body: some View {
         VStack {
-            Text("Getting Started")
+            OnboardingHeader()
             
-            Spacer().frame(width: 350, height: 450)
+            Spacer()
+                .frame(width: 350, height: 400)
+                .background(Color.white)
             
-            HStack {
-                Button(action: {}) {
-                    Image("out")
-                }
-                
-                Spacer().frame(width: 200, height: 75)
-                
-                Button(action: {}) {
-                    Image("check")
-                }
-            }
+            OnboardingFooter()
         }
+        .background(CustomColors().light2)
+        .cornerRadius(20)
+        .clipped()
+        .shadow(color: .gray, radius: 2)
     }
 }
 
 struct OnboardingFlow_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingFlow()
+        OnboardingFlow().environmentObject(ViewRouter())
     }
 }

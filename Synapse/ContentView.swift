@@ -23,7 +23,7 @@ struct ContentView: View {
                 } else if viewRouter.currentPage == "keep-logs" {
                     SetKeepLogs().transition(.opacity)
                 } else if viewRouter.currentPage == "handle" {
-                    SetHandle().transition(.opacity)
+                    SignUpPage().transition(.opacity)
                 } else if viewRouter.currentPage == "terms" {
                     AcceptTerms().transition(.opacity)
                 } else if viewRouter.currentPage == "main" {

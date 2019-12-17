@@ -48,6 +48,10 @@
 		BE7F9A7C23A9207F00DDB10C /* WelcomeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F9A7B23A9207F00DDB10C /* WelcomeButtons.swift */; };
 		BE7F9A7E23A9290A00DDB10C /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F9A7D23A9290A00DDB10C /* SignUpPage.swift */; };
 		BE7F9A8123A929E400DDB10C /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F9A8023A929E400DDB10C /* OnboardingFlow.swift */; };
+		BE7F9A8323A930BC00DDB10C /* OnboardingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F9A8223A930BC00DDB10C /* OnboardingHeader.swift */; };
+		BE7F9A8523A9321000DDB10C /* OnboardingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F9A8423A9321000DDB10C /* OnboardingFooter.swift */; };
+		BE7F9A8723A932BA00DDB10C /* OnboardingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F9A8623A932BA00DDB10C /* OnboardingProgress.swift */; };
+		BE7F9A8923A935B100DDB10C /* OnboardingPageDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7F9A8823A935B100DDB10C /* OnboardingPageDot.swift */; };
 		BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */; };
 		BE822BA2234D12BC004B2FC6 /* BigLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA1234D12BC004B2FC6 /* BigLogo.swift */; };
 		BE822BA4234D3C33004B2FC6 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE822BA3234D3C33004B2FC6 /* CustomColors.swift */; };
@@ -147,6 +151,10 @@
 		BE7F9A7B23A9207F00DDB10C /* WelcomeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeButtons.swift; sourceTree = "<group>"; };
 		BE7F9A7D23A9290A00DDB10C /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		BE7F9A8023A929E400DDB10C /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
+		BE7F9A8223A930BC00DDB10C /* OnboardingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHeader.swift; sourceTree = "<group>"; };
+		BE7F9A8423A9321000DDB10C /* OnboardingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFooter.swift; sourceTree = "<group>"; };
+		BE7F9A8623A932BA00DDB10C /* OnboardingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgress.swift; sourceTree = "<group>"; };
+		BE7F9A8823A935B100DDB10C /* OnboardingPageDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageDot.swift; sourceTree = "<group>"; };
 		BE822B9F234D0B85004B2FC6 /* EmailPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPassword.swift; sourceTree = "<group>"; };
 		BE822BA1234D12BC004B2FC6 /* BigLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLogo.swift; sourceTree = "<group>"; };
 		BE822BA3234D3C33004B2FC6 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
@@ -308,6 +316,10 @@
 				BE7F9A7F23A9291600DDB10C /* v1 Onboarding */,
 				BE7F9A7D23A9290A00DDB10C /* SignUpPage.swift */,
 				BE7F9A8023A929E400DDB10C /* OnboardingFlow.swift */,
+				BE7F9A8223A930BC00DDB10C /* OnboardingHeader.swift */,
+				BE7F9A8423A9321000DDB10C /* OnboardingFooter.swift */,
+				BE7F9A8623A932BA00DDB10C /* OnboardingProgress.swift */,
+				BE7F9A8823A935B100DDB10C /* OnboardingPageDot.swift */,
 			);
 			path = "Sign-Up";
 			sourceTree = "<group>";
@@ -672,6 +684,7 @@
 				BE6BAB2E2352B06900E2C17B /* PersistantView.swift in Sources */,
 				BE8F963F2363096500B4DD23 /* CoinbaseMarketData.swift in Sources */,
 				BE6EB9DE2386A23800CA9A45 /* CreditInfo.swift in Sources */,
+				BE7F9A8723A932BA00DDB10C /* OnboardingProgress.swift in Sources */,
 				BE87EDC82343073C00E267DE /* BalanceModule.swift in Sources */,
 				BE2312E823652EFB00C16DCC /* ProfilePicture.swift in Sources */,
 				BE87EDD2234328AA00E267DE /* SwipeToPay.swift in Sources */,
@@ -698,6 +711,7 @@
 				BE7F9A7E23A9290A00DDB10C /* SignUpPage.swift in Sources */,
 				BE718A092346FBAA00759BB1 /* TransactionPage.swift in Sources */,
 				BE7B7BF9235693CD001039A3 /* ForgotPassword.swift in Sources */,
+				BE7F9A8323A930BC00DDB10C /* OnboardingHeader.swift in Sources */,
 				BE8F96492363500200B4DD23 /* PageHeader.swift in Sources */,
 				BE7996AC2374AD4000243D28 /* BigNavigationButton.swift in Sources */,
 				BE6BAB302352B28700E2C17B /* Biometrics.swift in Sources */,
@@ -717,6 +731,8 @@
 				BE7474E223A90D51002A6BDE /* NeedAccount.swift in Sources */,
 				BE8F9645236336A000B4DD23 /* ReloadProfileButtons.swift in Sources */,
 				BE848AAC238463BF0093AB5C /* TakeImageView.swift in Sources */,
+				BE7F9A8523A9321000DDB10C /* OnboardingFooter.swift in Sources */,
+				BE7F9A8923A935B100DDB10C /* OnboardingPageDot.swift in Sources */,
 				BE6FEA85234FD6AC00758CD2 /* NetworkingClient.swift in Sources */,
 				BE7474DC23A9012E002A6BDE /* LoginButton.swift in Sources */,
 				BED52E10234BEFE2003D3D4A /* SWLogo.swift in Sources */,
