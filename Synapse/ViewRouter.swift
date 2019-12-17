@@ -78,7 +78,7 @@ class ViewRouter: ObservableObject {
         }
     }
     
-    var email: String = "example@domain.com" {
+    var email: String = "" {
         didSet {
             objectWillChange.send(self)
         }
@@ -127,6 +127,12 @@ class ViewRouter: ObservableObject {
     }
     
     var name = "" {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
+    var phone = "" {
         didSet {
             objectWillChange.send(self)
         }

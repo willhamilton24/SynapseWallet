@@ -80,7 +80,7 @@ struct ChooseHandleView: View {
                 }
                  
                  Text("Is Available").font(Font.custom("Roboto-Light", size: 18))
-            }.offset(x: -20, y: 0.0).foregroundColor(CustomColors().dark)
+            }.offset(x: -19, y: 0.0).foregroundColor(CustomColors().dark)
             
             
         }
