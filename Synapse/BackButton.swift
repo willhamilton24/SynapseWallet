@@ -13,16 +13,29 @@ struct BackButton: View {
     let destination: String
     
     var body: some View {
-        Button(action: {
-            self.viewRouter.currentPage = self.destination
-        }) {
-            Text("Back").padding().font(.custom("Roboto-Thin", size:20)).foregroundColor(CustomColors().dark)
-        }.frame(minWidth: 225, maxWidth: 250)
-            //.background(CustomColors().lg)
-            .cornerRadius(25)
-            .padding()
-            .padding(.vertical, 0)
-            .foregroundColor(CustomColors().light)
+        ZStack {
+            Button(action: {
+                self.viewRouter.currentPage = self.destination
+            }) {
+                Text("")
+            }.frame(minWidth: 100, maxWidth: 100)
+                .padding(.vertical)
+                //.padding(.vertical, 0)
+                .foregroundColor(CustomColors().light)
+                .background(CustomColors().dark)
+                .opacity(0.2)
+                .cornerRadius(15)
+            
+            HStack {
+                Image("out")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                
+                Text("back")
+                .font(.custom("Roboto-Light", size:24))
+                    .foregroundColor(.white)
+            }
+        }.offset(x: -30)
     }
 }
 

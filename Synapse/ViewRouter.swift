@@ -72,7 +72,7 @@ class ViewRouter: ObservableObject {
         }
     }
     
-    var handle: String = "myHandle" {
+    var handle: String = "" {
         didSet {
             objectWillChange.send(self)
         }
@@ -84,7 +84,7 @@ class ViewRouter: ObservableObject {
         }
     }
     
-    var password: String = "password" {
+    var password: String = "" {
         didSet {
             objectWillChange.send(self)
         }

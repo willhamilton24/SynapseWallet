@@ -15,7 +15,7 @@ struct BigLogo: View {
                 Text("SYNAPSE")
                 Text("WALLET.")
             }
-            .font(Font.custom("Roboto-Thin", size:75))
+            .font(Font.custom("Roboto-Thin", size:68))
             .padding()
             .foregroundColor(CustomColors().light)
             .frame(width: 500, height: 320)
