@@ -18,6 +18,7 @@ struct OnboardingProgress: View {
             OnboardingPageDot(pageRepresented: 2)
             OnboardingPageDot(pageRepresented: 3)
             OnboardingPageDot(pageRepresented: 4)
+            OnboardingPageDot(pageRepresented: 5)
         }
     }
 }

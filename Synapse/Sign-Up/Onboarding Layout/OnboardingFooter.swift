@@ -36,7 +36,7 @@ struct OnboardingFooter: View {
                     .padding()
                 
                 Button(action: {
-                    if self.viewRouter.signUpPage < 4 {
+                    if self.viewRouter.signUpPage < 5 {
                         self.viewRouter.signUpPage += 1
                     }
                 }) {

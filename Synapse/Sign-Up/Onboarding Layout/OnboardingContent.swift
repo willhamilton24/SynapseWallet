@@ -14,7 +14,17 @@ struct OnboardingContent: View {
     var body: some View {
         VStack {
             if self.viewRouter.signUpPage == 0 {
-                ChooseHandleView()
+                ChooseHandleView().transition(.opacity)
+            } else if self.viewRouter.signUpPage == 1 {
+                EmailAndPhoneView().transition(.opacity)
+            } else if self.viewRouter.signUpPage == 2 {
+                SetPasswordView().transition(.opacity)
+            } else if self.viewRouter.signUpPage == 3 {
+                KeepLogsView().transition(.opacity)
+            } else if self.viewRouter.signUpPage == 4 {
+                AcceptTermsView().transition(.opacity)
+            } else if self.viewRouter.signUpPage == 5 {
+                ChooseVerifView().transition(.opacity)
             } else {
                 Text("Sign Up Slide Placeholder")
                 .frame(width: 350, height: 350)

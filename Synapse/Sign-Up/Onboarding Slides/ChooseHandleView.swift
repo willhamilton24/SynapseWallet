@@ -65,6 +65,7 @@ struct ChooseHandleView: View {
                 }
                 
                 Text("4-24 Characters")
+                    .font(Font.custom("Roboto-Light", size: 18))
             }.foregroundColor(CustomColors().dark)
             
             HStack (spacing: 15){
@@ -78,9 +79,8 @@ struct ChooseHandleView: View {
                         .frame(width: 18, height: 18)
                 }
                  
-                 Text("Is Available")
-            }.offset(x: -23, y: 0.0).foregroundColor(CustomColors().dark
-            )
+                 Text("Is Available").font(Font.custom("Roboto-Light", size: 18))
+            }.offset(x: -20, y: 0.0).foregroundColor(CustomColors().dark)
             
             
         }
