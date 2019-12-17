@@ -17,7 +17,7 @@ struct OnboardingHeader: View {
             
             Divider()
                 .frame(width: 350, height: 1)
-        }
+        }.background(CustomColors().light2)
     }
 }
 

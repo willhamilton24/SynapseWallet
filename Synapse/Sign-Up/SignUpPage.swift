@@ -20,14 +20,9 @@ struct SignUpPage: View {
             .background(CustomColors().primeGradiant)
             
             VStack {
-                BigLogo()
-                .frame(width: 500, height: 240)
-                
-                Spacer().frame(height: 30)
-                
+                BigLogo().frame(width: 500, height: 240)
+                Spacer().frame(height: 60)
                 OnboardingFlow()
-                
-                Spacer().frame(height: 40)
             }
         }
     }

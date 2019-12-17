@@ -45,7 +45,7 @@ struct OnboardingFooter: View {
                     .frame(width: 50, height: 50)
                 }.foregroundColor(CustomColors().lg)
             }.padding(.bottom)
-        }
+        }.background(CustomColors().light2)
     }
 }
 

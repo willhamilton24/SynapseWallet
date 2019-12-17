@@ -17,13 +17,11 @@ struct OnboardingFlow: View {
         VStack {
             OnboardingHeader()
             
-            Spacer()
-                .frame(width: 350, height: 400)
-                .background(Color.white)
+            OnboardingContent()
             
             OnboardingFooter()
         }
-        .background(CustomColors().light2)
+        .background(Color.white)
         .cornerRadius(20)
         .clipped()
         .shadow(color: .gray, radius: 2)
