@@ -100,6 +100,8 @@
 		BE8F964723634E7500B4DD23 /* XButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F964623634E7500B4DD23 /* XButton.swift */; };
 		BE8F96492363500200B4DD23 /* PageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96482363500200B4DD23 /* PageHeader.swift */; };
 		BEB7664923AAC5C200E54F13 /* CheckBoxWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7664823AAC5C200E54F13 /* CheckBoxWrapper.swift */; };
+		BEB7664B23AACB4400E54F13 /* CustomPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7664A23AACB4400E54F13 /* CustomPop.swift */; };
+		BEB7664D23AAD17300E54F13 /* PopupNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7664C23AAD17300E54F13 /* PopupNotice.swift */; };
 		BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FC9234BFAE90046EADE /* LoginView.swift */; };
 		BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FCB234BFB060046EADE /* SignUpView.swift */; };
 		BECA1D30238694E50041E829 /* CreditsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA1D2F238694E50041E829 /* CreditsHeader.swift */; };
@@ -218,6 +220,8 @@
 		BE8F964623634E7500B4DD23 /* XButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButton.swift; sourceTree = "<group>"; };
 		BE8F96482363500200B4DD23 /* PageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHeader.swift; sourceTree = "<group>"; };
 		BEB7664823AAC5C200E54F13 /* CheckBoxWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxWrapper.swift; sourceTree = "<group>"; };
+		BEB7664A23AACB4400E54F13 /* CustomPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPop.swift; sourceTree = "<group>"; };
+		BEB7664C23AAD17300E54F13 /* PopupNotice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupNotice.swift; sourceTree = "<group>"; };
 		BEBD7FC9234BFAE90046EADE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BEBD7FCB234BFB060046EADE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BECA1D2F238694E50041E829 /* CreditsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsHeader.swift; sourceTree = "<group>"; };
@@ -522,12 +526,13 @@
 				BE7996AB2374AD4000243D28 /* BigNavigationButton.swift */,
 				BE7996AF2374B99900243D28 /* BackButton.swift */,
 				BE822BA1234D12BC004B2FC6 /* BigLogo.swift */,
+				BE8F964623634E7500B4DD23 /* XButton.swift */,
+				BEB7664E23AADC0A00E54F13 /* Custom Popup Engine */,
 				BE7F9A7A23A91FCB00DDB10C /* Welcome Page */,
 				BE7B7BFA235694D2001039A3 /* Persistant Log-In */,
 				BE7B7BFC235695BD001039A3 /* Manual Log-In */,
 				BE7B7BFB23569556001039A3 /* Sign-Up */,
 				BE7B7BFE2356A10E001039A3 /* Main Page */,
-				BE8F964623634E7500B4DD23 /* XButton.swift */,
 				BE2312E62365265800C16DCC /* Page Headers */,
 				BE38D8722379F928003C087C /* Profile Page */,
 				BE6EB9E12386A2FD00CA9A45 /* Credits Page */,
@@ -567,6 +572,15 @@
 				BE87EDBC2342F11100E267DE /* Info.plist */,
 			);
 			path = SynapseTests;
+			sourceTree = "<group>";
+		};
+		BEB7664E23AADC0A00E54F13 /* Custom Popup Engine */ = {
+			isa = PBXGroup;
+			children = (
+				BEB7664A23AACB4400E54F13 /* CustomPop.swift */,
+				BEB7664C23AAD17300E54F13 /* PopupNotice.swift */,
+			);
+			path = "Custom Popup Engine";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -768,6 +782,7 @@
 				BE87EDD623436B0200E267DE /* AccountPage.swift in Sources */,
 				BEB7664923AAC5C200E54F13 /* CheckBoxWrapper.swift in Sources */,
 				BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */,
+				BEB7664B23AACB4400E54F13 /* CustomPop.swift in Sources */,
 				BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */,
 				BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */,
 				BE7F9A7C23A9207F00DDB10C /* WelcomeButtons.swift in Sources */,
@@ -819,6 +834,7 @@
 				BE87EDA82342F10D00E267DE /* ContentView.swift in Sources */,
 				BE7F6D672352CFB40065F8DB /* EmailSentView.swift in Sources */,
 				BECA1D32238695A60041E829 /* CreditsPage.swift in Sources */,
+				BEB7664D23AAD17300E54F13 /* PopupNotice.swift in Sources */,
 				BE822BA6234D4031004B2FC6 /* SignUpProgress.swift in Sources */,
 				BE7996B02374B99900243D28 /* BackButton.swift in Sources */,
 				BE6BAB20235028E200E2C17B /* LottieView.swift in Sources */,

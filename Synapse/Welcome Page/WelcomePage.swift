@@ -36,6 +36,7 @@ struct WelcomePage: View {
 //                .frame(height: 75)
                 
             }.offset(y: -5)
+            CustomPop(active: true, heading: "Verification Code Sent", content: "Have a Nice Day!!")
         }
         .padding(.vertical, 30)
         .onAppear {
@@ -43,6 +44,7 @@ struct WelcomePage: View {
             if (defaults.string(forKey: defaultsKeys.handleKey) != nil && defaults.string(forKey: defaultsKeys.handleKey) != "") {
                 self.viewRouter.currentPage = "persist"
             }
+            
         }
     }
 }
