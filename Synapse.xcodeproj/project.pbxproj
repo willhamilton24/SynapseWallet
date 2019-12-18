@@ -11,6 +11,7 @@
 		A19F850A7E24DC768952B79D /* Pods_SynapseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C208035EAC5F80A9F7EB2EC /* Pods_SynapseTests.framework */; };
 		BE0E568123AA9A8500F3A315 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0E568023AA9A8500F3A315 /* PhoneNumberView.swift */; };
 		BE0E568323AA9FD100F3A315 /* SetEmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0E568223AA9FD100F3A315 /* SetEmailField.swift */; };
+		BE0E568623AAAE2F00F3A315 /* PhoneInputWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0E568523AAAE2F00F3A315 /* PhoneInputWrapper.swift */; };
 		BE2312E52365260C00C16DCC /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2312E42365260C00C16DCC /* ProfileHeader.swift */; };
 		BE2312E823652EFB00C16DCC /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2312E723652EFB00C16DCC /* ProfilePicture.swift */; };
 		BE2312EA2365301E00C16DCC /* ProfileAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2312E92365301E00C16DCC /* ProfileAccountInfo.swift */; };
@@ -98,6 +99,7 @@
 		BE8F9645236336A000B4DD23 /* ReloadProfileButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F9644236336A000B4DD23 /* ReloadProfileButtons.swift */; };
 		BE8F964723634E7500B4DD23 /* XButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F964623634E7500B4DD23 /* XButton.swift */; };
 		BE8F96492363500200B4DD23 /* PageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8F96482363500200B4DD23 /* PageHeader.swift */; };
+		BEB7664923AAC5C200E54F13 /* CheckBoxWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7664823AAC5C200E54F13 /* CheckBoxWrapper.swift */; };
 		BEBD7FCA234BFAE90046EADE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FC9234BFAE90046EADE /* LoginView.swift */; };
 		BEBD7FCC234BFB060046EADE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD7FCB234BFB060046EADE /* SignUpView.swift */; };
 		BECA1D30238694E50041E829 /* CreditsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECA1D2F238694E50041E829 /* CreditsHeader.swift */; };
@@ -123,6 +125,7 @@
 		B8BA29DB202E6307048475DC /* Pods-Synapse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Synapse.debug.xcconfig"; path = "Target Support Files/Pods-Synapse/Pods-Synapse.debug.xcconfig"; sourceTree = "<group>"; };
 		BE0E568023AA9A8500F3A315 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		BE0E568223AA9FD100F3A315 /* SetEmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEmailField.swift; sourceTree = "<group>"; };
+		BE0E568523AAAE2F00F3A315 /* PhoneInputWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInputWrapper.swift; sourceTree = "<group>"; };
 		BE2312E42365260C00C16DCC /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		BE2312E723652EFB00C16DCC /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		BE2312E92365301E00C16DCC /* ProfileAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountInfo.swift; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 		BE8F9644236336A000B4DD23 /* ReloadProfileButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadProfileButtons.swift; sourceTree = "<group>"; };
 		BE8F964623634E7500B4DD23 /* XButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButton.swift; sourceTree = "<group>"; };
 		BE8F96482363500200B4DD23 /* PageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHeader.swift; sourceTree = "<group>"; };
+		BEB7664823AAC5C200E54F13 /* CheckBoxWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxWrapper.swift; sourceTree = "<group>"; };
 		BEBD7FC9234BFAE90046EADE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BEBD7FCB234BFB060046EADE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BECA1D2F238694E50041E829 /* CreditsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsHeader.swift; sourceTree = "<group>"; };
@@ -262,6 +266,25 @@
 				7C208035EAC5F80A9F7EB2EC /* Pods_SynapseTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE0E568423AAA54500F3A315 /* Basic Info Slide */ = {
+			isa = PBXGroup;
+			children = (
+				BE6ECCE523A95DDA00EC616A /* EmailAndAgeView.swift */,
+				BE0E568223AA9FD100F3A315 /* SetEmailField.swift */,
+			);
+			path = "Basic Info Slide";
+			sourceTree = "<group>";
+		};
+		BE0E568723AABC2800F3A315 /* Phone & Accept Terms */ = {
+			isa = PBXGroup;
+			children = (
+				BE0E568023AA9A8500F3A315 /* PhoneNumberView.swift */,
+				BE0E568523AAAE2F00F3A315 /* PhoneInputWrapper.swift */,
+				BEB7664823AAC5C200E54F13 /* CheckBoxWrapper.swift */,
+			);
+			path = "Phone & Accept Terms";
 			sourceTree = "<group>";
 		};
 		BE2312E32364A8A600C16DCC /* Lottie */ = {
@@ -323,10 +346,9 @@
 			isa = PBXGroup;
 			children = (
 				BE6ECCE023A9581D00EC616A /* ChooseHandleView.swift */,
-				BE6ECCE523A95DDA00EC616A /* EmailAndAgeView.swift */,
-				BE0E568223AA9FD100F3A315 /* SetEmailField.swift */,
+				BE0E568423AAA54500F3A315 /* Basic Info Slide */,
+				BE0E568723AABC2800F3A315 /* Phone & Accept Terms */,
 				BE6ECCE723A95E1000EC616A /* SetPasswordView.swift */,
-				BE0E568023AA9A8500F3A315 /* PhoneNumberView.swift */,
 				BE6ECCE923A95E4200EC616A /* KeepLogsView.swift */,
 				BE6ECCED23A95E8000EC616A /* ChooseVerifView.swift */,
 			);
@@ -720,6 +742,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0E568623AAAE2F00F3A315 /* PhoneInputWrapper.swift in Sources */,
 				BE718A0B2347005600759BB1 /* MyTransactionsButton.swift in Sources */,
 				BE6BAB322352BE5800E2C17B /* defaultsKeys.swift in Sources */,
 				BE822BB8234FCB63004B2FC6 /* GettingStartedText.swift in Sources */,
@@ -743,6 +766,7 @@
 				BE8F964723634E7500B4DD23 /* XButton.swift in Sources */,
 				BE87EDDA2346DB5B00E267DE /* WithdrawPage.swift in Sources */,
 				BE87EDD623436B0200E267DE /* AccountPage.swift in Sources */,
+				BEB7664923AAC5C200E54F13 /* CheckBoxWrapper.swift in Sources */,
 				BE822BA0234D0B85004B2FC6 /* EmailPassword.swift in Sources */,
 				BE87EDD42343413D00E267DE /* InstantTransferButton.swift in Sources */,
 				BE87EDA42342F10D00E267DE /* AppDelegate.swift in Sources */,

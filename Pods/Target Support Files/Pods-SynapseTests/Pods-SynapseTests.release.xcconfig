@@ -1,7 +1,7 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire" "${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire" "${PODS_CONFIGURATION_BUILD_DIR}/M13Checkbox" "${PODS_CONFIGURATION_BUILD_DIR}/PhoneNumberKit" "${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios/Lottie.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "CoreGraphics" -framework "Lottie" -framework "QuartzCore" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/M13Checkbox/M13Checkbox.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/PhoneNumberKit/PhoneNumberKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios/Lottie.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "CoreGraphics" -framework "CoreTelephony" -framework "Foundation" -framework "Lottie" -framework "M13Checkbox" -framework "PhoneNumberKit" -framework "QuartzCore" -framework "UIKit"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

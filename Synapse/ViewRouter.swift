@@ -144,7 +144,7 @@ class ViewRouter: ObservableObject {
         }
     }
     
-    var signUpPage = 1 {
+    var signUpPage = 2 {
         didSet {
             withAnimation() {
                 objectWillChange.send(self)

@@ -1,20 +1,33 @@
 PODS:
   - Alamofire (4.7.3)
   - lottie-ios (3.1.3)
+  - M13Checkbox (3.4.0)
+  - PhoneNumberKit (3.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.1.0)
+    - PhoneNumberKit/UIKit (= 3.1.0)
+  - PhoneNumberKit/PhoneNumberKitCore (3.1.0)
+  - PhoneNumberKit/UIKit (3.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.3)
   - lottie-ios
+  - M13Checkbox
+  - PhoneNumberKit (~> 3.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - lottie-ios
+    - M13Checkbox
+    - PhoneNumberKit
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   lottie-ios: 496ac5cea1bbf1a7bd1f1f472f3232eb1b8d744b
+  M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
+  PhoneNumberKit: adffe4e128af1918386e09e7421d3d851a2987af
 
-PODFILE CHECKSUM: 6c02b40b8691bcbde12ffd8967281be998fa7fcd
+PODFILE CHECKSUM: b55a36becd2c51c2c332ab667816356a64da9297
 
 COCOAPODS: 1.8.3

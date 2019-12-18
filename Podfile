@@ -7,6 +7,8 @@ target 'Synapse' do
 
   pod 'Alamofire', '~> 4.7.3'
   pod 'lottie-ios'
+  pod 'PhoneNumberKit', '~> 3.1'
+  pod 'M13Checkbox'
 
   # Pods for Synapse
 

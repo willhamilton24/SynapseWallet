@@ -39,7 +39,7 @@ struct SetEmailField: View {
                }.padding(.horizontal, 20)
            
            Divider()
-               .frame(width: 320, height: 1)
+               .frame(width: 320, height: 2)
                .background(CustomColors().dark)
            
         }

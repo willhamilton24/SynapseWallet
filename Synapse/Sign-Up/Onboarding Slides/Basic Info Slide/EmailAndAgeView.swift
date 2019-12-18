@@ -20,7 +20,7 @@ struct EmailAndAgeView: View {
                 .font(Font.custom("Roboto-Light", size: 36))
                 .foregroundColor(CustomColors().lg)
 
-            Text("Let's get to know each other")
+            Text("We will never sell or share your personal data.")
                 .font(Font.custom("Roboto-Light", size: 14))
                 .frame(width: 325)
            
