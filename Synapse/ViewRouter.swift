@@ -138,7 +138,13 @@ class ViewRouter: ObservableObject {
         }
     }
     
-    var signUpPage = 0 {
+    var birth = "" {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+    
+    var signUpPage = 1 {
         didSet {
             withAnimation() {
                 objectWillChange.send(self)

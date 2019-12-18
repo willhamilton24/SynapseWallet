@@ -16,20 +16,20 @@ struct OnboardingContent: View {
             if self.viewRouter.signUpPage == 0 {
                 ChooseHandleView().transition(.opacity)
             } else if self.viewRouter.signUpPage == 1 {
-                EmailAndPhoneView().transition(.opacity)
+                EmailAndAgeView().transition(.opacity)
             } else if self.viewRouter.signUpPage == 2 {
-                SetPasswordView().transition(.opacity)
+                PhoneNumberView().transition(.opacity)
             } else if self.viewRouter.signUpPage == 3 {
-                KeepLogsView().transition(.opacity)
+                SetPasswordView().transition(.opacity)
             } else if self.viewRouter.signUpPage == 4 {
-                AcceptTermsView().transition(.opacity)
+                KeepLogsView().transition(.opacity)
             } else if self.viewRouter.signUpPage == 5 {
                 ChooseVerifView().transition(.opacity)
             } else {
                 Text("Sign Up Slide Placeholder")
                 .frame(width: 350, height: 350)
             }
-        }
+        }.frame(width: 350, height: 350)
     }
 }
 
