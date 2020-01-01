@@ -48,17 +48,17 @@ struct MainPage: View {
                 
                     ReloadProfileButtons()
                 
-                    Spacer().frame(height: 40)
+                    Spacer().frame(height: 55)
                 
                     // Balance Display Cluster
                     if self.viewRouter.coin == "ETH" {
-                        BalanceModuleETH().transition(.slide)
+                        BalanceModuleETH().transition(.scale)
                     } else if self.viewRouter.coin == "LTC" {
-                        BalanceModuleLTC().transition(.slide)
+                        BalanceModuleLTC().transition(.scale)
                     } else if self.viewRouter.coin == "USD" {
-                        BalanceModuleUSD().transition(.slide)
+                        BalanceModuleUSD().transition(.scale)
                     } else {
-                        BalanceModule().transition(.slide)
+                        BalanceModule().transition(.scale)
                     }
                 
                     VStack(spacing: 4) {
