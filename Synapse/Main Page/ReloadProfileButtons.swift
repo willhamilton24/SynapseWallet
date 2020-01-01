@@ -25,6 +25,14 @@ struct ReloadProfileButtons: View {
     
     var body: some View {
         HStack {
+            VStack(alignment: .leading) {
+                Text("Synapse")
+                Text("Wallet.")
+            }
+            .font(Font.custom("Roboto-Thin", size: 45))
+            .foregroundColor(CustomColors().light)
+            .padding(.trailing, 45)
+            
             Button(action: {
                 NetworkingClient().getBalances(username: self.viewRouter.handle, token: self.viewRouter.token) { (json2, error) in
                     if json2 != nil {
@@ -89,8 +97,8 @@ struct ReloadProfileButtons: View {
                 .foregroundColor(CustomColors().light)
 
             }
+            .padding(.trailing)
             
-            Spacer().frame(width: 240)
             //Profile Button
             Button(action: {
                 self.viewRouter.currentPage = "loading"

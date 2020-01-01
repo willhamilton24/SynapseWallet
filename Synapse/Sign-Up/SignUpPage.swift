@@ -22,7 +22,7 @@ struct SignUpPage: View {
             VStack {
                 BigLogo().frame(width: 500, height: 240)
                 Spacer().frame(height: 40)
-                OnboardingFlow()
+                OnboardingFlow().frame(height: 520)
             }.offset(y: -20)
         }
     }

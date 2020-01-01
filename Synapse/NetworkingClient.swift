@@ -13,6 +13,9 @@ class NetworkingClient  {
     
     let defaults = UserDefaults.standard
     
+    let coinbaseID = "2672312f02150b15ff35f2af83bfb07b7102408d7932fc92b2e3d57d44c50398"
+    let coinbaseSecret = "60f21a864aa0546cb0cdbc0180adbdc9643db5a15548b0e8f3c4940492176be4"
+    
     typealias WebServiceResponseArray = ([String]?, Error?) -> Void
     typealias WebServiceResponseString = (String?, Error?) -> Void
     typealias WebServiceResponseDouble = (Double?, Error?) -> Void
@@ -183,4 +186,6 @@ class NetworkingClient  {
         }
         
     }
+    
+    
 }

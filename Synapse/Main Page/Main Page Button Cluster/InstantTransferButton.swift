@@ -10,19 +10,19 @@ import SwiftUI
 
 struct InstantTransferButton: View {
     var body: some View {
-        NavigationLink(destination: InstantTransferPage()) {
+        Button(action: {}) {
             HStack(spacing: 0) {
-                Text("Instant")
-                    .font(Font.custom("Roboto-Light", size:18))
+                Text(" Instant")
+                    .font(Font.custom("Roboto-Light", size:35))
                 Image("bolt")
                     .resizable()
-                    .frame(width: 30, height: 30)
+                    .frame(width: 45, height: 45)
                 Text("Transfer")
-                    .font(Font.custom("Roboto-Light", size:18))
+                    .font(Font.custom("Roboto-Light", size:35))
             }
             .padding(12)
         }
-        .frame(minWidth: 150, maxWidth: 180)
+        .frame(minWidth: 300, maxWidth: 340)
         .background(CustomColors().lg)
         .cornerRadius(25)
         .padding()

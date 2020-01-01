@@ -30,9 +30,9 @@ struct BalanceModuleETH: View {
             Spacer()
                 .frame(height: 20)
             Spacer()
-                .frame(width: 300, height: 2.5, alignment: .center)
+                .frame(width: 340, height: 2.5, alignment: .center)
                 .foregroundColor(.white)
-                .background(CustomColors().primeGradiant)
+                .background(CustomColors().light)
                 
         }.onAppear {
             print(self.viewRouter.prices.eth)

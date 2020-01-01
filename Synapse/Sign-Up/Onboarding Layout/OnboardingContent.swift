@@ -14,17 +14,17 @@ struct OnboardingContent: View {
     var body: some View {
         VStack {
             if self.viewRouter.signUpPage == 0 {
-                ChooseHandleView().transition(.opacity)
+                ChooseHandleView().frame(width: 350, height: 350).transition(.opacity)
             } else if self.viewRouter.signUpPage == 1 {
-                EmailAndAgeView().transition(.opacity)
+                EmailAndAgeView().frame(width: 350, height: 350).transition(.opacity)
             } else if self.viewRouter.signUpPage == 2 {
-                PhoneNumberView().transition(.opacity)
+                PhoneNumberView().frame(width: 350, height: 350).transition(.opacity)
             } else if self.viewRouter.signUpPage == 3 {
-                SetPasswordView().transition(.opacity)
+                SetPasswordView().frame(width: 350, height: 350).transition(.opacity)
             } else if self.viewRouter.signUpPage == 4 {
-                KeepLogsView().transition(.opacity)
+                KeepLogsView().frame(width: 350, height: 350).transition(.opacity)
             } else if self.viewRouter.signUpPage == 5 {
-                ChooseVerifView().transition(.opacity)
+                ChooseVerifView().frame(width: 350, height: 350).transition(.opacity)
             } else {
                 Text("Sign Up Slide Placeholder")
                 .frame(width: 350, height: 350)

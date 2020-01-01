@@ -10,15 +10,14 @@ import SwiftUI
 
 struct MyTransactionsButton: View {
     var body: some View {
-        NavigationLink(destination: TransactionPage()) {
+        Button(action: {}) {
             Text("My Transactions")
-            .font(Font.custom("Roboto-Light", size:16))
+            .font(Font.custom("Roboto-Light", size:24))
             .padding()
-        }.frame(minWidth: 125, maxWidth: 150)
+        }.frame(minWidth: 200, maxWidth: 230)
         .background(CustomColors().lg)
-        .cornerRadius(25)
+        .cornerRadius(35)
         .padding()
-        .padding(.vertical, 0)
         .foregroundColor(CustomColors().light)
     }
 }

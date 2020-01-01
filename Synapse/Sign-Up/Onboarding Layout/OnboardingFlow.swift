@@ -17,7 +17,7 @@ struct OnboardingFlow: View {
         VStack {
             OnboardingHeader()
             
-            OnboardingContent()
+            OnboardingContent()//.frame(minHeight: 350, maxHeight: 350)
             
             OnboardingFooter()
         }

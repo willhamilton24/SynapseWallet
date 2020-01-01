@@ -13,60 +13,66 @@ struct MainPage: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     @State var btcValue: Double = 0
+    
+    let screenSize: CGRect = UIScreen.main.bounds
 
     var body: some View {
             VStack(spacing: 2) {
                     // Top Bar
-                    VStack {
-                        
-                        Spacer()
-                            .frame(height:165)
-                        
-                        HStack(spacing: 10.0) {
-                            
-                            SWLogo()
-                            
-                            Spacer()
-                                .frame(width: 200, height: 20, alignment: .center)
-                            
-                                
-                        }
-                    }
-                    .font(Font.custom("Roboto-Thin", size:36))
-                    .padding()
-                    .padding(.top, 30)
-                    .foregroundColor(CustomColors().light)
-                    .frame(width: 500, height: 270)
-                    .fixedSize()
-                    .background(CustomColors().primeGradiant)
+//                    VStack {
+//
+//                        Spacer()
+//                            .frame(height:165)
+//
+//                        HStack(spacing: 10.0) {
+//
+//                            SWLogo()
+//
+//                            Spacer()
+//                                .frame(width: 200, height: 20, alignment: .center)
+//
+//
+//                        }
+//                    }
+//                    .font(Font.custom("Roboto-Thin", size:36))
+//                    .padding()
+//                    .padding(.top, 30)
+//                    .foregroundColor(CustomColors().light)
+//                    .frame(width: 500, height: 270)
+//                    .fixedSize()
+//                    .background(CustomColors().primeGradiant)
                 
                 
-                    Spacer().frame(height: 20)
+                    Spacer().frame(width: screenSize.width, height: 200)
                     
                 
                     ReloadProfileButtons()
                 
-                    Spacer().frame(height: 20)
+                    Spacer().frame(height: 40)
                 
                     // Balance Display Cluster
                     if self.viewRouter.coin == "ETH" {
                         BalanceModuleETH()
                     } else if self.viewRouter.coin == "LTC" {
-                        BalanceModuleLTC() 
+                        BalanceModuleLTC()
+                    } else if self.viewRouter.coin == "USD" {
+                        BalanceModuleUSD()
                     } else {
                         BalanceModule()
                     }
-                    MyTransactionsButton().padding(.top, 30) // Display Account Transaction Log
-                    CurrencySelector()  // Select Active Currency
-                    DepositWithdrawButtons() // Deposit / Withdraw Funds + Pay Button
-                    InstantTransferButton() // Instant Transfer Funds
-                    Spacer().frame(height: 30)
-                    
-                    
-                    
+                
+                    VStack(spacing: 4) {
+                        CurrencySelector()  // Select Active Currency
+                        DepositWithdrawButtons() // Deposit / Withdraw Funds
+                        InstantTransferButton() // Instant Transfer Funds
+                        MyTransactionsButton() // Display Account Transaction Log
+                    }.padding(.top)
+                
+                    Spacer().frame(height: 220)
                 }
                 .edgesIgnoringSafeArea(.all)
-                .background(CustomColors().dark)
+                .background(CustomColors().primeGradiant)
+                .frame(minWidth: screenSize.width + 10, minHeight: screenSize.height + 80)
                 .onAppear {
                     
                     NetworkingClient().getBalances(username: self.viewRouter.handle, token: self.viewRouter.token) { (json, error) in

@@ -43,8 +43,9 @@ struct ContentView: View {
                 } else if viewRouter.currentPage == "credits" {
                     CreditsPage().transition(.opacity)
                 }
-        }.background(CustomColors().dark)
-            .edgesIgnoringSafeArea(.vertical)
+        }
+        .background(CustomColors().primeGradiant)
+        .edgesIgnoringSafeArea(.vertical)
     }
 }
 

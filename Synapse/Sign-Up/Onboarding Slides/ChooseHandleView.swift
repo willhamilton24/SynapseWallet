@@ -12,7 +12,7 @@ struct ChooseHandleView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
-        VStack {
+        VStack(spacing:0){
             Text("Choose a Handle")
                 .font(Font.custom("Roboto-Light", size: 36))
                 .foregroundColor(CustomColors().lg)
@@ -23,7 +23,7 @@ struct ChooseHandleView: View {
                 .frame(width: 325)
             
             Image("big-user")
-                .resizable()
+            .resizable()
             .frame(width: 130, height: 130)
             
             VStack (spacing: 0) {
@@ -46,41 +46,43 @@ struct ChooseHandleView: View {
                     }.padding(.horizontal, 20)
                 
                 Divider()
-                    .frame(width: 320, height: 1)
+                    .frame(width: 320, height: 2)
                     .background(CustomColors().dark)
                 
             }
             
             Spacer().frame(height: 25)
             
-            HStack (spacing: 15){
-                if (self.viewRouter.handle.count >= 4 && self.viewRouter.handle.count <= 24) {
-                   Image("dot-p")
-                    .resizable()
-                    .frame(width: 18, height: 18)
-               } else {
-                    Image("dot-r")
-                    .resizable()
-                    .frame(width: 18, height: 18)
-                }
-                
-                Text("4-24 Characters")
-                    .font(Font.custom("Roboto-Light", size: 18))
-            }.foregroundColor(CustomColors().dark)
-            
-            HStack (spacing: 15){
-                if self.viewRouter.users.contains(self.viewRouter.handle.lowercased()) {
-                    Image("dot-r")
-                        .resizable()
-                        .frame(width: 18, height: 18)
-                } else {
-                     Image("dot-p")
-                        .resizable()
-                        .frame(width: 18, height: 18)
-                }
-                 
-                 Text("Is Available").font(Font.custom("Roboto-Light", size: 18))
-            }.offset(x: -19, y: 0.0).foregroundColor(CustomColors().dark)
+//            HStack (spacing: 15){
+//                if (self.viewRouter.handle.count >= 4 && self.viewRouter.handle.count <= 24) {
+//                   Image("dot-p")
+//                    .resizable()
+//                    .frame(width: 18, height: 18)
+//               } else {
+//                    Image("dot-r")
+//                    .resizable()
+//                    .frame(width: 18, height: 18)
+//                }
+//
+//                Text("4-24 Characters")
+//                    .font(Font.custom("Roboto-Light", size: 18))
+//            }
+//            .foregroundColor(CustomColors().dark)
+//            .padding(.bottom)
+//
+//            HStack (spacing: 15){
+//                if self.viewRouter.users.contains(self.viewRouter.handle.lowercased()) {
+//                    Image("dot-r")
+//                        .resizable()
+//                        .frame(width: 18, height: 18)
+//                } else {
+//                     Image("dot-p")
+//                        .resizable()
+//                        .frame(width: 18, height: 18)
+//                }
+//
+//                 Text("Is Available").font(Font.custom("Roboto-Light", size: 18))
+//            }.offset(x: -19, y: 0.0).foregroundColor(CustomColors().dark)
             
             
         }

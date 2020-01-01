@@ -1,5 +1,14 @@
 PODS:
   - Alamofire (4.7.3)
+  - coinbase-official (3.3.0):
+    - coinbase-official/client (= 3.3.0)
+    - coinbase-official/core (= 3.3.0)
+    - coinbase-official/OAuth (= 3.3.0)
+  - coinbase-official/client (3.3.0):
+    - coinbase-official/core
+  - coinbase-official/core (3.3.0)
+  - coinbase-official/OAuth (3.3.0):
+    - coinbase-official/core
   - lottie-ios (3.1.3)
   - M13Checkbox (3.4.0)
   - PhoneNumberKit (3.1.0):
@@ -11,6 +20,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.3)
+  - coinbase-official (~> 3.3.0)
   - lottie-ios
   - M13Checkbox
   - PhoneNumberKit (~> 3.1)
@@ -18,16 +28,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - coinbase-official
     - lottie-ios
     - M13Checkbox
     - PhoneNumberKit
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  coinbase-official: 57de4952bdb85e16a8f99930c57e16505ff571ed
   lottie-ios: 496ac5cea1bbf1a7bd1f1f472f3232eb1b8d744b
   M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   PhoneNumberKit: adffe4e128af1918386e09e7421d3d851a2987af
 
-PODFILE CHECKSUM: b55a36becd2c51c2c332ab667816356a64da9297
+PODFILE CHECKSUM: 9ca81c9f2a44bf9d5897fcddd9a89fe1727c394c
 
 COCOAPODS: 1.8.3
