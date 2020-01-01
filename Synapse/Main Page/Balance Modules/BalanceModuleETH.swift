@@ -24,7 +24,7 @@ struct BalanceModuleETH: View {
                     .font(Font.custom("Roboto-Thin", size:32))
                     .padding(.top, 10)
             }.foregroundColor(CustomColors().light)
-            Text("$" + String(self.viewRouter.accountValues.eth) + "0" + " USD")
+            Text("$" + String(self.viewRouter.accountValues.eth) + " USD")
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Light", size:24))
             Spacer()

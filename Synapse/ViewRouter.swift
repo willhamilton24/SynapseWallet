@@ -98,7 +98,9 @@ class ViewRouter: ObservableObject {
     
     var coin: String = "BTC" {
         didSet {
-            objectWillChange.send(self)
+            withAnimation() {
+                objectWillChange.send(self)
+            }
         }
     }
     

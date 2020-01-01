@@ -52,13 +52,13 @@ struct MainPage: View {
                 
                     // Balance Display Cluster
                     if self.viewRouter.coin == "ETH" {
-                        BalanceModuleETH()
+                        BalanceModuleETH().transition(.slide)
                     } else if self.viewRouter.coin == "LTC" {
-                        BalanceModuleLTC()
+                        BalanceModuleLTC().transition(.slide)
                     } else if self.viewRouter.coin == "USD" {
-                        BalanceModuleUSD()
+                        BalanceModuleUSD().transition(.slide)
                     } else {
-                        BalanceModule()
+                        BalanceModule().transition(.slide)
                     }
                 
                     VStack(spacing: 4) {

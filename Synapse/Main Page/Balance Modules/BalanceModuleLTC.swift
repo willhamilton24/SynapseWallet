@@ -23,7 +23,7 @@ struct BalanceModuleLTC: View {
                     .font(Font.custom("Roboto-Thin", size:32))
                     .padding(.top, 10)
             }.foregroundColor(CustomColors().light)
-            Text("$" + String(self.viewRouter.accountValues.ltc) + "0" + " USD")
+            Text("$" + String(self.viewRouter.accountValues.ltc) + " USD")
                 .foregroundColor(CustomColors().light)
                 .font(Font.custom("Roboto-Light", size:24))
             Spacer()
